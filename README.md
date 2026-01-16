@@ -1,171 +1,136 @@
 # The Sports Page
 
-A daily-generated, newspaper-styled web application that displays sports scores, standings, statistics, and schedules. Designed to recreate the traditional sports page reading experience.
+A newspaper-styled web application that displays sports scores, standings, statistics, and schedules. Designed to recreate the traditional sports page reading experience.
 
 ## Features
 
-- **Daily Updates**: Automatically fetches fresh data at 3:00 AM ET
-- **NHL Coverage**: Scores, standings, and schedules from the NHL Stats API
-- **EPL Coverage**: Premier League scores, table, and fixtures from football-data.org
-- **Newspaper Design**: Vintage newspaper aesthetic with print optimization
-- **Customizable**: Toggle leagues and box score details
+- **NHL Coverage**: Scores, standings, leaders, schedule, and box scores from the NHL API
+- **NBA Coverage**: Scores, standings, leaders, and schedule via nba_api
+- **EPL Coverage**: Premier League scores, table, and fixtures (requires API key)
+- **Box Scores**: Traditional box scores with period-by-period scoring and top scorers
+- **Newspaper Design**: Vintage typography with consistent design scale
 - **Print-Friendly**: Optimized for printing on standard letter paper
+- **Toggleable Leagues**: Show/hide leagues with persistent preferences
 
 ## Quick Start
 
-### 1. Install Dependencies
+### One-Click Start
 
 ```bash
-cd sports-page
+./run.sh
+```
+
+This fetches fresh data and starts the server at http://localhost:8000
+
+### Manual Setup
+
+1. **Install Dependencies**
+
+```bash
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 pip install -r backend/requirements.txt
 ```
 
-### 2. Set Up API Keys
-
-Create a `.env` file in the project root:
-
-```bash
-# Get your free API key from https://www.football-data.org/
-export FOOTBALL_DATA_API_KEY="your_api_key_here"
-```
-
-Source the environment file:
-
-```bash
-source .env  # On Windows: set commands from .env manually
-```
-
-### 3. Fetch Data
-
-Run the data fetcher manually to test:
+2. **Fetch Data**
 
 ```bash
 python backend/fetch_data.py
 ```
 
-This will create `frontend/data/sports_data.json` with the latest data.
-
-### 4. View the Page
-
-Start a local web server:
+3. **Start Server**
 
 ```bash
-cd frontend
-python -m http.server 8000
+cd frontend && python -m http.server 8000
 ```
 
-Open your browser to: http://localhost:8000
+4. Open http://localhost:8000
 
-## Setting Up Daily Updates
-
-### Linux/Mac (cron)
-
-Edit your crontab:
+### Interactive Menu
 
 ```bash
-crontab -e
+./start.sh
 ```
 
-Add this line (adjust paths to match your installation):
+Provides options to fetch data, test APIs, or start the server.
 
-```
-0 3 * * * /path/to/sports-page/venv/bin/python /path/to/sports-page/backend/fetch_data.py >> /path/to/sports-page/logs/cron.log 2>&1
-```
+## Optional: EPL API Key
 
-Or use the provided script:
+EPL data requires a free API key from [football-data.org](https://www.football-data.org/):
 
 ```bash
-chmod +x scripts/setup_cron.sh
-./scripts/setup_cron.sh
+echo 'export FOOTBALL_DATA_API_KEY="your_key"' > .env
+source .env
 ```
 
-### Windows (Task Scheduler)
-
-Run PowerShell as Administrator:
-
-```powershell
-$action = New-ScheduledTaskAction -Execute "C:\path\to\venv\Scripts\python.exe" -Argument "C:\path\to\sports-page\backend\fetch_data.py"
-$trigger = New-ScheduledTaskTrigger -Daily -At 3:00AM
-Register-ScheduledTask -TaskName "SportsPageUpdate" -Action $action -Trigger $trigger
-```
+NHL and NBA work without any API keys.
 
 ## Project Structure
 
 ```
 sports-page/
-├── backend/              # Python data fetcher
-│   ├── apis/            # League-specific API integrations
-│   │   ├── nhl.py       # NHL Stats API
-│   │   └── epl.py       # Football-data.org API
-│   ├── fetch_data.py    # Main cron job script
-│   ├── config.py        # Configuration
-│   └── utils.py         # Utilities
-├── frontend/            # Static web application
-│   ├── css/            # Stylesheets
-│   ├── js/             # JavaScript modules
-│   ├── data/           # Generated JSON data
-│   └── index.html      # Main page
-├── logs/               # Log files
-└── scripts/            # Setup utilities
+├── backend/
+│   ├── apis/
+│   │   ├── nhl.py          # NHL API (api-web.nhle.com)
+│   │   ├── nba.py          # NBA API (nba_api library)
+│   │   └── epl.py          # EPL API (football-data.org)
+│   ├── fetch_data.py       # Main data fetcher
+│   └── requirements.txt
+├── frontend/
+│   ├── css/
+│   │   ├── base.css        # Variables and reset
+│   │   ├── newspaper.css   # Layout and typography
+│   │   ├── components.css  # UI components
+│   │   └── print.css       # Print styles
+│   ├── js/
+│   │   ├── app.js          # Main application
+│   │   ├── renderer.js     # DOM rendering
+│   │   ├── storage.js      # Preferences
+│   │   └── utils.js        # Utilities
+│   ├── data/               # Generated JSON (gitignored)
+│   └── index.html
+├── docs/
+│   └── design-spec.md      # Typography and design system
+├── run.sh                  # One-click start
+└── start.sh                # Interactive menu
 ```
+
+## Design System
+
+See [docs/design-spec.md](docs/design-spec.md) for the typography scale and component hierarchy.
+
+| Level | Size | Use |
+|-------|------|-----|
+| 1 | 3rem | Masthead |
+| 2 | 1.75rem | League headers (NHL, NBA) |
+| 3 | 1.125rem | Section headers |
+| 4 | 1rem | Conference/Category |
+| 5 | 0.9rem | Scores, division headers |
+| 6 | 0.85rem | Body text |
+| 7 | 0.75rem | Secondary info |
+| 8 | 0.7rem | Tertiary info |
 
 ## Data Sources
 
-- **NHL**: [NHL Stats API](https://gitlab.com/dword4/nhlapi) (free, no key required)
+- **NHL**: [NHL API](https://api-web.nhle.com) (free, no key required)
+- **NBA**: [nba_api](https://github.com/swar/nba_api) (free, no key required)
 - **EPL**: [football-data.org](https://www.football-data.org/) (free tier, API key required)
 
-## Customization
+## Usage
 
 ### Toggle Leagues
-
-Use the checkboxes at the top of the page to show/hide different leagues. Your preferences are saved in localStorage.
+Use the checkboxes to show/hide leagues. Preferences are saved in localStorage.
 
 ### Box Scores
-
-Check "Show Box Scores" to see detailed period-by-period scoring and statistics.
+Check "Show Box Scores" to see period-by-period scoring, shots on goal, goalies, and top scorers.
 
 ### Print
-
-Click the "Print" button or use your browser's print function (Cmd/Ctrl+P). The page is optimized for standard letter paper (8.5" x 11").
-
-## Troubleshooting
-
-### No data appearing
-
-1. Check that `frontend/data/sports_data.json` exists
-2. Run `python backend/fetch_data.py` manually to see any errors
-3. Check `logs/fetch_data.log` for error messages
-
-### EPL data not loading
-
-1. Verify your API key is set: `echo $FOOTBALL_DATA_API_KEY`
-2. Check your API quota at https://www.football-data.org/
-3. Free tier allows 10 requests/minute, 100/day
-
-### NHL data not loading
-
-- The NHL Stats API is free and requires no key
-- Check your internet connection
-- Verify the API is accessible: `curl https://statsapi.web.nhl.com/api/v1/standings`
-
-## Future Enhancements
-
-- Add NBA, MLB, NFL support
-- Player headshots and team logos
-- Historical archive (last 30 days)
-- Favorite teams highlighting
-- Mobile app (PWA)
+Click "Print" or use Cmd/Ctrl+P. Optimized for letter paper (8.5" x 11").
 
 ## License
 
-This project is for personal use. Not affiliated with NHL, EPL, or any sports league.
+This project is for personal use. Not affiliated with NHL, NBA, EPL, or any sports league.
 
-## Credits
+---
 
-Built with data from:
-- NHL Stats API
-- football-data.org
-
-Inspired by the traditional newspaper sports section.
+Built with Claude Code.
