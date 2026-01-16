@@ -1,0 +1,128 @@
+/* Newspaper Layout & Typography */
+
+/* Masthead - Level 1 */
+.masthead {
+    text-align: center;
+    border-top: 1px solid var(--border-heavy);
+    border-bottom: 4px double var(--border-heavy);
+    padding: var(--space-lg) 0;
+    margin-bottom: var(--space-lg);
+    background: linear-gradient(to bottom, #fff 0%, var(--newsprint-bg) 100%);
+}
+
+.masthead h1 {
+    font-family: var(--font-sans);
+    font-size: var(--text-1);
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-sm);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+}
+
+.masthead .tagline {
+    font-family: var(--font-serif);
+    font-size: var(--text-7);
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.masthead .date {
+    font-family: var(--font-sans);
+    font-size: var(--text-7);
+    font-weight: 400;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    background: #fff;
+    border: 1px solid var(--border-light);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.league-toggles {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.league-toggles label {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: var(--text-6);
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.options label {
+    cursor: pointer;
+    font-size: var(--text-6);
+}
+
+.options button {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--text-primary);
+    color: #fff;
+    border: none;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: var(--text-6);
+    transition: background 0.2s;
+}
+
+.options button:hover {
+    background: #333;
+}
+
+/* League Sections */
+.league-section {
+    margin-bottom: var(--space-xl);
+    page-break-inside: avoid;
+}
+
+/* Level 2 - League Headers (NHL, NBA, EPL) */
+.section-header {
+    font-family: var(--font-sans);
+    font-size: var(--text-2);
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--border-heavy);
+    margin: var(--space-lg) 0 var(--space-md);
+    padding-bottom: var(--space-xs);
+    letter-spacing: 0.05em;
+}
+
+/* Level 3 - Section Headers (Yesterday's Scores, Standings, Leaders) */
+.subsection-header {
+    font-family: var(--font-sans);
+    font-size: var(--text-3);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-heavy);
+    margin: var(--space-md) 0 var(--space-sm);
+    padding-bottom: var(--space-xs);
+}
+
+/* Footer */
+footer {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-md);
+    border-top: 2px solid var(--border-light);
+    text-align: center;
+    font-size: var(--text-7);
+    color: var(--text-secondary);
+}
+
+footer p {
+    margin: var(--space-xs) 0;
+}

@@ -1,0 +1,308 @@
+/* Print Optimization - Dense Single Page Layout */
+/* See docs/design-spec.md for typography scale */
+
+@media print {
+    @page {
+        size: letter;
+        margin: 0.3in 0.4in;
+    }
+
+    /* Print Typography Scale (proportionally smaller) */
+    :root {
+        --text-1: 1.25rem;   /* Masthead */
+        --text-2: 0.9rem;    /* League headers */
+        --text-3: 0.7rem;    /* Section headers */
+        --text-4: 0.6rem;    /* Conference/Category */
+        --text-5: 0.55rem;   /* Division, scores */
+        --text-6: 0.5rem;    /* Body text */
+        --text-7: 0.45rem;   /* Secondary */
+        --text-8: 0.4rem;    /* Tertiary */
+
+        --space-xs: 0.1rem;
+        --space-sm: 0.2rem;
+        --space-md: 0.3rem;
+        --space-lg: 0.4rem;
+        --space-xl: 0.5rem;
+    }
+
+    /* Orphan/widow control */
+    p, li, td, th {
+        orphans: 3;
+        widows: 3;
+    }
+
+    body {
+        font-size: 7pt;
+        background: white;
+        color: black;
+        max-width: 100%;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    /* Masthead */
+    .masthead {
+        margin-bottom: var(--space-md);
+        padding: var(--space-sm) 0;
+        border-bottom-width: 2px;
+    }
+
+    .masthead h1 {
+        font-size: var(--text-1);
+        margin-bottom: var(--space-xs);
+        letter-spacing: 0.1em;
+    }
+
+    .masthead .tagline,
+    .masthead .date {
+        font-size: var(--text-8);
+        margin-bottom: var(--space-xs);
+    }
+
+    /* Section headers - keep with following content */
+    .section-header {
+        font-size: var(--text-2);
+        margin: var(--space-md) 0 var(--space-sm) 0;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+        -webkit-column-break-after: avoid !important;
+    }
+
+    .subsection-header {
+        font-size: var(--text-3);
+        margin: var(--space-sm) 0 var(--space-xs) 0;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+        -webkit-column-break-after: avoid !important;
+    }
+
+    /* Keep all headers attached to content */
+    h2, h3, h4 {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+        -webkit-column-break-after: avoid !important;
+    }
+
+    /* Standings - 2 columns */
+    .standings {
+        margin-bottom: var(--space-lg);
+    }
+
+    .standings-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--space-lg) !important;
+    }
+
+    .standings-conference {
+        margin-bottom: var(--space-md);
+    }
+
+    .conference-title {
+        font-size: var(--text-4);
+        margin-bottom: var(--space-xs);
+        padding-bottom: var(--space-xs);
+    }
+
+    .standings-division {
+        margin-bottom: var(--space-sm);
+    }
+
+    .standings-division h4 {
+        font-size: var(--text-5);
+        margin-bottom: var(--space-xs);
+    }
+
+    .standings-table {
+        font-size: var(--text-6);
+        margin: var(--space-xs) 0 var(--space-sm);
+        line-height: 1.1;
+    }
+
+    .standings-table th {
+        padding: var(--space-xs);
+        font-size: var(--text-8);
+    }
+
+    .standings-table td {
+        padding: var(--space-xs);
+    }
+
+    /* Yesterday's scores - 4 columns */
+    .yesterday-scores {
+        margin-bottom: var(--space-lg);
+        page-break-before: avoid !important;
+        break-before: avoid !important;
+    }
+
+    .yesterday-scores .games-container {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: var(--space-sm) !important;
+        page-break-before: avoid !important;
+        break-before: avoid !important;
+    }
+
+    .game {
+        margin: 0;
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--text-5);
+        border: 1px solid #999;
+    }
+
+    .game-table {
+        font-size: var(--text-5);
+    }
+
+    .game-table td {
+        padding: var(--space-xs) 0;
+    }
+
+    .game-status {
+        font-size: var(--text-8);
+        margin-top: var(--space-xs);
+    }
+
+    /* Leaders - 3 columns */
+    .leaders {
+        margin-bottom: var(--space-lg);
+    }
+
+    .leaders-container {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--space-lg) !important;
+    }
+
+    .leader-category {
+        margin-bottom: var(--space-sm);
+    }
+
+    .leader-category h4 {
+        font-size: var(--text-4);
+        margin-bottom: var(--space-xs);
+    }
+
+    .leader-list {
+        font-size: var(--text-6);
+        line-height: 1.2;
+    }
+
+    .leader-list li {
+        padding: var(--space-xs) 0;
+    }
+
+    .leader-list .player .team {
+        font-size: var(--text-8);
+    }
+
+    /* Schedule */
+    .schedule-grid {
+        margin-bottom: var(--space-sm);
+    }
+
+    .schedule-table {
+        font-size: var(--text-7);
+    }
+
+    .schedule-table th {
+        padding: var(--space-xs);
+        font-size: var(--text-5);
+    }
+
+    .schedule-table td {
+        padding: var(--space-xs);
+        min-width: 50px;
+        vertical-align: top;
+    }
+
+    .schedule-game {
+        font-size: var(--text-7);
+        margin: var(--space-xs) 0;
+        padding: var(--space-xs) 0;
+        border-bottom: none;
+        display: flex;
+        gap: var(--space-xs);
+    }
+
+    .schedule-time {
+        font-size: var(--text-8);
+        display: none;  /* Hide times to save space */
+    }
+
+    .schedule-matchup {
+        font-size: var(--text-7);
+    }
+
+    /* Box scores */
+    .box-score {
+        display: none !important;
+    }
+
+    .box-score.visible {
+        display: block !important;
+        visibility: visible !important;
+        margin-top: var(--space-sm);
+        padding: var(--space-sm);
+        font-size: var(--text-7);
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .box-score table {
+        font-size: var(--text-6);
+        margin: var(--space-xs) 0;
+    }
+
+    .box-score th {
+        font-size: var(--text-7);
+        padding: var(--space-xs);
+    }
+
+    .box-score td {
+        padding: var(--space-xs);
+    }
+
+    .box-score p {
+        font-size: var(--text-7);
+        margin: var(--space-xs) 0;
+    }
+
+    .scorers-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--space-sm);
+    }
+
+    .scorers-column {
+        font-size: var(--text-8);
+        line-height: 1.2;
+    }
+
+    .team-label {
+        font-size: var(--text-7);
+        margin-bottom: var(--space-xs);
+        padding-bottom: var(--space-xs);
+    }
+
+    /* League sections */
+    .league-section {
+        page-break-before: avoid !important;
+        break-before: avoid !important;
+    }
+
+    /* Ensure black text */
+    * {
+        color: black !important;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}

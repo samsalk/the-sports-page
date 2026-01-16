@@ -1,0 +1,91 @@
+/* CSS Reset & Base Variables */
+
+:root {
+    /* Colors */
+    --newsprint-bg: #f4f1ea;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --border-light: #d0d0d0;
+    --border-heavy: #000;
+    --accent: #c41e3a;
+
+    /* Fonts */
+    --font-serif: 'Merriweather', Georgia, serif;
+    --font-sans: 'Oswald', 'Franklin Gothic', 'Arial Narrow', sans-serif;
+    --font-mono: 'Courier New', monospace;
+
+    /* Typography Scale (base 14px, ratio ~1.25) */
+    --text-1: 3rem;      /* 42px - Masthead */
+    --text-2: 1.75rem;   /* 24px - League headers */
+    --text-3: 1.125rem;  /* 16px - Section headers */
+    --text-4: 1rem;      /* 14px - Conference/Category headers */
+    --text-5: 0.9rem;    /* 13px - Division headers, scores */
+    --text-6: 0.85rem;   /* 12px - Body text */
+    --text-7: 0.75rem;   /* 11px - Secondary info */
+    --text-8: 0.7rem;    /* 10px - Tertiary info */
+
+    /* Spacing Scale */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    line-height: 1.6;
+    background: var(--newsprint-bg);
+    color: var(--text-primary);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-md);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Utility classes */
+.no-print {
+    /* Hidden in print mode via print.css */
+}
+
+.loading {
+    text-align: center;
+    padding: var(--space-xl);
+    font-size: var(--text-3);
+    color: var(--text-secondary);
+}
+
+.error {
+    background: #fee;
+    border: 1px solid #c00;
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    border-radius: 4px;
+    color: #c00;
+}
