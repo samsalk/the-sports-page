@@ -148,7 +148,7 @@
     }
 
     .game {
-        margin: 0;
+        margin: 0 0 var(--space-sm) 0;
         padding: var(--space-xs) var(--space-sm);
         font-size: var(--text-5);
         border: 1px solid #999;

@@ -26,14 +26,14 @@
 /* Game Cards - Level 5 for scores */
 .game {
     break-inside: avoid;
-    margin: 0 0 var(--space-sm) 0;
+    margin: 0 0 var(--space-md) 0;
     padding: var(--space-sm);
     background: #fff;
     border: 1px solid var(--border-light);
 }
 
 .game:last-child {
-    margin-bottom: 0;
+    margin-bottom: var(--space-sm);
 }
 
 .game-table {

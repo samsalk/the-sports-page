@@ -200,11 +200,13 @@ function renderBoxScore(game, boxScoreData) {
         awayCol.innerHTML = `<div class="team-label">${game.away_team.abbr}</div>`;
         awayTeamScorers.forEach(s => {
             if (s.goals !== undefined) {
-                // NHL format
+                // NHL format: goals and assists
                 awayCol.innerHTML += `${s.name}: ${s.goals}G ${s.assists}A<br>`;
             } else if (s.points !== undefined) {
-                // NBA format
-                awayCol.innerHTML += `${s.name}: ${s.points}-${s.rebounds}-${s.assists}<br>`;
+                // NBA format: PTS, REB, AST, shooting splits
+                const fgStr = s.fgm !== undefined ? `, ${s.fgm}-${s.fga} FG` : '';
+                const fg3Str = s.fg3m !== undefined && s.fg3a > 0 ? `, ${s.fg3m}-${s.fg3a} 3PT` : '';
+                awayCol.innerHTML += `${s.name}: ${s.points}p ${s.rebounds}r ${s.assists}a${fgStr}${fg3Str}<br>`;
             }
         });
         scorersGrid.appendChild(awayCol);
@@ -214,11 +216,13 @@ function renderBoxScore(game, boxScoreData) {
         homeCol.innerHTML = `<div class="team-label">${game.home_team.abbr}</div>`;
         homeTeamScorers.forEach(s => {
             if (s.goals !== undefined) {
-                // NHL format
+                // NHL format: goals and assists
                 homeCol.innerHTML += `${s.name}: ${s.goals}G ${s.assists}A<br>`;
             } else if (s.points !== undefined) {
-                // NBA format
-                homeCol.innerHTML += `${s.name}: ${s.points}-${s.rebounds}-${s.assists}<br>`;
+                // NBA format: PTS, REB, AST, shooting splits
+                const fgStr = s.fgm !== undefined ? `, ${s.fgm}-${s.fga} FG` : '';
+                const fg3Str = s.fg3m !== undefined && s.fg3a > 0 ? `, ${s.fg3m}-${s.fg3a} 3PT` : '';
+                homeCol.innerHTML += `${s.name}: ${s.points}p ${s.rebounds}r ${s.assists}a${fgStr}${fg3Str}<br>`;
             }
         });
         scorersGrid.appendChild(homeCol);
@@ -443,12 +447,22 @@ function renderLeaders(leaders) {
     // Create leaders container for multi-column layout
     const leadersContainer = createElement('div', 'leaders-container');
 
+    // Category display names with "per game" suffix for rate stats
+    const categoryLabels = {
+        'points': 'Points Per Game',
+        'assists': 'Assists Per Game',
+        'rebounds': 'Rebounds Per Game',
+        'goals': 'Goals',
+        'saves': 'Saves'
+    };
+
     for (const [category, playerList] of Object.entries(leaders)) {
         if (!playerList || playerList.length === 0) continue;
 
         const catDiv = createElement('div', 'leader-category');
 
-        const catTitle = createElement('h4', '', category.charAt(0).toUpperCase() + category.slice(1).replace('_', ' '));
+        const label = categoryLabels[category] || category.charAt(0).toUpperCase() + category.slice(1).replace('_', ' ');
+        const catTitle = createElement('h4', '', label);
         catDiv.appendChild(catTitle);
 
         const list = document.createElement('ul');
@@ -456,10 +470,13 @@ function renderLeaders(leaders) {
 
         playerList.slice(0, 10).forEach(player => {
             const li = document.createElement('li');
+            // Format value - show 1 decimal for per-game stats
+            const isPerGame = ['points', 'assists', 'rebounds'].includes(category);
+            const formattedValue = isPerGame ? Number(player.value).toFixed(1) : player.value;
             li.innerHTML = `
                 <span class="rank">${player.rank}.</span>
                 <span class="player">${player.player} <span class="team">(${player.team})</span></span>
-                <span class="value">${player.value}</span>
+                <span class="value">${formattedValue}</span>
             `;
             list.appendChild(li);
         });

@@ -4,7 +4,7 @@ import requests
 from datetime import datetime, timedelta
 from typing import Dict, List, Any
 import logging
-from nba_api.stats.endpoints import leaguestandings, leagueleaders
+from nba_api.stats.endpoints import leaguestandings, leagueleaders, scoreboardv2
 from nba_api.live.nba.endpoints import scoreboard
 
 logger = logging.getLogger(__name__)
@@ -32,142 +32,137 @@ def fetch_all_data(yesterday_date) -> Dict[str, Any]:
     }
 
 def fetch_yesterday_scores(yesterday_date) -> Dict[str, Any]:
-    """Fetch yesterday's game scores"""
-    url = f"{BASE_URL}/scoreboard/todaysScoreboard_00.json"
+    """Fetch yesterday's game scores using nba_api scoreboardv2"""
+    try:
+        # Use scoreboardv2 which can fetch historical data
+        date_str = yesterday_date.strftime('%Y-%m-%d')
+        scoreboard_data = scoreboardv2.ScoreboardV2(game_date=date_str).get_dict()
+
+        games = []
+        game_headers = []
+        line_score_data = {}
+
+        # Parse result sets
+        for result_set in scoreboard_data.get('resultSets', []):
+            name = result_set.get('name', '')
+            headers = result_set.get('headers', [])
+            rows = result_set.get('rowSet', [])
+
+            if name == 'GameHeader':
+                game_headers = [(dict(zip(headers, row))) for row in rows]
+            elif name == 'LineScore':
+                # Build line score lookup by game_id and team_id
+                for row in rows:
+                    row_dict = dict(zip(headers, row))
+                    game_id = row_dict.get('GAME_ID', '')
+                    team_id = row_dict.get('TEAM_ID', '')
+                    if game_id not in line_score_data:
+                        line_score_data[game_id] = {}
+                    line_score_data[game_id][team_id] = row_dict
+
+        for game in game_headers:
+            game_id = game.get('GAME_ID', '')
+            game_status = game.get('GAME_STATUS_ID', 0)
+
+            # Only include finished games (status 3 = Final)
+            if game_status != 3:
+                continue
+
+            # Get team info from line score data
+            home_team_id = game.get('HOME_TEAM_ID', '')
+            away_team_id = game.get('VISITOR_TEAM_ID', '')
+
+            game_line_scores = line_score_data.get(game_id, {})
+            home_line = game_line_scores.get(home_team_id, {})
+            away_line = game_line_scores.get(away_team_id, {})
+
+            # Fetch detailed box score
+            box_score = fetch_box_score(game_id)
+
+            games.append({
+                'game_id': game_id,
+                'away_team': {
+                    'abbr': away_line.get('TEAM_ABBREVIATION', 'UNK'),
+                    'name': away_line.get('TEAM_CITY_NAME', 'Unknown'),
+                    'score': away_line.get('PTS', 0) or 0
+                },
+                'home_team': {
+                    'abbr': home_line.get('TEAM_ABBREVIATION', 'UNK'),
+                    'name': home_line.get('TEAM_CITY_NAME', 'Unknown'),
+                    'score': home_line.get('PTS', 0) or 0
+                },
+                'status': 'Final',
+                'periods': 4,  # Will be updated from box score if OT
+                'box_score': box_score
+            })
+
+        logger.info(f"Found {len(games)} NBA games for {yesterday_date}")
+        return {
+            'date': str(yesterday_date),
+            'games': games
+        }
+
+    except Exception as e:
+        logger.error(f"Failed to fetch NBA scores: {e}")
+        return {'date': str(yesterday_date), 'games': []}
+
+def fetch_box_score(game_id) -> Dict[str, Any]:
+    """Fetch detailed box score for a game using CDN endpoint"""
+    url = f"{BASE_URL}/boxscore/boxscore_{game_id}.json"
 
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
         response.raise_for_status()
         data = response.json()
-    except Exception as e:
-        logger.error(f"Failed to fetch NBA scores: {e}")
-        return {'date': str(yesterday_date), 'games': []}
 
-    scoreboard = data.get('scoreboard', {})
-    game_date = scoreboard.get('gameDate', '')
+        game = data.get('game', {})
+        home = game.get('homeTeam', {})
+        away = game.get('awayTeam', {})
 
-    # Only return games from yesterday
-    if game_date != yesterday_date.strftime('%Y-%m-%d'):
-        logger.info(f"No games found for {yesterday_date}")
-        return {'date': str(yesterday_date), 'games': []}
+        # Extract quarter-by-quarter scores
+        home_periods = [p.get('score', 0) for p in home.get('periods', [])]
+        away_periods = [p.get('score', 0) for p in away.get('periods', [])]
 
-    games = []
-    for game in scoreboard.get('games', []):
-        # Only include finished games
-        game_status = game.get('gameStatus', 0)
-        if game_status != 3:  # 3 = Final
-            continue
+        # Extract player stats from both teams
+        all_players = []
+        for team_data, team_type in [(home, 'home'), (away, 'away')]:
+            team_abbr = team_data.get('teamTricode', 'UNK')
+            for player in team_data.get('players', []):
+                stats = player.get('statistics', {})
+                points = stats.get('points', 0)
 
-        away_team = game.get('awayTeam', {})
-        home_team = game.get('homeTeam', {})
+                if points and points > 0:
+                    all_players.append({
+                        'team': team_abbr,
+                        'name': player.get('name', 'Unknown'),
+                        'points': points,
+                        'rebounds': stats.get('reboundsTotal', 0),
+                        'assists': stats.get('assists', 0),
+                        'minutes': stats.get('minutes', ''),
+                        'fgm': stats.get('fieldGoalsMade', 0),
+                        'fga': stats.get('fieldGoalsAttempted', 0),
+                        'fg3m': stats.get('threePointersMade', 0),
+                        'fg3a': stats.get('threePointersAttempted', 0),
+                        'ftm': stats.get('freeThrowsMade', 0),
+                        'fta': stats.get('freeThrowsAttempted', 0),
+                        'steals': stats.get('steals', 0),
+                        'blocks': stats.get('blocks', 0),
+                        'turnovers': stats.get('turnovers', 0),
+                    })
 
-        # Get period data
-        periods = game.get('periods', [])
-        num_periods = game.get('period', 4)  # Default 4 quarters
-
-        # Fetch detailed box score
-        box_score = fetch_box_score(game.get('gameId', ''))
-
-        games.append({
-            'game_id': game.get('gameId', ''),
-            'away_team': {
-                'abbr': away_team.get('teamTricode', 'UNK'),
-                'name': away_team.get('teamName', 'Unknown'),
-                'score': away_team.get('score', 0)
-            },
-            'home_team': {
-                'abbr': home_team.get('teamTricode', 'UNK'),
-                'name': home_team.get('teamName', 'Unknown'),
-                'score': home_team.get('score', 0)
-            },
-            'status': 'Final',
-            'periods': num_periods,
-            'box_score': box_score
-        })
-
-    return {
-        'date': str(yesterday_date),
-        'games': games
-    }
-
-def fetch_box_score(game_id) -> Dict[str, Any]:
-    """Fetch detailed box score for a game using nba_api"""
-    from nba_api.stats.endpoints import boxscoretraditionalv2, boxscoresummaryv2
-
-    try:
-        # Get line score (quarter-by-quarter)
-        line_score_away = []
-        line_score_home = []
-
-        try:
-            summary = boxscoresummaryv2.BoxScoreSummaryV2(game_id=game_id)
-            summary_result = summary.get_dict()
-
-            for result_set in summary_result.get('resultSets', []):
-                if result_set.get('name') == 'LineScore':
-                    headers = result_set.get('headers', [])
-                    rows = result_set.get('rowSet', [])
-
-                    for i, row in enumerate(rows):
-                        team_dict = dict(zip(headers, row))
-
-                        # Extract quarter scores (PTS_QTR1 through PTS_QTR4, plus OT if applicable)
-                        quarters = []
-                        for q in range(1, 11):  # Check up to 10 periods (4 quarters + 6 OT)
-                            qtr_key = f'PTS_QTR{q}' if q <= 4 else f'PTS_OT{q-4}'
-                            qtr_pts = team_dict.get(qtr_key)
-                            if qtr_pts is not None:
-                                quarters.append(qtr_pts)
-                            elif q <= 4:
-                                break  # Stop if regular quarter is missing
-
-                        # First team is away, second is home
-                        if i == 0:
-                            line_score_away = quarters
-                        elif i == 1:
-                            line_score_home = quarters
-        except Exception as e:
-            logger.debug(f"Could not fetch line score for game {game_id}: {e}")
-
-        # Extract top scorers (top 6 by points)
-        scorers = []
-        try:
-            box = boxscoretraditionalv2.BoxScoreTraditionalV2(game_id=game_id)
-            result = box.get_dict()
-
-            for result_set in result.get('resultSets', []):
-                if result_set.get('name') == 'PlayerStats':
-                    headers = result_set.get('headers', [])
-                    rows = result_set.get('rowSet', [])
-
-                    for row in rows:
-                        player_dict = dict(zip(headers, row))
-                        points = player_dict.get('PTS', 0)
-
-                        if points and points > 0:  # Only include players who scored
-                            scorers.append({
-                                'team': player_dict.get('TEAM_ABBREVIATION', 'UNK'),
-                                'name': player_dict.get('PLAYER_NAME', 'Unknown'),
-                                'points': points,
-                                'rebounds': player_dict.get('REB', 0),
-                                'assists': player_dict.get('AST', 0)
-                            })
-
-            # Sort by points and take top 6
-            scorers.sort(key=lambda x: x['points'], reverse=True)
-        except Exception as e:
-            logger.debug(f"Could not fetch player stats for game {game_id}: {e}")
+        # Sort by points and take top 6
+        all_players.sort(key=lambda x: x['points'], reverse=True)
 
         return {
             'line_score': {
-                'away': line_score_away,
-                'home': line_score_home
+                'away': away_periods,
+                'home': home_periods
             },
-            'scorers': scorers[:6]
+            'scorers': all_players[:6]
         }
 
     except Exception as e:
-        logger.error(f"Failed to fetch NBA box score for game {game_id}: {e}")
+        logger.debug(f"Failed to fetch NBA box score for game {game_id}: {e}")
         return {
             'line_score': {'away': [], 'home': []},
             'scorers': []
@@ -276,61 +271,79 @@ def fetch_stat_leaders() -> Dict[str, List[Dict]]:
         return leaders
 
 def fetch_upcoming_schedule(yesterday_date) -> List[Dict]:
-    """Fetch 3-day schedule - today, tomorrow, day after"""
-    url = f"{BASE_URL}/scoreboard/todaysScoreboard_00.json"
-
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-    except Exception as e:
-        logger.error(f"Failed to fetch NBA schedule: {e}")
-        return []
-
+    """Fetch 3-day schedule - today, tomorrow, day after using scoreboardv2"""
     schedule = []
     today = yesterday_date + timedelta(days=1)
 
-    scoreboard = data.get('scoreboard', {})
+    # Fetch 3 days: today, tomorrow, day after
+    for day_offset in range(3):
+        target_date = today + timedelta(days=day_offset)
+        date_str = target_date.strftime('%Y-%m-%d')
 
-    # For now, this will only show today's games
-    # We'd need to fetch multiple days or use the schedule endpoint
-    games = []
-    for game in scoreboard.get('games', []):
-        # Skip finished games
-        game_status = game.get('gameStatus', 0)
-        if game_status == 3:  # 3 = Final
+        try:
+            scoreboard_data = scoreboardv2.ScoreboardV2(game_date=date_str).get_dict()
+
+            # Parse game headers and line scores
+            game_headers = []
+            line_score_data = {}
+
+            for result_set in scoreboard_data.get('resultSets', []):
+                name = result_set.get('name', '')
+                headers = result_set.get('headers', [])
+                rows = result_set.get('rowSet', [])
+
+                if name == 'GameHeader':
+                    game_headers = [dict(zip(headers, row)) for row in rows]
+                elif name == 'LineScore':
+                    for row in rows:
+                        row_dict = dict(zip(headers, row))
+                        game_id = row_dict.get('GAME_ID', '')
+                        team_id = row_dict.get('TEAM_ID', '')
+                        if game_id not in line_score_data:
+                            line_score_data[game_id] = {}
+                        line_score_data[game_id][team_id] = row_dict
+
+            games = []
+            for game in game_headers:
+                game_id = game.get('GAME_ID', '')
+                game_status = game.get('GAME_STATUS_ID', 0)
+
+                # Skip finished games
+                if game_status == 3:
+                    continue
+
+                # Get team info from line score
+                home_team_id = game.get('HOME_TEAM_ID', '')
+                away_team_id = game.get('VISITOR_TEAM_ID', '')
+
+                game_line_scores = line_score_data.get(game_id, {})
+                home_line = game_line_scores.get(home_team_id, {})
+                away_line = game_line_scores.get(away_team_id, {})
+
+                # Parse game time from status text (e.g., "7:00 pm ET")
+                game_time_text = game.get('GAME_STATUS_TEXT', '')
+
+                games.append({
+                    'time': game_time_text,
+                    'time_label': game_time_text,
+                    'away': away_line.get('TEAM_ABBREVIATION', 'UNK'),
+                    'away_name': away_line.get('TEAM_CITY_NAME', 'Unknown'),
+                    'away_record': away_line.get('TEAM_WINS_LOSSES', ''),
+                    'home': home_line.get('TEAM_ABBREVIATION', 'UNK'),
+                    'home_name': home_line.get('TEAM_CITY_NAME', 'Unknown'),
+                    'home_record': home_line.get('TEAM_WINS_LOSSES', ''),
+                    'broadcast': ''
+                })
+
+            if games:
+                schedule.append({
+                    'date': date_str,
+                    'day_label': target_date.strftime('%a'),
+                    'games': games
+                })
+
+        except Exception as e:
+            logger.debug(f"Failed to fetch NBA schedule for {date_str}: {e}")
             continue
-
-        away_team = game.get('awayTeam', {})
-        home_team = game.get('homeTeam', {})
-
-        # Parse game time
-        game_time_utc = game.get('gameTimeUTC', '')
-        if game_time_utc:
-            try:
-                game_time = datetime.strptime(game_time_utc, '%Y-%m-%dT%H:%M:%SZ')
-            except:
-                game_time = datetime.now()
-        else:
-            game_time = datetime.now()
-
-        games.append({
-            'time': game_time.strftime('%H:%M'),
-            'time_label': game_time.strftime('%I:%M %p'),
-            'away': away_team.get('teamTricode', 'UNK'),
-            'away_name': away_team.get('teamName', 'Unknown'),
-            'away_record': f"{away_team.get('wins', 0)}-{away_team.get('losses', 0)}",
-            'home': home_team.get('teamTricode', 'UNK'),
-            'home_name': home_team.get('teamName', 'Unknown'),
-            'home_record': f"{home_team.get('wins', 0)}-{home_team.get('losses', 0)}",
-            'broadcast': ''
-        })
-
-    if games:
-        schedule.append({
-            'date': scoreboard.get('gameDate', ''),
-            'day_label': today.strftime('%a'),
-            'games': games
-        })
 
     return schedule
