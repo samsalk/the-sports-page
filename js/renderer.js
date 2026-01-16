@@ -487,6 +487,7 @@ function renderScheduleGrid(schedule) {
 
     const table = document.createElement('table');
     table.className = 'schedule-table';
+    table.setAttribute('aria-label', 'Weekly game schedule');
 
     // Header row with days
     const thead = document.createElement('thead');
@@ -494,6 +495,7 @@ function renderScheduleGrid(schedule) {
 
     schedule.forEach(day => {
         const th = document.createElement('th');
+        th.setAttribute('scope', 'col');
         const dateObj = new Date(day.date);
         th.textContent = `${day.day_label} ${dateObj.getDate()}`;
         headerRow.appendChild(th);

@@ -19,7 +19,7 @@ from apis import nhl, nba, epl
 from utils import setup_logging
 
 # Configuration
-OUTPUT_DIR = Path(__file__).parent.parent / 'frontend' / 'data'
+OUTPUT_DIR = Path(__file__).parent.parent / 'data'
 OUTPUT_FILE = OUTPUT_DIR / 'sports_data.json'
 TIMEZONE = pytz.timezone('America/New_York')
 

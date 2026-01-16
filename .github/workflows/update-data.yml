@@ -33,6 +33,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update sports data [automated]"
-          file_pattern: frontend/data/sports_data.json
+          file_pattern: data/sports_data.json
           commit_user_name: "GitHub Actions"
           commit_user_email: "actions@github.com"
