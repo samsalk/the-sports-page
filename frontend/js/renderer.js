@@ -2,6 +2,7 @@
 
 function renderAllLeagues(data, prefs) {
     const content = document.getElementById('content');
+    content.setAttribute('aria-busy', 'true');
     content.innerHTML = '';
 
     let hasContent = false;
@@ -17,24 +18,31 @@ function renderAllLeagues(data, prefs) {
     }
 
     if (!hasContent) {
-        content.innerHTML = '<div class="no-games">No leagues selected. Please select a league above.</div>';
+        content.innerHTML = '<div class="no-games" role="status">No leagues selected. Please select a league above.</div>';
     }
+
+    content.setAttribute('aria-busy', 'false');
 }
 
 function renderLeagueSection(leagueKey, data, prefs) {
+    const headerId = `${leagueKey}-header`;
+
     if (data.error) {
         const section = createElement('section', 'league-section');
+        section.setAttribute('aria-labelledby', headerId);
         section.innerHTML = `
-            <h2 class="section-header">${getLeagueName(leagueKey)}</h2>
-            <div class="error">Failed to load data: ${data.error}</div>
+            <h2 class="section-header" id="${headerId}">${getLeagueName(leagueKey)}</h2>
+            <div class="error" role="alert">Failed to load data: ${data.error}</div>
         `;
         return section;
     }
 
     const section = createElement('section', `league-section league-${leagueKey}`);
+    section.setAttribute('aria-labelledby', headerId);
 
     // Section header
     const header = createElement('h2', 'section-header', getLeagueName(leagueKey));
+    header.id = headerId;
     section.appendChild(header);
 
     // Render subsections - Standings first, then scores
@@ -63,6 +71,8 @@ function hasLeaders(leaders) {
 
 function renderYesterdayScores(yesterday, showBoxScores) {
     const container = createElement('div', 'yesterday-scores');
+    container.setAttribute('role', 'region');
+    container.setAttribute('aria-label', "Yesterday's game scores");
 
     const title = createElement('h3', 'subsection-header', `Yesterday's Scores`);
     container.appendChild(title);
@@ -80,11 +90,14 @@ function renderYesterdayScores(yesterday, showBoxScores) {
 }
 
 function renderGame(game, showBoxScores) {
-    const div = createElement('div', 'game');
+    const article = document.createElement('article');
+    article.className = 'game';
+    article.setAttribute('aria-label', `${game.away_team.name} ${game.away_team.score} at ${game.home_team.name} ${game.home_team.score}`);
 
     // Create table for aligned scores
     const table = document.createElement('table');
     table.className = 'game-table';
+    table.setAttribute('aria-label', 'Game score');
 
     const tbody = document.createElement('tbody');
 
@@ -105,19 +118,19 @@ function renderGame(game, showBoxScores) {
     tbody.appendChild(homeRow);
 
     table.appendChild(tbody);
-    div.appendChild(table);
+    article.appendChild(table);
 
     // Status line
     const statusLine = createElement('div', 'game-status', game.status);
-    div.appendChild(statusLine);
+    article.appendChild(statusLine);
 
     // Box score (if available and enabled)
     if (game.box_score && showBoxScores) {
         const boxScore = renderBoxScore(game, game.box_score);
-        div.appendChild(boxScore);
+        article.appendChild(boxScore);
     }
 
-    return div;
+    return article;
 }
 
 function renderBoxScore(game, boxScoreData) {
@@ -229,6 +242,8 @@ function renderBoxScore(game, boxScoreData) {
 
 function renderStandings(standings, leagueKey) {
     const container = createElement('div', 'standings');
+    container.setAttribute('role', 'region');
+    container.setAttribute('aria-label', `${getLeagueName(leagueKey)} Standings`);
 
     const title = createElement('h3', 'subsection-header', 'Standings');
     container.appendChild(title);
@@ -265,20 +280,21 @@ function renderStandings(standings, leagueKey) {
 
                 const table = document.createElement('table');
                 table.className = 'standings-table';
+                table.setAttribute('aria-label', `${fullDivisionName} standings`);
 
                 // Header with spelled-out abbreviations
                 const thead = document.createElement('thead');
                 const headerRow = document.createElement('tr');
                 headerRow.innerHTML = `
-                    <th class="rank">#</th>
-                    <th class="team">Team</th>
-                    <th class="numeric">GP</th>
-                    <th class="numeric">Wins</th>
-                    <th class="numeric">Losses</th>
-                    <th class="numeric">OT</th>
-                    <th class="numeric">Points</th>
-                    <th class="numeric">GB</th>
-                    <th>Streak</th>
+                    <th class="rank" scope="col">#</th>
+                    <th class="team" scope="col">Team</th>
+                    <th class="numeric" scope="col"><abbr title="Games Played">GP</abbr></th>
+                    <th class="numeric" scope="col">Wins</th>
+                    <th class="numeric" scope="col">Losses</th>
+                    <th class="numeric" scope="col"><abbr title="Overtime Losses">OT</abbr></th>
+                    <th class="numeric" scope="col">Points</th>
+                    <th class="numeric" scope="col"><abbr title="Games Behind">GB</abbr></th>
+                    <th scope="col">Streak</th>
                 `;
                 thead.appendChild(headerRow);
                 table.appendChild(thead);
@@ -323,18 +339,19 @@ function renderStandings(standings, leagueKey) {
 
             const table = document.createElement('table');
             table.className = 'standings-table';
+            table.setAttribute('aria-label', `${conferenceName} Conference standings`);
 
             // Header
             const thead = document.createElement('thead');
             const headerRow = document.createElement('tr');
             headerRow.innerHTML = `
-                <th class="rank">#</th>
-                <th class="team">Team</th>
-                <th class="numeric">W</th>
-                <th class="numeric">L</th>
-                <th class="numeric">PCT</th>
-                <th class="numeric">GB</th>
-                <th>Streak</th>
+                <th class="rank" scope="col">#</th>
+                <th class="team" scope="col">Team</th>
+                <th class="numeric" scope="col"><abbr title="Wins">W</abbr></th>
+                <th class="numeric" scope="col"><abbr title="Losses">L</abbr></th>
+                <th class="numeric" scope="col"><abbr title="Win Percentage">PCT</abbr></th>
+                <th class="numeric" scope="col"><abbr title="Games Behind">GB</abbr></th>
+                <th scope="col">Streak</th>
             `;
             thead.appendChild(headerRow);
             table.appendChild(thead);
@@ -366,21 +383,22 @@ function renderStandings(standings, leagueKey) {
 
         const table = document.createElement('table');
         table.className = 'standings-table';
+        table.setAttribute('aria-label', 'Premier League standings');
 
         // Header with spelled-out abbreviations
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
         headerRow.innerHTML = `
-            <th class="rank">#</th>
-            <th class="team">Team</th>
-            <th class="numeric">Played</th>
-            <th class="numeric">Wins</th>
-            <th class="numeric">Draws</th>
-            <th class="numeric">Losses</th>
-            <th class="numeric">GF</th>
-            <th class="numeric">GA</th>
-            <th class="numeric">GD</th>
-            <th class="numeric">Points</th>
+            <th class="rank" scope="col">#</th>
+            <th class="team" scope="col">Team</th>
+            <th class="numeric" scope="col">Played</th>
+            <th class="numeric" scope="col">Wins</th>
+            <th class="numeric" scope="col">Draws</th>
+            <th class="numeric" scope="col">Losses</th>
+            <th class="numeric" scope="col"><abbr title="Goals For">GF</abbr></th>
+            <th class="numeric" scope="col"><abbr title="Goals Against">GA</abbr></th>
+            <th class="numeric" scope="col"><abbr title="Goal Difference">GD</abbr></th>
+            <th class="numeric" scope="col">Points</th>
         `;
         thead.appendChild(headerRow);
         table.appendChild(thead);
@@ -416,6 +434,8 @@ function renderStandings(standings, leagueKey) {
 
 function renderLeaders(leaders) {
     const container = createElement('div', 'leaders');
+    container.setAttribute('role', 'region');
+    container.setAttribute('aria-label', 'Statistical leaders');
 
     const title = createElement('h3', 'subsection-header', 'Statistical Leaders');
     container.appendChild(title);
@@ -454,6 +474,8 @@ function renderLeaders(leaders) {
 
 function renderScheduleGrid(schedule) {
     const container = createElement('div', 'schedule-grid');
+    container.setAttribute('role', 'region');
+    container.setAttribute('aria-label', "This week's schedule");
 
     const title = createElement('h3', 'subsection-header', 'This Week\'s Schedule');
     container.appendChild(title);

@@ -13,26 +13,31 @@
     <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body>
+    <a href="#content" class="skip-link">Skip to main content</a>
+
     <header class="masthead">
         <h1>THE SPORTS PAGE</h1>
         <p class="tagline">Est. 2025 · All the Scores Worth Knowing</p>
         <p class="date" id="dateLabel">Loading...</p>
     </header>
 
-    <nav class="controls no-print">
-        <div class="league-toggles">
-            <label><input type="checkbox" id="toggle-nhl" checked> NHL</label>
+    <nav class="controls no-print" aria-label="League and display options">
+        <fieldset class="league-toggles">
+            <legend class="visually-hidden">Select leagues to display</legend>
+            <label><input type="checkbox" id="toggle-nhl" checked aria-describedby="league-hint"> NHL</label>
             <label><input type="checkbox" id="toggle-nba" checked> NBA</label>
             <label><input type="checkbox" id="toggle-epl" checked> EPL</label>
-        </div>
-        <div class="options">
-            <label><input type="checkbox" id="toggle-boxscores"> Show Box Scores</label>
-            <button id="print-btn" onclick="window.print()">Print</button>
+            <span id="league-hint" class="visually-hidden">Toggle to show or hide league scores and standings</span>
+        </fieldset>
+        <div class="options" role="group" aria-label="Display options">
+            <label><input type="checkbox" id="toggle-boxscores" aria-describedby="boxscore-hint"> Show Box Scores</label>
+            <span id="boxscore-hint" class="visually-hidden">Show detailed scoring breakdown for each game</span>
+            <button id="print-btn" onclick="window.print()" aria-label="Print this page">Print</button>
         </div>
     </nav>
 
-    <main id="content">
-        <div class="loading">Loading sports data...</div>
+    <main id="content" aria-live="polite" aria-busy="true">
+        <div class="loading" role="status">Loading sports data...</div>
     </main>
 
     <footer class="no-print">
