@@ -1,25 +1,41 @@
-"""NBA API fetcher using cdn.nba.com and nba_api library"""
+"""NBA API fetcher using direct API calls to cdn.nba.com and stats.nba.com"""
 
 import requests
 from datetime import datetime, timedelta
 from typing import Dict, List, Any
 import logging
-from nba_api.stats.endpoints import leaguestandings, leagueleaders, scoreboardv2
-from nba_api.live.nba.endpoints import scoreboard
+import time
 
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://cdn.nba.com/static/json/liveData"
+STATS_URL = "https://stats.nba.com/stats"
 
-# Headers to mimic browser requests
-HEADERS = {
+# Headers for CDN requests
+CDN_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
     'Accept': 'application/json',
     'Referer': 'https://www.nba.com/'
 }
 
+# Headers for stats.nba.com - these are required to avoid 403/timeout
+STATS_HEADERS = {
+    'Host': 'stats.nba.com',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'x-nba-stats-origin': 'stats',
+    'x-nba-stats-token': 'true',
+    'Connection': 'keep-alive',
+    'Referer': 'https://stats.nba.com/',
+    'Pragma': 'no-cache',
+    'Cache-Control': 'no-cache',
+}
+
 # Current NBA season
 CURRENT_SEASON = "2025-26"
+
 
 def fetch_all_data(yesterday_date) -> Dict[str, Any]:
     """Fetch all NBA data for the sports page"""
@@ -31,27 +47,31 @@ def fetch_all_data(yesterday_date) -> Dict[str, Any]:
         'schedule': fetch_upcoming_schedule(yesterday_date)
     }
 
+
 def fetch_yesterday_scores(yesterday_date) -> Dict[str, Any]:
-    """Fetch yesterday's game scores using nba_api scoreboardv2"""
+    """Fetch yesterday's game scores using stats.nba.com scoreboardv2"""
+    date_str = yesterday_date.strftime('%Y-%m-%d')
+
     try:
-        # Use scoreboardv2 which can fetch historical data
-        date_str = yesterday_date.strftime('%Y-%m-%d')
-        scoreboard_data = scoreboardv2.ScoreboardV2(game_date=date_str).get_dict()
+        # Use scoreboardv2 endpoint directly
+        url = f"{STATS_URL}/scoreboardv2?GameDate={date_str}&LeagueID=00"
+        response = requests.get(url, headers=STATS_HEADERS, timeout=30)
+        response.raise_for_status()
+        data = response.json()
 
         games = []
         game_headers = []
         line_score_data = {}
 
         # Parse result sets
-        for result_set in scoreboard_data.get('resultSets', []):
+        for result_set in data.get('resultSets', []):
             name = result_set.get('name', '')
             headers = result_set.get('headers', [])
             rows = result_set.get('rowSet', [])
 
             if name == 'GameHeader':
-                game_headers = [(dict(zip(headers, row))) for row in rows]
+                game_headers = [dict(zip(headers, row)) for row in rows]
             elif name == 'LineScore':
-                # Build line score lookup by game_id and team_id
                 for row in rows:
                     row_dict = dict(zip(headers, row))
                     game_id = row_dict.get('GAME_ID', '')
@@ -76,7 +96,7 @@ def fetch_yesterday_scores(yesterday_date) -> Dict[str, Any]:
             home_line = game_line_scores.get(home_team_id, {})
             away_line = game_line_scores.get(away_team_id, {})
 
-            # Fetch detailed box score
+            # Fetch detailed box score from CDN (more reliable)
             box_score = fetch_box_score(game_id)
 
             games.append({
@@ -92,7 +112,7 @@ def fetch_yesterday_scores(yesterday_date) -> Dict[str, Any]:
                     'score': home_line.get('PTS', 0) or 0
                 },
                 'status': 'Final',
-                'periods': 4,  # Will be updated from box score if OT
+                'periods': 4,
                 'box_score': box_score
             })
 
@@ -106,12 +126,13 @@ def fetch_yesterday_scores(yesterday_date) -> Dict[str, Any]:
         logger.error(f"Failed to fetch NBA scores: {e}")
         return {'date': str(yesterday_date), 'games': []}
 
+
 def fetch_box_score(game_id) -> Dict[str, Any]:
     """Fetch detailed box score for a game using CDN endpoint"""
     url = f"{BASE_URL}/boxscore/boxscore_{game_id}.json"
 
     try:
-        response = requests.get(url, headers=HEADERS, timeout=10)
+        response = requests.get(url, headers=CDN_HEADERS, timeout=10)
         response.raise_for_status()
         data = response.json()
 
@@ -125,7 +146,7 @@ def fetch_box_score(game_id) -> Dict[str, Any]:
 
         # Extract player stats from both teams
         all_players = []
-        for team_data, team_type in [(home, 'home'), (away, 'away')]:
+        for team_data in [home, away]:
             team_abbr = team_data.get('teamTricode', 'UNK')
             for player in team_data.get('players', []):
                 stats = player.get('statistics', {})
@@ -168,35 +189,33 @@ def fetch_box_score(game_id) -> Dict[str, Any]:
             'scorers': []
         }
 
+
 def fetch_standings() -> Dict[str, List[Dict]]:
-    """Fetch NBA standings using nba_api"""
+    """Fetch NBA standings using stats.nba.com"""
     try:
-        standings_data = leaguestandings.LeagueStandings(
-            league_id='00',
-            season=CURRENT_SEASON,
-            season_type='Regular Season'
-        ).get_dict()
+        url = f"{STATS_URL}/leaguestandings?LeagueID=00&Season={CURRENT_SEASON}&SeasonType=Regular%20Season"
+        response = requests.get(url, headers=STATS_HEADERS, timeout=30)
+        response.raise_for_status()
+        data = response.json()
 
         standings = {'Eastern': [], 'Western': []}
 
-        # Parse the resultSets from the API response
-        for result_set in standings_data.get('resultSets', []):
+        # Parse the resultSets
+        for result_set in data.get('resultSets', []):
             if result_set.get('name') == 'Standings':
                 headers = result_set.get('headers', [])
                 rows = result_set.get('rowSet', [])
 
                 for row in rows:
-                    # Create a dict mapping headers to row values
                     team_dict = dict(zip(headers, row))
 
-                    # Determine conference - map 'East'/'West' to 'Eastern'/'Western'
+                    # Determine conference
                     conf_short = team_dict.get('Conference', '')
                     conf_name = 'Eastern' if conf_short == 'East' else 'Western' if conf_short == 'West' else ''
 
                     if not conf_name:
                         continue
 
-                    # Extract relevant data
                     team_data = {
                         'rank': team_dict.get('PlayoffRank', 0),
                         'team_name': f"{team_dict.get('TeamCity', '')} {team_dict.get('TeamName', 'Unknown')}",
@@ -218,8 +237,9 @@ def fetch_standings() -> Dict[str, List[Dict]]:
         logger.error(f"Failed to fetch NBA standings: {e}")
         return {'Eastern': [], 'Western': []}
 
+
 def fetch_stat_leaders() -> Dict[str, List[Dict]]:
-    """Fetch NBA statistical leaders using nba_api"""
+    """Fetch NBA statistical leaders using stats.nba.com"""
     leaders = {
         'points': [],
         'rebounds': [],
@@ -234,31 +254,28 @@ def fetch_stat_leaders() -> Dict[str, List[Dict]]:
 
     try:
         for category_name, stat_code in stat_categories.items():
-            try:
-                leaders_data = leagueleaders.LeagueLeaders(
-                    league_id='00',
-                    per_mode48='PerGame',
-                    scope='S',
-                    season=CURRENT_SEASON,
-                    season_type_all_star='Regular Season',
-                    stat_category_abbreviation=stat_code
-                ).get_dict()
+            url = f"{STATS_URL}/leagueleaders?LeagueID=00&PerMode=PerGame&Scope=S&Season={CURRENT_SEASON}&SeasonType=Regular%20Season&StatCategory={stat_code}"
 
-                # Parse the resultSet (singular) from the API response
-                result_set = leaders_data.get('resultSet', {})
+            try:
+                response = requests.get(url, headers=STATS_HEADERS, timeout=30)
+                response.raise_for_status()
+                data = response.json()
+
+                result_set = data.get('resultSet', {})
                 headers = result_set.get('headers', [])
                 rows = result_set.get('rowSet', [])
 
-                # Get top 10 players
                 for i, row in enumerate(rows[:10]):
                     player_dict = dict(zip(headers, row))
-
                     leaders[category_name].append({
                         'rank': i + 1,
                         'player': player_dict.get('PLAYER', 'Unknown'),
                         'team': player_dict.get('TEAM', 'UNK'),
                         'value': player_dict.get(stat_code, 0)
                     })
+
+                # Small delay between requests to avoid rate limiting
+                time.sleep(0.5)
 
             except Exception as e:
                 logger.error(f"Failed to fetch NBA {category_name} leaders: {e}")
@@ -270,24 +287,26 @@ def fetch_stat_leaders() -> Dict[str, List[Dict]]:
         logger.error(f"Failed to fetch NBA stat leaders: {e}")
         return leaders
 
+
 def fetch_upcoming_schedule(yesterday_date) -> List[Dict]:
-    """Fetch 3-day schedule - today, tomorrow, day after using scoreboardv2"""
+    """Fetch 3-day schedule using stats.nba.com scoreboardv2"""
     schedule = []
     today = yesterday_date + timedelta(days=1)
 
-    # Fetch 3 days: today, tomorrow, day after
     for day_offset in range(3):
         target_date = today + timedelta(days=day_offset)
         date_str = target_date.strftime('%Y-%m-%d')
 
         try:
-            scoreboard_data = scoreboardv2.ScoreboardV2(game_date=date_str).get_dict()
+            url = f"{STATS_URL}/scoreboardv2?GameDate={date_str}&LeagueID=00"
+            response = requests.get(url, headers=STATS_HEADERS, timeout=30)
+            response.raise_for_status()
+            data = response.json()
 
-            # Parse game headers and line scores
             game_headers = []
             line_score_data = {}
 
-            for result_set in scoreboard_data.get('resultSets', []):
+            for result_set in data.get('resultSets', []):
                 name = result_set.get('name', '')
                 headers = result_set.get('headers', [])
                 rows = result_set.get('rowSet', [])
@@ -312,7 +331,6 @@ def fetch_upcoming_schedule(yesterday_date) -> List[Dict]:
                 if game_status == 3:
                     continue
 
-                # Get team info from line score
                 home_team_id = game.get('HOME_TEAM_ID', '')
                 away_team_id = game.get('VISITOR_TEAM_ID', '')
 
@@ -320,7 +338,6 @@ def fetch_upcoming_schedule(yesterday_date) -> List[Dict]:
                 home_line = game_line_scores.get(home_team_id, {})
                 away_line = game_line_scores.get(away_team_id, {})
 
-                # Parse game time from status text (e.g., "7:00 pm ET")
                 game_time_text = game.get('GAME_STATUS_TEXT', '')
 
                 games.append({
@@ -341,6 +358,9 @@ def fetch_upcoming_schedule(yesterday_date) -> List[Dict]:
                     'day_label': target_date.strftime('%a'),
                     'games': games
                 })
+
+            # Small delay between requests
+            time.sleep(0.5)
 
         except Exception as e:
             logger.debug(f"Failed to fetch NBA schedule for {date_str}: {e}")
