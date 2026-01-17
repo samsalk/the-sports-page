@@ -114,7 +114,8 @@ def fetch_box_score_espn(game_id) -> Dict[str, Any]:
         for comp in data.get('header', {}).get('competitions', []):
             for competitor in comp.get('competitors', []):
                 linescores = competitor.get('linescores', [])
-                quarters = [int(ls.get('value', 0)) for ls in linescores]
+                # ESPN uses 'displayValue' for quarter scores
+                quarters = [int(ls.get('displayValue', ls.get('value', 0))) for ls in linescores]
                 if competitor.get('homeAway') == 'home':
                     line_scores['home'] = quarters
                 else:
@@ -127,8 +128,7 @@ def fetch_box_score_espn(game_id) -> Dict[str, Any]:
             team_abbr = team.get('abbreviation', 'UNK')
 
             for stat_group in team_data.get('statistics', []):
-                if stat_group.get('name') not in ['starters', 'bench']:
-                    continue
+                # ESPN may have name=None for the main stats group, so don't filter
 
                 labels = stat_group.get('labels', [])
                 for athlete in stat_group.get('athletes', []):
