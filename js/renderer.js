@@ -1,5 +1,27 @@
 /* Data Rendering Functions */
 
+// Check if box score has any meaningful data to display
+function hasBoxScoreData(boxScore) {
+    if (!boxScore) return false;
+
+    // Check for line score with actual values
+    const hasLineScore = boxScore.line_score &&
+        boxScore.line_score.away &&
+        boxScore.line_score.away.length > 0 &&
+        boxScore.line_score.away.some(v => v > 0);
+
+    // Check for scorers
+    const hasScorers = boxScore.scorers && boxScore.scorers.length > 0;
+
+    // Check for goalies (NHL)
+    const hasGoalies = boxScore.goalies && boxScore.goalies.length > 0;
+
+    // Check for shots (NHL)
+    const hasShots = boxScore.shots && (boxScore.shots.away > 0 || boxScore.shots.home > 0);
+
+    return hasLineScore || hasScorers || hasGoalies || hasShots;
+}
+
 function renderAllLeagues(data, prefs) {
     const content = document.getElementById('content');
     content.setAttribute('aria-busy', 'true');
@@ -125,7 +147,7 @@ function renderGame(game, showBoxScores) {
     article.appendChild(statusLine);
 
     // Box score (if available and enabled)
-    if (game.box_score && showBoxScores) {
+    if (game.box_score && showBoxScores && hasBoxScoreData(game.box_score)) {
         const boxScore = renderBoxScore(game, game.box_score);
         article.appendChild(boxScore);
     }
@@ -136,8 +158,13 @@ function renderGame(game, showBoxScores) {
 function renderBoxScore(game, boxScoreData) {
     const div = createElement('div', 'box-score visible');
 
-    // Line score table
-    if (boxScoreData.line_score) {
+    // Line score table - only show if we have actual period/quarter data
+    const hasLineScore = boxScoreData.line_score &&
+        boxScoreData.line_score.away &&
+        boxScoreData.line_score.away.length > 0 &&
+        boxScoreData.line_score.away.some(v => v > 0);
+
+    if (hasLineScore) {
         const table = document.createElement('table');
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
