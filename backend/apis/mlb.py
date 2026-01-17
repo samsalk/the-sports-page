@@ -4,8 +4,13 @@ import requests
 from datetime import datetime, timedelta
 from typing import Dict, List, Any
 import logging
+import pytz
 
 logger = logging.getLogger(__name__)
+
+# Timezone constants
+UTC_TZ = pytz.UTC
+ET_TZ = pytz.timezone('America/New_York')
 
 BASE_URL = "https://statsapi.mlb.com/api/v1"
 
@@ -429,13 +434,14 @@ def fetch_upcoming_schedule(yesterday_date) -> List[Dict]:
                     if game['status']['detailedState'] == 'Final':
                         continue
 
-                    # Parse game time
+                    # Parse game time and convert from UTC to ET
                     game_time = game.get('gameDate', '')
                     time_label = ''
                     if game_time:
                         try:
-                            dt = datetime.strptime(game_time, '%Y-%m-%dT%H:%M:%SZ')
-                            time_label = dt.strftime('%I:%M %p')
+                            dt_utc = datetime.strptime(game_time, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=UTC_TZ)
+                            dt_et = dt_utc.astimezone(ET_TZ)
+                            time_label = dt_et.strftime('%I:%M %p ET')
                         except:
                             time_label = game['status'].get('abstractGameState', '')
 
