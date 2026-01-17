@@ -196,9 +196,10 @@ def fetch_box_score_espn(game_id) -> Dict[str, Any]:
 
 
 def fetch_standings() -> Dict[str, List[Dict]]:
-    """Fetch NBA standings using ESPN API"""
+    """Fetch NBA standings using ESPN API v2"""
     try:
-        url = f"{ESPN_BASE}/standings"
+        # Use v2 endpoint which has full standings data
+        url = "https://site.api.espn.com/apis/v2/sports/basketball/nba/standings"
         response = requests.get(url, timeout=15)
         response.raise_for_status()
         data = response.json()
@@ -218,16 +219,16 @@ def fetch_standings() -> Dict[str, List[Dict]]:
             for i, entry in enumerate(entries):
                 team = entry.get('team', {})
 
-                # Get stats
+                # Get stats - v2 uses 'name' key for stat names
                 stats = {}
                 for stat in entry.get('stats', []):
-                    abbr = stat.get('abbreviation', stat.get('name', ''))
-                    stats[abbr] = stat.get('value', stat.get('displayValue', 0))
+                    name = stat.get('name', '')
+                    stats[name] = stat.get('value', stat.get('displayValue', 0))
 
-                wins = int(stats.get('wins', stats.get('W', 0)))
-                losses = int(stats.get('losses', stats.get('L', 0)))
-                pct = float(stats.get('winPercent', stats.get('PCT', 0.0)))
-                gb = stats.get('gamesBehind', stats.get('GB', 0))
+                wins = int(stats.get('wins', 0))
+                losses = int(stats.get('losses', 0))
+                pct = float(stats.get('winPercent', 0.0))
+                gb = stats.get('gamesBehind', 0)
 
                 standings[conf_key].append({
                     'rank': i + 1,
