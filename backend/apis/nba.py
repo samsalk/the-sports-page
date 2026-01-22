@@ -241,6 +241,12 @@ def fetch_standings() -> Dict[str, List[Dict]]:
                     'streak': str(stats.get('streak', '-'))
                 })
 
+        # Sort by win percentage descending and re-rank
+        for conf_key in standings:
+            standings[conf_key].sort(key=lambda x: x['win_pct'], reverse=True)
+            for i, team in enumerate(standings[conf_key]):
+                team['rank'] = i + 1
+
         return standings
 
     except Exception as e:
@@ -249,39 +255,61 @@ def fetch_standings() -> Dict[str, List[Dict]]:
 
 
 def fetch_stat_leaders() -> Dict[str, List[Dict]]:
-    """Fetch NBA statistical leaders using ESPN API"""
+    """Fetch NBA statistical leaders using ESPN core API"""
     leaders = {
         'points': [],
         'rebounds': [],
         'assists': []
     }
 
+    # Map ESPN category names to our keys
+    category_map = {
+        'pointsPerGame': 'points',
+        'reboundsPerGame': 'rebounds',
+        'assistsPerGame': 'assists'
+    }
+
     try:
-        # ESPN doesn't have a direct leaders endpoint, but we can use the main page
-        url = f"{ESPN_BASE}/scoreboard"
+        url = "https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2026/types/2/leaders"
         response = requests.get(url, timeout=15)
         response.raise_for_status()
         data = response.json()
 
-        # Leaders are often in the scoreboard response
-        for leader_type in data.get('leaders', []):
-            category = leader_type.get('name', '').lower()
-            if 'point' in category:
-                key = 'points'
-            elif 'rebound' in category:
-                key = 'rebounds'
-            elif 'assist' in category:
-                key = 'assists'
-            else:
+        for cat in data.get('categories', []):
+            cat_name = cat.get('name', '')
+            if cat_name not in category_map:
                 continue
 
-            for i, leader in enumerate(leader_type.get('leaders', [])[:10]):
-                athlete = leader.get('athlete', {})
+            key = category_map[cat_name]
+            for i, leader in enumerate(cat.get('leaders', [])[:10]):
+                # Resolve athlete name from $ref
+                athlete_ref = leader.get('athlete', {}).get('$ref', '')
+                team_ref = leader.get('team', {}).get('$ref', '')
+
+                player_name = 'Unknown'
+                team_abbr = 'UNK'
+
+                if athlete_ref:
+                    try:
+                        resp = requests.get(athlete_ref, timeout=5)
+                        if resp.ok:
+                            player_name = resp.json().get('displayName', 'Unknown')
+                    except:
+                        pass
+
+                if team_ref:
+                    try:
+                        resp = requests.get(team_ref, timeout=5)
+                        if resp.ok:
+                            team_abbr = resp.json().get('abbreviation', 'UNK')
+                    except:
+                        pass
+
                 leaders[key].append({
                     'rank': i + 1,
-                    'player': athlete.get('displayName', 'Unknown'),
-                    'team': athlete.get('team', {}).get('abbreviation', 'UNK'),
-                    'value': leader.get('value', 0)
+                    'player': player_name,
+                    'team': team_abbr,
+                    'value': round(leader.get('value', 0), 1)
                 })
 
         return leaders

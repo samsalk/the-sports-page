@@ -77,7 +77,7 @@ function renderLeagueSection(leagueKey, data, prefs) {
     }
 
     if (data.leaders && hasLeaders(data.leaders)) {
-        section.appendChild(renderLeaders(data.leaders));
+        section.appendChild(renderLeaders(data.leaders, leagueKey));
     }
 
     if (data.schedule && data.schedule.length > 0) {
@@ -463,7 +463,7 @@ function renderStandings(standings, leagueKey) {
     return container;
 }
 
-function renderLeaders(leaders) {
+function renderLeaders(leaders, leagueKey) {
     const container = createElement('div', 'leaders');
     container.setAttribute('role', 'region');
     container.setAttribute('aria-label', 'Statistical leaders');
@@ -474,12 +474,15 @@ function renderLeaders(leaders) {
     // Create leaders container for multi-column layout
     const leadersContainer = createElement('div', 'leaders-container');
 
-    // Category display names with "per game" suffix for rate stats
-    const categoryLabels = {
+    // Category display names - only NBA uses "Per Game" (rate stats)
+    const categoryLabels = leagueKey === 'nba' ? {
         'points': 'Points Per Game',
         'assists': 'Assists Per Game',
-        'rebounds': 'Rebounds Per Game',
+        'rebounds': 'Rebounds Per Game'
+    } : {
         'goals': 'Goals',
+        'assists': 'Assists',
+        'points': 'Points',
         'saves': 'Saves'
     };
 
