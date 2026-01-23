@@ -221,9 +221,11 @@ def fetch_standings() -> Dict[str, List[Dict]]:
 
                 # Get stats - v2 uses 'name' key for stat names
                 stats = {}
+                display_stats = {}
                 for stat in entry.get('stats', []):
                     name = stat.get('name', '')
                     stats[name] = stat.get('value', stat.get('displayValue', 0))
+                    display_stats[name] = stat.get('displayValue', str(stat.get('value', '')))
 
                 wins = int(stats.get('wins', 0))
                 losses = int(stats.get('losses', 0))
@@ -238,7 +240,7 @@ def fetch_standings() -> Dict[str, List[Dict]]:
                     'losses': losses,
                     'win_pct': round(pct, 3),
                     'games_back': gb if gb != 0 else '-',
-                    'streak': str(stats.get('streak', '-'))
+                    'streak': display_stats.get('streak', '-')
                 })
 
         # Sort by win percentage descending and re-rank

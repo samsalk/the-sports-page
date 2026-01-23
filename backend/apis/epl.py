@@ -5,8 +5,13 @@ import requests
 from datetime import datetime, timedelta
 from typing import Dict, List, Any
 import logging
+import pytz
 
 logger = logging.getLogger(__name__)
+
+# Timezone constants
+UTC_TZ = pytz.UTC
+ET_TZ = pytz.timezone('America/New_York')
 
 BASE_URL = 'https://api.football-data.org/v4'
 COMPETITION_ID = 2021  # Premier League
@@ -191,10 +196,11 @@ def fetch_week_schedule(start_date) -> List[Dict]:
         if match_date not in schedule_by_date:
             schedule_by_date[match_date] = []
 
-        match_time = datetime.strptime(match['utcDate'], '%Y-%m-%dT%H:%M:%SZ')
+        match_time_utc = datetime.strptime(match['utcDate'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=UTC_TZ)
+        match_time_et = match_time_utc.astimezone(ET_TZ)
         schedule_by_date[match_date].append({
-            'time': match_time.strftime('%H:%M'),
-            'time_label': match_time.strftime('%I:%M %p'),
+            'time': match_time_et.strftime('%H:%M'),
+            'time_label': match_time_et.strftime('%I:%M %p ET'),
             'home': TEAM_ABBR.get(match['homeTeam']['name'], 'UNK'),
             'away': TEAM_ABBR.get(match['awayTeam']['name'], 'UNK'),
             'broadcast': ''

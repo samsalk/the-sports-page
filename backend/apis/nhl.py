@@ -4,8 +4,13 @@ import requests
 from datetime import datetime, timedelta
 from typing import Dict, List, Any
 import logging
+import pytz
 
 logger = logging.getLogger(__name__)
+
+# Timezone constants
+UTC_TZ = pytz.UTC
+ET_TZ = pytz.timezone('America/New_York')
 
 BASE_URL = 'https://api-web.nhle.com/v1'
 
@@ -363,15 +368,16 @@ def fetch_week_schedule(yesterday_date) -> List[Dict]:
             if game_state in ['OFF', 'FINAL']:
                 continue
 
-            # Parse game time
+            # Parse game time and convert from UTC to ET
             start_time_utc = game.get('startTimeUTC', '')
             if start_time_utc:
                 try:
-                    game_time = datetime.strptime(start_time_utc, '%Y-%m-%dT%H:%M:%SZ')
+                    game_time_utc = datetime.strptime(start_time_utc, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=UTC_TZ)
+                    game_time_et = game_time_utc.astimezone(ET_TZ)
                 except:
-                    game_time = datetime.now()
+                    game_time_et = datetime.now(ET_TZ)
             else:
-                game_time = datetime.now()
+                game_time_et = datetime.now(ET_TZ)
 
             # Get broadcast info
             broadcasts = game.get('tvBroadcasts', [])
@@ -385,8 +391,8 @@ def fetch_week_schedule(yesterday_date) -> List[Dict]:
             home_record = home_team.get('record', '')
 
             games.append({
-                'time': game_time.strftime('%H:%M'),
-                'time_label': game_time.strftime('%I:%M %p'),
+                'time': game_time_et.strftime('%H:%M'),
+                'time_label': game_time_et.strftime('%I:%M %p ET'),
                 'away': away_team.get('abbrev', 'UNK'),
                 'away_name': away_team.get('name', {}).get('default', away_team.get('abbrev', 'UNK')),
                 'away_record': away_record,
