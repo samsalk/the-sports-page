@@ -60,28 +60,45 @@ def fetch_all_data(yesterday_date) -> Dict[str, Any]:
 
     logger.info(f"Fetching EPL data for {yesterday_date}")
     return {
-        'yesterday': fetch_yesterday_matches(yesterday_date),
+        'yesterday': fetch_last_matchday(yesterday_date),
         'standings': fetch_standings(),
         'leaders': fetch_top_scorers(),
         'schedule': fetch_week_schedule(yesterday_date)
     }
 
-def fetch_yesterday_matches(date) -> Dict[str, Any]:
-    """Fetch yesterday's match results"""
-    date_str = date.strftime('%Y-%m-%d')
-    url = f"{BASE_URL}/competitions/{COMPETITION_ID}/matches"
-    params = {
-        'dateFrom': date_str,
-        'dateTo': date_str
-    }
+def fetch_last_matchday(date) -> Dict[str, Any]:
+    """Fetch the most recent completed matchday (EPL games are mainly on weekends)"""
+    # Look back up to 14 days to find the last matchday with completed games
+    for days_back in range(0, 15):
+        check_date = date - timedelta(days=days_back)
+        date_str = check_date.strftime('%Y-%m-%d')
+        url = f"{BASE_URL}/competitions/{COMPETITION_ID}/matches"
+        params = {
+            'dateFrom': date_str,
+            'dateTo': date_str
+        }
 
-    try:
-        response = requests.get(url, headers=get_headers(), params=params, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-    except Exception as e:
-        logger.error(f"Failed to fetch yesterday's matches: {e}")
-        return {'date': date_str, 'games': []}
+        try:
+            response = requests.get(url, headers=get_headers(), params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+        except Exception as e:
+            logger.error(f"Failed to fetch matches for {date_str}: {e}")
+            continue
+
+        # Check if there are finished games on this date
+        finished_games = [m for m in data.get('matches', []) if m['status'] == 'FINISHED']
+        if finished_games:
+            logger.info(f"Found {len(finished_games)} completed EPL games on {date_str}")
+            return parse_matchday_games(data, date_str)
+
+    # No games found in the last 14 days
+    logger.warning("No completed EPL games found in the last 14 days")
+    return {'date': date.strftime('%Y-%m-%d'), 'games': [], 'matchday_label': 'No recent games'}
+
+
+def parse_matchday_games(data, date_str) -> Dict[str, Any]:
+    """Parse match data into game structures"""
 
     games = []
     for match in data.get('matches', []):

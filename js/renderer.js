@@ -73,7 +73,7 @@ function renderLeagueSection(leagueKey, data, prefs) {
     }
 
     if (data.yesterday && data.yesterday.games && data.yesterday.games.length > 0) {
-        section.appendChild(renderYesterdayScores(data.yesterday, prefs.showBoxScores));
+        section.appendChild(renderYesterdayScores(data.yesterday, prefs.showBoxScores, leagueKey));
     }
 
     if (data.leaders && hasLeaders(data.leaders)) {
@@ -91,12 +91,30 @@ function hasLeaders(leaders) {
     return Object.values(leaders).some(arr => arr && arr.length > 0);
 }
 
-function renderYesterdayScores(yesterday, showBoxScores) {
+function renderYesterdayScores(yesterday, showBoxScores, leagueKey) {
     const container = createElement('div', 'yesterday-scores');
     container.setAttribute('role', 'region');
-    container.setAttribute('aria-label', "Yesterday's game scores");
+    container.setAttribute('aria-label', "Recent game scores");
 
-    const title = createElement('h3', 'subsection-header', `Yesterday's Scores`);
+    // For EPL, show "Last Matchday" with the date since games aren't daily
+    let titleText = `Yesterday's Scores`;
+    if (leagueKey === 'epl' && yesterday.date) {
+        const matchDate = new Date(yesterday.date + 'T12:00:00');
+        const today = new Date();
+        today.setHours(12, 0, 0, 0);
+        const diffDays = Math.round((today - matchDate) / (1000 * 60 * 60 * 24));
+
+        if (diffDays === 0) {
+            titleText = `Today's Results`;
+        } else if (diffDays === 1) {
+            titleText = `Yesterday's Results`;
+        } else {
+            const dateStr = matchDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            titleText = `Last Matchday (${dateStr})`;
+        }
+    }
+
+    const title = createElement('h3', 'subsection-header', titleText);
     container.appendChild(title);
 
     // Create games container for multi-column layout
