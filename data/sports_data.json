@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-25T09:48:52.607449-05:00",
+  "generated_at": "2026-01-25T10:03:02.405509-05:00",
   "date_label": "Sunday, January 25, 2026",
   "leagues": {
     "nhl": {
@@ -3483,6 +3483,532 @@
         ]
       },
       "schedule": []
+    },
+    "epl": {
+      "yesterday": {
+        "date": "2026-01-24",
+        "games": [
+          {
+            "match_id": 538014,
+            "home_team": {
+              "abbr": "WHU",
+              "name": "West Ham United FC",
+              "score": 3
+            },
+            "away_team": {
+              "abbr": "SUN",
+              "name": "Sunderland AFC",
+              "score": 1
+            },
+            "status": "FINISHED",
+            "half_time_score": "3-0",
+            "box_score": null
+          },
+          {
+            "match_id": 538009,
+            "home_team": {
+              "abbr": "BUR",
+              "name": "Burnley FC",
+              "score": 2
+            },
+            "away_team": {
+              "abbr": "TOT",
+              "name": "Tottenham Hotspur FC",
+              "score": 2
+            },
+            "status": "FINISHED",
+            "half_time_score": "1-1",
+            "box_score": null
+          },
+          {
+            "match_id": 538011,
+            "home_team": {
+              "abbr": "FUL",
+              "name": "Fulham FC",
+              "score": 2
+            },
+            "away_team": {
+              "abbr": "BHA",
+              "name": "Brighton & Hove Albion FC",
+              "score": 1
+            },
+            "status": "FINISHED",
+            "half_time_score": "0-1",
+            "box_score": null
+          },
+          {
+            "match_id": 538012,
+            "home_team": {
+              "abbr": "MCI",
+              "name": "Manchester City FC",
+              "score": 2
+            },
+            "away_team": {
+              "abbr": "WOL",
+              "name": "Wolverhampton Wanderers FC",
+              "score": 0
+            },
+            "status": "FINISHED",
+            "half_time_score": "2-0",
+            "box_score": null
+          },
+          {
+            "match_id": 538005,
+            "home_team": {
+              "abbr": "BOU",
+              "name": "AFC Bournemouth",
+              "score": 3
+            },
+            "away_team": {
+              "abbr": "LIV",
+              "name": "Liverpool FC",
+              "score": 2
+            },
+            "status": "FINISHED",
+            "half_time_score": "2-1",
+            "box_score": null
+          }
+        ]
+      },
+      "standings": {
+        "Premier League": [
+          {
+            "rank": 1,
+            "team": "ARS",
+            "team_name": "Arsenal FC",
+            "played": 22,
+            "wins": 15,
+            "draws": 5,
+            "losses": 2,
+            "goals_for": 40,
+            "goals_against": 14,
+            "goal_diff": 26,
+            "points": 50,
+            "form": null
+          },
+          {
+            "rank": 2,
+            "team": "MCI",
+            "team_name": "Manchester City FC",
+            "played": 23,
+            "wins": 14,
+            "draws": 4,
+            "losses": 5,
+            "goals_for": 47,
+            "goals_against": 21,
+            "goal_diff": 26,
+            "points": 46,
+            "form": null
+          },
+          {
+            "rank": 3,
+            "team": "AVL",
+            "team_name": "Aston Villa FC",
+            "played": 23,
+            "wins": 14,
+            "draws": 4,
+            "losses": 5,
+            "goals_for": 34,
+            "goals_against": 25,
+            "goal_diff": 9,
+            "points": 46,
+            "form": null
+          },
+          {
+            "rank": 4,
+            "team": "CHE",
+            "team_name": "Chelsea FC",
+            "played": 23,
+            "wins": 10,
+            "draws": 7,
+            "losses": 6,
+            "goals_for": 37,
+            "goals_against": 24,
+            "goal_diff": 13,
+            "points": 37,
+            "form": null
+          },
+          {
+            "rank": 5,
+            "team": "LIV",
+            "team_name": "Liverpool FC",
+            "played": 23,
+            "wins": 10,
+            "draws": 6,
+            "losses": 7,
+            "goals_for": 35,
+            "goals_against": 32,
+            "goal_diff": 3,
+            "points": 36,
+            "form": null
+          },
+          {
+            "rank": 6,
+            "team": "MUN",
+            "team_name": "Manchester United FC",
+            "played": 22,
+            "wins": 9,
+            "draws": 8,
+            "losses": 5,
+            "goals_for": 38,
+            "goals_against": 32,
+            "goal_diff": 6,
+            "points": 35,
+            "form": null
+          },
+          {
+            "rank": 7,
+            "team": "FUL",
+            "team_name": "Fulham FC",
+            "played": 23,
+            "wins": 10,
+            "draws": 4,
+            "losses": 9,
+            "goals_for": 32,
+            "goals_against": 32,
+            "goal_diff": 0,
+            "points": 34,
+            "form": null
+          },
+          {
+            "rank": 8,
+            "team": "BRE",
+            "team_name": "Brentford FC",
+            "played": 23,
+            "wins": 10,
+            "draws": 3,
+            "losses": 10,
+            "goals_for": 35,
+            "goals_against": 31,
+            "goal_diff": 4,
+            "points": 33,
+            "form": null
+          },
+          {
+            "rank": 9,
+            "team": "NEW",
+            "team_name": "Newcastle United FC",
+            "played": 23,
+            "wins": 9,
+            "draws": 6,
+            "losses": 8,
+            "goals_for": 32,
+            "goals_against": 28,
+            "goal_diff": 4,
+            "points": 33,
+            "form": null
+          },
+          {
+            "rank": 10,
+            "team": "SUN",
+            "team_name": "Sunderland AFC",
+            "played": 23,
+            "wins": 8,
+            "draws": 9,
+            "losses": 6,
+            "goals_for": 24,
+            "goals_against": 26,
+            "goal_diff": -2,
+            "points": 33,
+            "form": null
+          },
+          {
+            "rank": 11,
+            "team": "EVE",
+            "team_name": "Everton FC",
+            "played": 22,
+            "wins": 9,
+            "draws": 5,
+            "losses": 8,
+            "goals_for": 24,
+            "goals_against": 25,
+            "goal_diff": -1,
+            "points": 32,
+            "form": null
+          },
+          {
+            "rank": 12,
+            "team": "BHA",
+            "team_name": "Brighton & Hove Albion FC",
+            "played": 23,
+            "wins": 7,
+            "draws": 9,
+            "losses": 7,
+            "goals_for": 33,
+            "goals_against": 31,
+            "goal_diff": 2,
+            "points": 30,
+            "form": null
+          },
+          {
+            "rank": 13,
+            "team": "BOU",
+            "team_name": "AFC Bournemouth",
+            "played": 23,
+            "wins": 7,
+            "draws": 9,
+            "losses": 7,
+            "goals_for": 38,
+            "goals_against": 43,
+            "goal_diff": -5,
+            "points": 30,
+            "form": null
+          },
+          {
+            "rank": 14,
+            "team": "TOT",
+            "team_name": "Tottenham Hotspur FC",
+            "played": 23,
+            "wins": 7,
+            "draws": 7,
+            "losses": 9,
+            "goals_for": 33,
+            "goals_against": 31,
+            "goal_diff": 2,
+            "points": 28,
+            "form": null
+          },
+          {
+            "rank": 15,
+            "team": "CRY",
+            "team_name": "Crystal Palace FC",
+            "played": 23,
+            "wins": 7,
+            "draws": 7,
+            "losses": 9,
+            "goals_for": 23,
+            "goals_against": 26,
+            "goal_diff": -3,
+            "points": 28,
+            "form": null
+          },
+          {
+            "rank": 16,
+            "team": "LEE",
+            "team_name": "Leeds United FC",
+            "played": 22,
+            "wins": 6,
+            "draws": 7,
+            "losses": 9,
+            "goals_for": 30,
+            "goals_against": 37,
+            "goal_diff": -7,
+            "points": 25,
+            "form": null
+          },
+          {
+            "rank": 17,
+            "team": "NFO",
+            "team_name": "Nottingham Forest FC",
+            "played": 23,
+            "wins": 7,
+            "draws": 4,
+            "losses": 12,
+            "goals_for": 22,
+            "goals_against": 34,
+            "goal_diff": -12,
+            "points": 25,
+            "form": null
+          },
+          {
+            "rank": 18,
+            "team": "WHU",
+            "team_name": "West Ham United FC",
+            "played": 23,
+            "wins": 5,
+            "draws": 5,
+            "losses": 13,
+            "goals_for": 27,
+            "goals_against": 45,
+            "goal_diff": -18,
+            "points": 20,
+            "form": null
+          },
+          {
+            "rank": 19,
+            "team": "BUR",
+            "team_name": "Burnley FC",
+            "played": 23,
+            "wins": 3,
+            "draws": 6,
+            "losses": 14,
+            "goals_for": 25,
+            "goals_against": 44,
+            "goal_diff": -19,
+            "points": 15,
+            "form": null
+          },
+          {
+            "rank": 20,
+            "team": "WOL",
+            "team_name": "Wolverhampton Wanderers FC",
+            "played": 23,
+            "wins": 1,
+            "draws": 5,
+            "losses": 17,
+            "goals_for": 15,
+            "goals_against": 43,
+            "goal_diff": -28,
+            "points": 8,
+            "form": null
+          }
+        ]
+      },
+      "leaders": {
+        "goals": [
+          {
+            "rank": 1,
+            "player": "Erling Haaland",
+            "team": "MCI",
+            "value": 20
+          },
+          {
+            "rank": 2,
+            "player": "Thiago Rodrigues",
+            "team": "BRE",
+            "value": 16
+          },
+          {
+            "rank": 3,
+            "player": "Antoine Semenyo",
+            "team": "MCI",
+            "value": 11
+          },
+          {
+            "rank": 4,
+            "player": "Dominic Calvert-Lewin",
+            "team": "LEE",
+            "value": 9
+          },
+          {
+            "rank": 5,
+            "player": "Hugo Ekitike",
+            "team": "LIV",
+            "value": 8
+          },
+          {
+            "rank": 6,
+            "player": "Bruno Guimarães",
+            "team": "NEW",
+            "value": 8
+          },
+          {
+            "rank": 7,
+            "player": "Jean-Philippe Mateta",
+            "team": "CRY",
+            "value": 8
+          },
+          {
+            "rank": 8,
+            "player": "Harry Wilson",
+            "team": "FUL",
+            "value": 8
+          },
+          {
+            "rank": 9,
+            "player": "Danny Welbeck",
+            "team": "BHA",
+            "value": 8
+          },
+          {
+            "rank": 10,
+            "player": "Richarlison",
+            "team": "TOT",
+            "value": 7
+          }
+        ],
+        "assists": []
+      },
+      "schedule": [
+        {
+          "date": "2026-01-25",
+          "day_label": "Sun",
+          "games": [
+            {
+              "time": "09:00",
+              "time_label": "09:00 AM ET",
+              "home": "CRY",
+              "away": "CHE",
+              "broadcast": ""
+            },
+            {
+              "time": "09:00",
+              "time_label": "09:00 AM ET",
+              "home": "BRE",
+              "away": "NFO",
+              "broadcast": ""
+            },
+            {
+              "time": "09:00",
+              "time_label": "09:00 AM ET",
+              "home": "NEW",
+              "away": "AVL",
+              "broadcast": ""
+            },
+            {
+              "time": "11:30",
+              "time_label": "11:30 AM ET",
+              "home": "ARS",
+              "away": "MUN",
+              "broadcast": ""
+            }
+          ]
+        },
+        {
+          "date": "2026-01-26",
+          "day_label": "Mon",
+          "games": [
+            {
+              "time": "15:00",
+              "time_label": "03:00 PM ET",
+              "home": "EVE",
+              "away": "LEE",
+              "broadcast": ""
+            }
+          ]
+        },
+        {
+          "date": "2026-01-31",
+          "day_label": "Sat",
+          "games": [
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "BHA",
+              "away": "EVE",
+              "broadcast": ""
+            },
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "LEE",
+              "away": "ARS",
+              "broadcast": ""
+            },
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "WOL",
+              "away": "BOU",
+              "broadcast": ""
+            },
+            {
+              "time": "12:30",
+              "time_label": "12:30 PM ET",
+              "home": "CHE",
+              "away": "WHU",
+              "broadcast": ""
+            },
+            {
+              "time": "15:00",
+              "time_label": "03:00 PM ET",
+              "home": "LIV",
+              "away": "NEW",
+              "broadcast": ""
+            }
+          ]
+        }
+      ]
     }
   }
 }

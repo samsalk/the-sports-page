@@ -15,7 +15,7 @@ import pytz
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Import league-specific modules
-from apis import nhl, nba, mlb
+from apis import nhl, nba, mlb, epl
 from utils import setup_logging
 
 # Configuration
@@ -65,6 +65,15 @@ def main():
     except Exception as e:
         logger.error(f"✗ MLB fetch failed: {e}")
         data['leagues']['mlb'] = create_error_structure(str(e))
+
+    # Fetch EPL data
+    try:
+        logger.info("Fetching EPL data...")
+        data['leagues']['epl'] = epl.fetch_all_data(yesterday)
+        logger.info("✓ EPL data fetched successfully")
+    except Exception as e:
+        logger.error(f"✗ EPL fetch failed: {e}")
+        data['leagues']['epl'] = create_error_structure(str(e))
 
     # Write to JSON file
     try:

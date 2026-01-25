@@ -41,7 +41,9 @@ TEAM_ABBR = {
     'Burnley FC': 'BUR',
     'Ipswich Town FC': 'IPS',
     'Leicester City FC': 'LEI',
-    'Southampton FC': 'SOU'
+    'Southampton FC': 'SOU',
+    'Sunderland AFC': 'SUN',
+    'Leeds United FC': 'LEE'
 }
 
 def get_headers() -> Dict[str, str]:
