@@ -121,22 +121,22 @@ def fetch_box_score(game_id) -> Dict[str, Any]:
     # Extract goalie stats
     goalies = []
     for team_key in ['awayTeam', 'homeTeam']:
+        # Get team abbreviation from the top-level team data
+        team_abbr = data.get(team_key, {}).get('abbrev', 'UNK')
         team_data = data.get('playerByGameStats', {}).get(team_key, {})
-        for position_key in ['goalies']:
-            for player in team_data.get(position_key, []):
-                stats = player
-                if stats:
-                    name = player.get('name', {}).get('default', 'Unknown')
-                    saves = stats.get('saves', 0)
-                    shots_against = stats.get('shotsAgainst', 0) or stats.get('shots', 0)
+        for player in team_data.get('goalies', []):
+            if player:
+                name = player.get('name', {}).get('default', 'Unknown')
+                saves = player.get('saves', 0)
+                shots_against = player.get('shotsAgainst', 0)
 
-                    goalies.append({
-                        'team': player.get('teamAbbrev', {}).get('default', 'UNK'),
-                        'name': name,
-                        'saves': saves,
-                        'shots': shots_against,
-                        'save_pct': round(saves / shots_against, 3) if shots_against > 0 else 0.000
-                    })
+                goalies.append({
+                    'team': team_abbr,
+                    'name': name,
+                    'saves': saves,
+                    'shots': shots_against,
+                    'save_pct': round(saves / shots_against, 3) if shots_against > 0 else 0.000
+                })
 
     # Extract top scorers (players with points in the game)
     scorers = []

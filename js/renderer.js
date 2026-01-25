@@ -258,14 +258,37 @@ function renderBoxScore(game, boxScoreData) {
         div.appendChild(scorersDiv);
     }
 
-    // Goalies (NHL) - shown after scorers
+    // Goalies (NHL) - shown after scorers in two-column format
     if (boxScoreData.goalies && boxScoreData.goalies.length > 0) {
-        const goaliesP = createElement('p', '');
-        goaliesP.innerHTML = '<strong>Goalies:</strong><br>';
-        boxScoreData.goalies.forEach(g => {
-            goaliesP.innerHTML += `${g.name} (${g.team}): ${g.saves}/${g.shots} (${(g.save_pct * 100).toFixed(1)}%)<br>`;
+        const goaliesDiv = createElement('div', 'goalies-section');
+        goaliesDiv.innerHTML = '<div class="scorers-title">Goalies</div>';
+
+        const goaliesGrid = createElement('div', 'scorers-grid');
+
+        // Separate goalies by team
+        const awayGoalies = boxScoreData.goalies.filter(g => g.team === game.away_team.abbr);
+        const homeGoalies = boxScoreData.goalies.filter(g => g.team === game.home_team.abbr);
+
+        // Away team column
+        const awayCol = createElement('div', 'scorers-column');
+        awayCol.innerHTML = `<div class="team-label">${game.away_team.abbr}</div>`;
+        awayGoalies.forEach(g => {
+            const savePct = g.shots > 0 ? (g.save_pct * 100).toFixed(1) : '0.0';
+            awayCol.innerHTML += `${g.name}: ${g.saves}/${g.shots} (${savePct}%)<br>`;
         });
-        div.appendChild(goaliesP);
+        goaliesGrid.appendChild(awayCol);
+
+        // Home team column
+        const homeCol = createElement('div', 'scorers-column');
+        homeCol.innerHTML = `<div class="team-label">${game.home_team.abbr}</div>`;
+        homeGoalies.forEach(g => {
+            const savePct = g.shots > 0 ? (g.save_pct * 100).toFixed(1) : '0.0';
+            homeCol.innerHTML += `${g.name}: ${g.saves}/${g.shots} (${savePct}%)<br>`;
+        });
+        goaliesGrid.appendChild(homeCol);
+
+        goaliesDiv.appendChild(goaliesGrid);
+        div.appendChild(goaliesDiv);
     }
 
     return div;
