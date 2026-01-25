@@ -225,6 +225,38 @@
     width: 28px;
 }
 
+/* EPL full-width standings table */
+.standings-full-width {
+    column-span: all;
+}
+
+.standings-table-wide {
+    width: 100%;
+    table-layout: auto;
+}
+
+.standings-table-wide th {
+    white-space: nowrap;
+    padding: var(--space-xs) var(--space-lg);
+}
+
+.standings-table-wide td {
+    padding: var(--space-xs) var(--space-lg);
+}
+
+.standings-table-wide .numeric {
+    width: auto;
+    padding: var(--space-xs) var(--space-lg);
+}
+
+.standings-table-wide .team {
+    width: 100%;
+}
+
+.standings-table .team-nowrap {
+    white-space: nowrap;
+}
+
 /* ===== STATISTICAL LEADERS ===== */
 .leaders {
     margin-bottom: var(--space-lg);

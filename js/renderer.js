@@ -450,26 +450,26 @@ function renderStandings(standings, leagueKey) {
             standingsContainer.appendChild(confContainer);
         }
     } else if (leagueKey === 'epl') {
-        // EPL doesn't have divisions, just show single table
-        const divContainer = createElement('div', 'standings-division');
+        // EPL has single league table - use full width with spelled-out headers
+        const divContainer = createElement('div', 'standings-division standings-full-width');
 
         const table = document.createElement('table');
-        table.className = 'standings-table';
+        table.className = 'standings-table standings-table-wide';
         table.setAttribute('aria-label', 'Premier League standings');
 
-        // Header with spelled-out abbreviations
+        // Header with full column names (we have room)
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
         headerRow.innerHTML = `
             <th class="rank" scope="col">#</th>
             <th class="team" scope="col">Team</th>
-            <th class="numeric" scope="col">Played</th>
-            <th class="numeric" scope="col">Wins</th>
-            <th class="numeric" scope="col">Draws</th>
-            <th class="numeric" scope="col">Losses</th>
-            <th class="numeric" scope="col"><abbr title="Goals For">GF</abbr></th>
-            <th class="numeric" scope="col"><abbr title="Goals Against">GA</abbr></th>
-            <th class="numeric" scope="col"><abbr title="Goal Difference">GD</abbr></th>
+            <th class="numeric" scope="col">Matches Played</th>
+            <th class="numeric" scope="col">W</th>
+            <th class="numeric" scope="col">D</th>
+            <th class="numeric" scope="col">L</th>
+            <th class="numeric" scope="col">Goals For</th>
+            <th class="numeric" scope="col">Goals Against</th>
+            <th class="numeric" scope="col">Goal Difference</th>
             <th class="numeric" scope="col">Points</th>
         `;
         thead.appendChild(headerRow);
@@ -482,7 +482,7 @@ function renderStandings(standings, leagueKey) {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td class="rank">${team.rank}</td>
-                <td class="team">${team.team_name || team.team}</td>
+                <td class="team team-nowrap">${team.team_name || team.team}</td>
                 <td class="numeric">${team.played}</td>
                 <td class="numeric">${team.wins}</td>
                 <td class="numeric">${team.draws}</td>
@@ -584,7 +584,8 @@ function renderScheduleGrid(schedule) {
     schedule.forEach(day => {
         const th = document.createElement('th');
         th.setAttribute('scope', 'col');
-        const dateObj = new Date(day.date);
+        // Add time component to avoid timezone issues (date-only strings are parsed as UTC)
+        const dateObj = new Date(day.date + 'T12:00:00');
         th.textContent = `${day.day_label} ${dateObj.getDate()}`;
         headerRow.appendChild(th);
     });
