@@ -110,6 +110,9 @@ def parse_matchday_games(data, date_str) -> Dict[str, Any]:
         ht_home = match['score']['halfTime']['home']
         ht_away = match['score']['halfTime']['away']
 
+        # Fetch detailed match info including goal scorers
+        box_score = fetch_match_details(match['id'])
+
         games.append({
             'match_id': match['id'],
             'home_team': {
@@ -124,12 +127,76 @@ def parse_matchday_games(data, date_str) -> Dict[str, Any]:
             },
             'status': match['status'],
             'half_time_score': f"{ht_home}-{ht_away}" if ht_home is not None else "0-0",
-            'box_score': None  # Would need separate match details API
+            'box_score': box_score
         })
 
     return {
         'date': date_str,
         'games': games
+    }
+
+
+def fetch_match_details(match_id: int) -> Dict[str, Any]:
+    """Fetch detailed match info including goal scorers and assists"""
+    url = f"{BASE_URL}/matches/{match_id}"
+
+    try:
+        response = requests.get(url, headers=get_headers(), timeout=10)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        logger.error(f"Failed to fetch match details for {match_id}: {e}")
+        return None
+
+    home_team_id = data.get('homeTeam', {}).get('id')
+    away_team_id = data.get('awayTeam', {}).get('id')
+    home_abbr = TEAM_ABBR.get(data.get('homeTeam', {}).get('name', ''), 'UNK')
+    away_abbr = TEAM_ABBR.get(data.get('awayTeam', {}).get('name', ''), 'UNK')
+
+    # Parse goals into home/away lists
+    home_goals = []
+    away_goals = []
+
+    for goal in data.get('goals', []):
+        scorer_name = goal.get('scorer', {}).get('name', 'Unknown')
+        minute = goal.get('minute', 0)
+        injury_time = goal.get('injuryTime')
+        goal_type = goal.get('type', 'REGULAR')
+        assist = goal.get('assist', {})
+        assist_name = assist.get('name') if assist else None
+
+        # Format the minute display (e.g., "45+2'" for injury time)
+        if injury_time:
+            minute_display = f"{minute}+{injury_time}'"
+        else:
+            minute_display = f"{minute}'"
+
+        # Add penalty/own goal indicator
+        if goal_type == 'PENALTY':
+            scorer_display = f"{scorer_name} (pen)"
+        elif goal_type == 'OWN':
+            scorer_display = f"{scorer_name} (og)"
+        else:
+            scorer_display = scorer_name
+
+        goal_entry = {
+            'scorer': scorer_display,
+            'minute': minute_display,
+            'assist': assist_name
+        }
+
+        # Determine which team scored
+        team_id = goal.get('team', {}).get('id')
+        if team_id == home_team_id:
+            home_goals.append(goal_entry)
+        elif team_id == away_team_id:
+            away_goals.append(goal_entry)
+
+    return {
+        'home_goals': home_goals,
+        'away_goals': away_goals,
+        'home_abbr': home_abbr,
+        'away_abbr': away_abbr
     }
 
 def fetch_standings() -> Dict[str, List[Dict]]:

@@ -39,6 +39,15 @@ def main():
         'leagues': {}
     }
 
+    # Fetch MLB data (first - primary sport)
+    try:
+        logger.info("Fetching MLB data...")
+        data['leagues']['mlb'] = mlb.fetch_all_data(yesterday)
+        logger.info("✓ MLB data fetched successfully")
+    except Exception as e:
+        logger.error(f"✗ MLB fetch failed: {e}")
+        data['leagues']['mlb'] = create_error_structure(str(e))
+
     # Fetch NHL data
     try:
         logger.info("Fetching NHL data...")
@@ -56,15 +65,6 @@ def main():
     except Exception as e:
         logger.error(f"✗ NBA fetch failed: {e}")
         data['leagues']['nba'] = create_error_structure(str(e))
-
-    # Fetch MLB data
-    try:
-        logger.info("Fetching MLB data...")
-        data['leagues']['mlb'] = mlb.fetch_all_data(yesterday)
-        logger.info("✓ MLB data fetched successfully")
-    except Exception as e:
-        logger.error(f"✗ MLB fetch failed: {e}")
-        data['leagues']['mlb'] = create_error_structure(str(e))
 
     # Fetch EPL data
     try:

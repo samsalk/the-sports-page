@@ -5,7 +5,7 @@ const DEFAULT_PREFERENCES = {
         nhl: true,
         nba: true,
         epl: true,
-        mlb: false,
+        mlb: true,
         nfl: false
     },
     showBoxScores: false

@@ -20,7 +20,7 @@ TEAM_ABBR = {
     'Boston Red Sox': 'BOS', 'Chicago Cubs': 'CHC', 'Chicago White Sox': 'CWS',
     'Cincinnati Reds': 'CIN', 'Cleveland Guardians': 'CLE', 'Colorado Rockies': 'COL',
     'Detroit Tigers': 'DET', 'Houston Astros': 'HOU', 'Kansas City Royals': 'KC',
-    'Los Angeles Angels': 'LAA', 'Los Angeles Dodgers': 'LAD', 'Miami Marlins': 'MIA',
+    'Los Angeles Angels': 'LAA', 'Los Angeles Dodgers': 'LAD', 'Athletics': 'OAK', 'Miami Marlins': 'MIA',
     'Milwaukee Brewers': 'MIL', 'Minnesota Twins': 'MIN', 'New York Mets': 'NYM',
     'New York Yankees': 'NYY', 'Athletics': 'OAK', 'Philadelphia Phillies': 'PHI',
     'Pittsburgh Pirates': 'PIT', 'San Diego Padres': 'SD', 'San Francisco Giants': 'SF',
@@ -305,9 +305,17 @@ def fetch_game_notes(game_id: int) -> Dict[str, List[str]]:
         return {'hr': [], '2b': [], '3b': [], 'sb': [], 'dp': 0}
 
 
+def _find_split(splits: List[Dict], split_type: str) -> Dict:
+    """Find a specific split record by type"""
+    for s in splits:
+        if s.get('type') == split_type:
+            return s
+    return {}
+
+
 def fetch_standings(season: int) -> Dict[str, List[Dict]]:
     """Fetch MLB standings by division"""
-    url = f"{BASE_URL}/standings?leagueId=103,104&season={season}"
+    url = f"{BASE_URL}/standings?leagueId=103,104&season={season}&hydrate=team"
 
     try:
         response = requests.get(url, timeout=10)
@@ -317,28 +325,45 @@ def fetch_standings(season: int) -> Dict[str, List[Dict]]:
         logger.error(f"Failed to fetch MLB standings: {e}")
         return {}
 
+    # Map division IDs to names
+    DIVISION_NAMES = {
+        200: 'AL West', 201: 'AL East', 202: 'AL Central',
+        203: 'NL West', 204: 'NL East', 205: 'NL Central'
+    }
+
     standings = {}
 
     for record in data.get('records', []):
-        division = record.get('division', {}).get('name', 'Unknown')
-        # Simplify division name
-        div_short = division.replace('American League ', 'AL ').replace('National League ', 'NL ')
+        div_id = record.get('division', {}).get('id')
+        div_short = DIVISION_NAMES.get(div_id, 'Unknown')
 
         teams = []
         for team_record in record.get('teamRecords', []):
+            splits = team_record.get('records', {}).get('splitRecords', [])
+            home_split = _find_split(splits, 'home')
+            away_split = _find_split(splits, 'away')
+            last10 = _find_split(splits, 'lastTen')
+
+            # With hydrate=team, the full team name and abbreviation are available
+            team_info = team_record['team']
+            team_name = team_info.get('name', '')
+            team_abbr = team_info.get('abbreviation', get_team_abbr(team_name))
+
             teams.append({
-                'rank': len(teams) + 1,
-                'team': get_team_abbr(team_record['team']['name']),
-                'team_name': team_record['team']['name'],
+                'rank': int(team_record.get('divisionRank', len(teams) + 1)),
+                'team': team_abbr,
+                'team_name': team_name,
                 'wins': team_record['wins'],
                 'losses': team_record['losses'],
-                'pct': team_record['winningPercentage'],
+                'pct': team_record.get('leagueRecord', {}).get('pct', '.000'),
                 'gb': team_record.get('gamesBack', '-'),
-                'home': team_record.get('records', {}).get('splitRecords', [{}])[0].get('wins', 0),
-                'away': team_record.get('records', {}).get('splitRecords', [{}])[1].get('wins', 0),
+                'l10': f"{last10.get('wins', 0)}-{last10.get('losses', 0)}" if last10 else '-',
+                'home': f"{home_split.get('wins', 0)}-{home_split.get('losses', 0)}" if home_split else '-',
+                'away': f"{away_split.get('wins', 0)}-{away_split.get('losses', 0)}" if away_split else '-',
                 'streak': team_record.get('streak', {}).get('streakCode', '-')
             })
 
+        teams.sort(key=lambda t: t['rank'])
         standings[div_short] = teams
 
     return standings
@@ -350,16 +375,21 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
         'batting_avg': [],
         'home_runs': [],
         'rbi': [],
+        'hits': [],
+        'stolen_bases': [],
         'wins': [],
         'era': [],
-        'strikeouts': []
+        'strikeouts': [],
+        'saves': []
     }
 
     # Batting leaders
     batting_categories = {
         'batting_avg': 'battingAverage',
         'home_runs': 'homeRuns',
-        'rbi': 'runsBattedIn'
+        'rbi': 'runsBattedIn',
+        'hits': 'hits',
+        'stolen_bases': 'stolenBases'
     }
 
     try:
@@ -386,7 +416,8 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
     pitching_categories = {
         'wins': 'wins',
         'era': 'earnedRunAverage',
-        'strikeouts': 'strikeouts'
+        'strikeouts': 'strikeouts',
+        'saves': 'saves'
     }
 
     try:

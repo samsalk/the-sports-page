@@ -4,11 +4,11 @@
 function hasBoxScoreData(boxScore) {
     if (!boxScore) return false;
 
-    // Check for line score with actual values
-    const hasLineScore = boxScore.line_score &&
-        boxScore.line_score.away &&
-        boxScore.line_score.away.length > 0 &&
-        boxScore.line_score.away.some(v => v > 0);
+    // Check for line score with actual values (NHL/NBA use arrays, MLB uses {innings: [...], runs, hits, errors})
+    const hasLineScore = boxScore.line_score && boxScore.line_score.away && (
+        (Array.isArray(boxScore.line_score.away) && boxScore.line_score.away.length > 0 && boxScore.line_score.away.some(v => v > 0)) ||
+        (boxScore.line_score.away.innings && boxScore.line_score.away.innings.length > 0)
+    );
 
     // Check for scorers
     const hasScorers = boxScore.scorers && boxScore.scorers.length > 0;
@@ -19,7 +19,15 @@ function hasBoxScoreData(boxScore) {
     // Check for shots (NHL)
     const hasShots = boxScore.shots && (boxScore.shots.away > 0 || boxScore.shots.home > 0);
 
-    return hasLineScore || hasScorers || hasGoalies || hasShots;
+    // Check for EPL goals (soccer)
+    const hasEplGoals = (boxScore.home_goals && boxScore.home_goals.length > 0) ||
+        (boxScore.away_goals && boxScore.away_goals.length > 0);
+
+    // Check for MLB batting data
+    const hasBatting = (boxScore.away_batting && boxScore.away_batting.length > 0) ||
+        (boxScore.home_batting && boxScore.home_batting.length > 0);
+
+    return hasLineScore || hasScorers || hasGoalies || hasShots || hasEplGoals || hasBatting;
 }
 
 function renderAllLeagues(data, prefs) {
@@ -59,7 +67,11 @@ function renderLeagueSection(leagueKey, data, prefs) {
         return section;
     }
 
-    const section = createElement('section', `league-section league-${leagueKey}`);
+    let sectionClass = `league-section league-${leagueKey}`;
+    if (leagueKey === 'mlb' && prefs.showBoxScores) {
+        sectionClass += ' mlb-boxscores-on';
+    }
+    const section = createElement('section', sectionClass);
     section.setAttribute('aria-labelledby', headerId);
 
     // Section header
@@ -175,6 +187,16 @@ function renderGame(game, showBoxScores) {
 
 function renderBoxScore(game, boxScoreData) {
     const div = createElement('div', 'box-score visible');
+
+    // EPL/Soccer goal scorers - different format from other sports
+    if (boxScoreData.home_goals !== undefined || boxScoreData.away_goals !== undefined) {
+        return renderSoccerBoxScore(game, boxScoreData);
+    }
+
+    // MLB box score - full batting/pitching tables, newspaper style
+    if (boxScoreData.away_batting !== undefined) {
+        return renderBaseballBoxScore(game, boxScoreData);
+    }
 
     // Line score table - only show if we have actual period/quarter data
     const hasLineScore = boxScoreData.line_score &&
@@ -449,6 +471,65 @@ function renderStandings(standings, leagueKey) {
             confContainer.appendChild(table);
             standingsContainer.appendChild(confContainer);
         }
+    } else if (leagueKey === 'mlb') {
+        // MLB: Group divisions by league (AL/NL), like newspaper box score pages
+        const leagues = {
+            'American League': ['AL East', 'AL Central', 'AL West'],
+            'National League': ['NL East', 'NL Central', 'NL West']
+        };
+
+        for (const [leagueName, divisionNames] of Object.entries(leagues)) {
+            const confContainer = createElement('div', 'standings-conference');
+            const confTitle = createElement('h4', 'conference-title', leagueName);
+            confContainer.appendChild(confTitle);
+
+            for (const divisionName of divisionNames) {
+                const teams = standings[divisionName];
+                if (!teams || teams.length === 0) continue;
+
+                const divContainer = createElement('div', 'standings-division');
+                const divTitle = createElement('h4', '', divisionName);
+                divContainer.appendChild(divTitle);
+
+                const table = document.createElement('table');
+                table.className = 'standings-table';
+                table.setAttribute('aria-label', `${divisionName} standings`);
+
+                const thead = document.createElement('thead');
+                const headerRow = document.createElement('tr');
+                headerRow.innerHTML = `
+                    <th class="team" scope="col">Team</th>
+                    <th class="numeric" scope="col"><abbr title="Wins">W</abbr></th>
+                    <th class="numeric" scope="col"><abbr title="Losses">L</abbr></th>
+                    <th class="numeric" scope="col"><abbr title="Win Percentage">PCT</abbr></th>
+                    <th class="numeric" scope="col"><abbr title="Games Behind">GB</abbr></th>
+                    <th scope="col">Streak</th>
+                `;
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+
+                const tbody = document.createElement('tbody');
+                teams.forEach(team => {
+                    const row = document.createElement('tr');
+                    const gb = team.gb === '-' || team.gb === '0' || team.gb === 0 ? '-' : team.gb;
+                    row.innerHTML = `
+                        <td class="team">${team.team_name}</td>
+                        <td class="numeric">${team.wins}</td>
+                        <td class="numeric">${team.losses}</td>
+                        <td class="numeric">${team.pct}</td>
+                        <td class="numeric">${gb}</td>
+                        <td>${team.streak || '-'}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+
+                table.appendChild(tbody);
+                divContainer.appendChild(table);
+                confContainer.appendChild(divContainer);
+            }
+
+            standingsContainer.appendChild(confContainer);
+        }
     } else if (leagueKey === 'epl') {
         // EPL has single league table - use full width with spelled-out headers
         const divContainer = createElement('div', 'standings-division standings-full-width');
@@ -515,11 +596,21 @@ function renderLeaders(leaders, leagueKey) {
     // Create leaders container for multi-column layout
     const leadersContainer = createElement('div', 'leaders-container');
 
-    // Category display names - only NBA uses "Per Game" (rate stats)
+    // Category display names per league
     const categoryLabels = leagueKey === 'nba' ? {
         'points': 'Points Per Game',
         'assists': 'Assists Per Game',
         'rebounds': 'Rebounds Per Game'
+    } : leagueKey === 'mlb' ? {
+        'batting_avg': 'Batting Average',
+        'home_runs': 'Home Runs',
+        'rbi': 'RBI',
+        'hits': 'Hits',
+        'stolen_bases': 'Stolen Bases',
+        'wins': 'Wins',
+        'era': 'ERA',
+        'strikeouts': 'Strikeouts',
+        'saves': 'Saves'
     } : {
         'goals': 'Goals',
         'assists': 'Assists',
@@ -623,4 +714,234 @@ function renderScheduleGrid(schedule) {
 
     container.appendChild(table);
     return container;
+}
+
+function renderBaseballBoxScore(game, boxScoreData) {
+    const div = createElement('div', 'box-score visible mlb-box-score');
+
+    // Line score (inning-by-inning) with R/H/E
+    const ls = boxScoreData.line_score;
+    if (ls && ls.away && ls.away.innings) {
+        const table = document.createElement('table');
+        table.className = 'mlb-line-score';
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        headerRow.innerHTML = '<th></th>';
+        const numInnings = Math.max(ls.away.innings.length, ls.home.innings.length, 9);
+        for (let i = 1; i <= numInnings; i++) {
+            headerRow.innerHTML += `<th>${i}</th>`;
+        }
+        headerRow.innerHTML += '<th>R</th><th>H</th><th>E</th>';
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+
+        // Away row
+        const awayRow = document.createElement('tr');
+        awayRow.innerHTML = `<td class="team-cell"><strong>${game.away_team.abbr}</strong></td>`;
+        for (let i = 0; i < numInnings; i++) {
+            const val = i < ls.away.innings.length ? ls.away.innings[i] : '';
+            awayRow.innerHTML += `<td>${val}</td>`;
+        }
+        awayRow.innerHTML += `<td class="total"><strong>${ls.away.runs}</strong></td><td class="total">${ls.away.hits}</td><td class="total">${ls.away.errors}</td>`;
+        tbody.appendChild(awayRow);
+
+        // Home row
+        const homeRow = document.createElement('tr');
+        homeRow.innerHTML = `<td class="team-cell"><strong>${game.home_team.abbr}</strong></td>`;
+        for (let i = 0; i < numInnings; i++) {
+            const val = i < ls.home.innings.length ? ls.home.innings[i] : '';
+            homeRow.innerHTML += `<td>${val}</td>`;
+        }
+        homeRow.innerHTML += `<td class="total"><strong>${ls.home.runs}</strong></td><td class="total">${ls.home.hits}</td><td class="total">${ls.home.errors}</td>`;
+        tbody.appendChild(homeRow);
+
+        table.appendChild(tbody);
+        div.appendChild(table);
+    }
+
+    // Batting tables - one per team
+    const renderBattingTable = (batters, teamAbbr) => {
+        if (!batters || batters.length === 0) return null;
+
+        const section = createElement('div', 'mlb-batting-section');
+        const header = createElement('div', 'mlb-team-header', teamAbbr);
+        section.appendChild(header);
+
+        const table = document.createElement('table');
+        table.className = 'mlb-batting-table';
+
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        headerRow.innerHTML = '<th class="player-col">Batter</th><th>AB</th><th>R</th><th>H</th><th>BI</th><th>BB</th><th>SO</th><th>AVG</th>';
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+        let totals = { ab: 0, r: 0, h: 0, rbi: 0, bb: 0, so: 0 };
+
+        batters.forEach(b => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="player-col">${b.name} <span class="pos">${b.position}</span></td>
+                <td>${b.ab}</td><td>${b.r}</td><td>${b.h}</td><td>${b.rbi}</td><td>${b.bb}</td><td>${b.so}</td><td>${b.avg}</td>
+            `;
+            tbody.appendChild(row);
+            totals.ab += b.ab;
+            totals.r += b.r;
+            totals.h += b.h;
+            totals.rbi += b.rbi;
+            totals.bb += b.bb;
+            totals.so += b.so;
+        });
+
+        // Totals row
+        const totalRow = document.createElement('tr');
+        totalRow.className = 'totals-row';
+        totalRow.innerHTML = `
+            <td class="player-col"><strong>Totals</strong></td>
+            <td><strong>${totals.ab}</strong></td><td><strong>${totals.r}</strong></td><td><strong>${totals.h}</strong></td><td><strong>${totals.rbi}</strong></td><td><strong>${totals.bb}</strong></td><td><strong>${totals.so}</strong></td><td></td>
+        `;
+        tbody.appendChild(totalRow);
+
+        table.appendChild(tbody);
+        section.appendChild(table);
+        return section;
+    };
+
+    // Pitching tables - one per team
+    const renderPitchingTable = (pitchers, teamAbbr) => {
+        if (!pitchers || pitchers.length === 0) return null;
+
+        const section = createElement('div', 'mlb-pitching-section');
+
+        const table = document.createElement('table');
+        table.className = 'mlb-pitching-table';
+
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        headerRow.innerHTML = '<th class="player-col">Pitcher</th><th>IP</th><th>H</th><th>R</th><th>ER</th><th>BB</th><th>SO</th><th>NP</th><th>ERA</th>';
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+        pitchers.forEach(p => {
+            const row = document.createElement('tr');
+            const resultStr = p.result ? ` (${p.result}${p.record ? ', ' + p.record : ''})` : '';
+            row.innerHTML = `
+                <td class="player-col">${p.name}${resultStr}</td>
+                <td>${p.ip}</td><td>${p.h}</td><td>${p.r}</td><td>${p.er}</td><td>${p.bb}</td><td>${p.so}</td><td>${p.np}</td><td>${p.era}</td>
+            `;
+            tbody.appendChild(row);
+        });
+
+        table.appendChild(tbody);
+        section.appendChild(table);
+        return section;
+    };
+
+    // Away team batting
+    const awayBatting = renderBattingTable(boxScoreData.away_batting, game.away_team.abbr);
+    if (awayBatting) div.appendChild(awayBatting);
+
+    // Away team pitching
+    const awayPitching = renderPitchingTable(boxScoreData.away_pitching, game.away_team.abbr);
+    if (awayPitching) div.appendChild(awayPitching);
+
+    // Home team batting
+    const homeBatting = renderBattingTable(boxScoreData.home_batting, game.home_team.abbr);
+    if (homeBatting) div.appendChild(homeBatting);
+
+    // Home team pitching
+    const homePitching = renderPitchingTable(boxScoreData.home_pitching, game.home_team.abbr);
+    if (homePitching) div.appendChild(homePitching);
+
+    // Game notes (HRs, 2B, 3B, SB, DP)
+    const notes = boxScoreData.game_notes;
+    if (notes) {
+        const notesDiv = createElement('div', 'mlb-game-notes');
+        const noteLines = [];
+
+        if (notes.hr && notes.hr.length > 0) {
+            noteLines.push(`<strong>HR:</strong> ${notes.hr.join(', ')}`);
+        }
+        if (notes['2b'] && notes['2b'].length > 0) {
+            noteLines.push(`<strong>2B:</strong> ${notes['2b'].join(', ')}`);
+        }
+        if (notes['3b'] && notes['3b'].length > 0) {
+            noteLines.push(`<strong>3B:</strong> ${notes['3b'].join(', ')}`);
+        }
+        if (notes.sb && notes.sb.length > 0) {
+            noteLines.push(`<strong>SB:</strong> ${notes.sb.join(', ')}`);
+        }
+        if (notes.dp && notes.dp > 0) {
+            noteLines.push(`<strong>DP:</strong> ${notes.dp}`);
+        }
+
+        if (noteLines.length > 0) {
+            notesDiv.innerHTML = noteLines.join(' · ');
+            div.appendChild(notesDiv);
+        }
+    }
+
+    return div;
+}
+
+function renderSoccerBoxScore(game, boxScoreData) {
+    const div = createElement('div', 'box-score visible soccer-box-score');
+
+    const homeGoals = boxScoreData.home_goals || [];
+    const awayGoals = boxScoreData.away_goals || [];
+
+    // Only render if there are goals
+    if (homeGoals.length === 0 && awayGoals.length === 0) {
+        return div;
+    }
+
+    const scorersDiv = createElement('div', 'soccer-scorers');
+
+    // Two-column layout for goal scorers
+    const scorersGrid = createElement('div', 'scorers-grid');
+
+    // Away team column
+    const awayCol = createElement('div', 'scorers-column');
+    awayCol.innerHTML = `<div class="team-label">${game.away_team.abbr}</div>`;
+    if (awayGoals.length > 0) {
+        awayGoals.forEach(goal => {
+            const goalLine = createElement('div', 'soccer-goal');
+            let text = `${goal.scorer} ${goal.minute}`;
+            if (goal.assist) {
+                text += ` <span class="assist">(${goal.assist})</span>`;
+            }
+            goalLine.innerHTML = text;
+            awayCol.appendChild(goalLine);
+        });
+    } else {
+        awayCol.innerHTML += '<div class="no-goals">—</div>';
+    }
+    scorersGrid.appendChild(awayCol);
+
+    // Home team column
+    const homeCol = createElement('div', 'scorers-column');
+    homeCol.innerHTML = `<div class="team-label">${game.home_team.abbr}</div>`;
+    if (homeGoals.length > 0) {
+        homeGoals.forEach(goal => {
+            const goalLine = createElement('div', 'soccer-goal');
+            let text = `${goal.scorer} ${goal.minute}`;
+            if (goal.assist) {
+                text += ` <span class="assist">(${goal.assist})</span>`;
+            }
+            goalLine.innerHTML = text;
+            homeCol.appendChild(goalLine);
+        });
+    } else {
+        homeCol.innerHTML += '<div class="no-goals">—</div>';
+    }
+    scorersGrid.appendChild(homeCol);
+
+    scorersDiv.appendChild(scorersGrid);
+    div.appendChild(scorersDiv);
+
+    return div;
 }

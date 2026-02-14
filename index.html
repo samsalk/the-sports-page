@@ -24,7 +24,8 @@
     <nav class="controls no-print" aria-label="League and display options">
         <fieldset class="league-toggles">
             <legend class="visually-hidden">Select leagues to display</legend>
-            <label><input type="checkbox" id="toggle-nhl" checked aria-describedby="league-hint"> NHL</label>
+            <label><input type="checkbox" id="toggle-mlb" checked aria-describedby="league-hint"> MLB</label>
+            <label><input type="checkbox" id="toggle-nhl" checked> NHL</label>
             <label><input type="checkbox" id="toggle-nba" checked> NBA</label>
             <label><input type="checkbox" id="toggle-epl" checked> EPL</label>
             <span id="league-hint" class="visually-hidden">Toggle to show or hide league scores and standings</span>
@@ -42,7 +43,7 @@
 
     <footer class="no-print">
         <p>Data updated at <span id="updateTime">--</span></p>
-        <p>Not affiliated with NHL, NBA, EPL, or any sports league · Data sources: NHL Stats API, NBA Stats API, football-data.org</p>
+        <p>Not affiliated with NHL, NBA, MLB, EPL, or any sports league · Data sources: NHL Stats API, NBA Stats API, MLB Stats API, football-data.org</p>
     </footer>
 
     <script src="js/storage.js"></script>
