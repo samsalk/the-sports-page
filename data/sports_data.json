@@ -1,11 +1,3937 @@
 {
-  "generated_at": "2026-02-20T06:33:37.588957-05:00",
-  "date_label": "Friday, February 20, 2026",
+  "generated_at": "2026-02-21T06:23:27.005287-05:00",
+  "date_label": "Saturday, February 21, 2026",
   "leagues": {
     "mlb": {
       "yesterday": {
-        "date": "2026-02-19",
-        "games": []
+        "date": "2026-02-20",
+        "games": [
+          {
+            "game_id": 832034,
+            "away_team": {
+              "abbr": "NYY",
+              "name": "New York Yankees",
+              "score": 0
+            },
+            "home_team": {
+              "abbr": "BAL",
+              "name": "Baltimore Orioles",
+              "score": 2
+            },
+            "status": "Final",
+            "box_score": {
+              "line_score": {
+                "away": {
+                  "innings": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "runs": 0,
+                  "hits": 3,
+                  "errors": 0
+                },
+                "home": {
+                  "innings": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0
+                  ],
+                  "runs": 2,
+                  "hits": 8,
+                  "errors": 0
+                }
+              },
+              "away_batting": [
+                {
+                  "name": "Austin Wells",
+                  "position": "C",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Garrett Martin",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "José Caballero",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Braden Shewmake",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jazz Chisholm Jr.",
+                  "position": "2B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Zack Short",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Amed Rosario",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jonathan Ornelas",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ernesto Martinez Jr.",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Payton Henry",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Marco Luciano",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jackson Castillo",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Duke Ellis",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tyler Hardman",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kenedy Corona",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jace Avina",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ali Sánchez",
+                  "position": "DH",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                }
+              ],
+              "home_batting": [
+                {
+                  "name": "Gunnar Henderson",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "José Barrero",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Pete Alonso",
+                  "position": "1B",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Creed Willems",
+                  "position": "1B",
+                  "ab": 0,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Samuel Basallo",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Sam Huff",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 2,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tyler O'Neill",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 2,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Reed Trimble",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Colton Cowser",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Enrique Bradfield Jr.",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Adley Rutschman",
+                  "position": "DH",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Heston Kjerstad",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Will Robertson",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Coby Mayo",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Brandon Butterworth",
+                  "position": "3B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jeremiah Jackson",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Payton Eeles",
+                  "position": "2B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                }
+              ],
+              "away_pitching": [
+                {
+                  "name": "Bradley Hanner",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 3,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 1,
+                  "so": 1,
+                  "np": 24,
+                  "era": "18.00"
+                },
+                {
+                  "name": "Jake Bird",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 15,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Carson Coleman",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 12,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Elmer Rodríguez",
+                  "result": "",
+                  "record": "",
+                  "ip": "3.0",
+                  "h": 3,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 42,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Dylan Coleman",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "np": 15,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Kervin Castro",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 12,
+                  "era": "0.00"
+                }
+              ],
+              "home_pitching": [
+                {
+                  "name": "Keegan Akin",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 2,
+                  "np": 21,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Rico Garcia",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 18,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Trevor Rogers",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 32,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Jose Espada",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 15,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Trey Gibson",
+                  "result": "S",
+                  "record": "",
+                  "ip": "3.0",
+                  "h": 2,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 35,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Grant Wolfram",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 13,
+                  "era": "0.00"
+                }
+              ],
+              "game_notes": {
+                "hr": [
+                  "Pete Alonso (2)"
+                ],
+                "2b": [
+                  "Sam Huff",
+                  "Sam Huff"
+                ],
+                "3b": [],
+                "sb": [],
+                "dp": 3
+              }
+            }
+          },
+          {
+            "game_id": 832033,
+            "away_team": {
+              "abbr": "NOR",
+              "name": "Northeastern Huskies",
+              "score": 3
+            },
+            "home_team": {
+              "abbr": "BOS",
+              "name": "Boston Red Sox",
+              "score": 18
+            },
+            "status": "Final",
+            "box_score": {
+              "line_score": {
+                "away": {
+                  "innings": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "runs": 3,
+                  "hits": 7,
+                  "errors": 1
+                },
+                "home": {
+                  "innings": [
+                    1,
+                    0,
+                    3,
+                    4,
+                    1,
+                    9,
+                    0
+                  ],
+                  "runs": 18,
+                  "hits": 14,
+                  "errors": 2
+                }
+              },
+              "away_batting": [
+                {
+                  "name": "Carmelo Musacchia",
+                  "position": "SS",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Henry DiGiorgio",
+                  "position": "SS",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Harrison Feinberg",
+                  "position": "CF",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Cooper Maher",
+                  "position": "P",
+                  "ab": 0,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jack Cropper",
+                  "position": "P",
+                  "ab": 0,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Max Marchetti",
+                  "position": "P",
+                  "ab": 0,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tom Mahoney",
+                  "position": "P",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ryan Gerety",
+                  "position": "RF",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ian Oehlschlaeger",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Matt Brinker",
+                  "position": "C",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Eric Cha",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Will Fosberg",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Chris Walsh",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Michael Mack",
+                  "position": "2B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Anthony Ruggiero",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Carter Bentley",
+                  "position": "CF",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "AJ Aschettino",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Cooper Tarantino",
+                  "position": "PH",
+                  "ab": 1,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                }
+              ],
+              "home_batting": [
+                {
+                  "name": "Nate Eaton",
+                  "position": "RF",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tyler McDonough",
+                  "position": "2B",
+                  "ab": 0,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Masataka Yoshida",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 2,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Braiden Ward",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 2,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kristian Campbell",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Max Ferguson",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nathan Hickey",
+                  "position": "1B",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 3,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Phillip Sikes",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 2,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Mikey Romero",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Corey Rosier",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Vinny Capra",
+                  "position": "3B",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jack Winnay",
+                  "position": "1B",
+                  "ab": 0,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 1,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tsung-Che Cheng",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Marvin Alcantara",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Allan Castro",
+                  "position": "DH",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Mickey Gasper",
+                  "position": "DH",
+                  "ab": 1,
+                  "r": 2,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ronald Rosario",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 2,
+                  "h": 2,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nate Baez",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                }
+              ],
+              "away_pitching": [
+                {
+                  "name": "Angel Cruz",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 4,
+                  "r": 4,
+                  "er": 4,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 25,
+                  "era": "36.00"
+                },
+                {
+                  "name": "Robbie O'Connor",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 2,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 27,
+                  "era": "4.50"
+                },
+                {
+                  "name": "Max Marchetti",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.1",
+                  "h": 3,
+                  "r": 4,
+                  "er": 4,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 20,
+                  "era": "108.00"
+                },
+                {
+                  "name": "Scott Longo",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 2,
+                  "r": 3,
+                  "er": 2,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 28,
+                  "era": "18.00"
+                },
+                {
+                  "name": "Jack Cropper",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.0",
+                  "h": 2,
+                  "r": 5,
+                  "er": 5,
+                  "bb": 3,
+                  "so": 0,
+                  "np": 21,
+                  "era": "-.--"
+                },
+                {
+                  "name": "Cooper Maher",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 2,
+                  "so": 0,
+                  "np": 22,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Tom Mahoney",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.2",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 10,
+                  "era": "0.00"
+                }
+              ],
+              "home_pitching": [
+                {
+                  "name": "Jeremy Wu-Yelland",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 14,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Max Carlson",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.2",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 6,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Tyler Uberstine",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.1",
+                  "h": 4,
+                  "r": 2,
+                  "er": 1,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 31,
+                  "era": "6.75"
+                },
+                {
+                  "name": "Jack Anderson",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 2,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 27,
+                  "era": "4.50"
+                },
+                {
+                  "name": "Noah Song",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "np": 12,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Wyatt Olds",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 22,
+                  "era": "0.00"
+                }
+              ],
+              "game_notes": {
+                "hr": [
+                  "Ronald Rosario (1)"
+                ],
+                "2b": [
+                  "Masataka Yoshida",
+                  "Nate Eaton",
+                  "Nathan Hickey"
+                ],
+                "3b": [
+                  "Mikey Romero"
+                ],
+                "sb": [],
+                "dp": 1
+              }
+            }
+          },
+          {
+            "game_id": 831829,
+            "away_team": {
+              "abbr": "KC",
+              "name": "Kansas City Royals",
+              "score": 7
+            },
+            "home_team": {
+              "abbr": "TEX",
+              "name": "Texas Rangers",
+              "score": 3
+            },
+            "status": "Final",
+            "box_score": {
+              "line_score": {
+                "away": {
+                  "innings": [
+                    0,
+                    3,
+                    3,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                  ],
+                  "runs": 7,
+                  "hits": 9,
+                  "errors": 0
+                },
+                "home": {
+                  "innings": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                  ],
+                  "runs": 3,
+                  "hits": 7,
+                  "errors": 2
+                }
+              },
+              "away_batting": [
+                {
+                  "name": "Maikel Garcia",
+                  "position": "3B",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Abraham Toro",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Bobby Witt Jr.",
+                  "position": "DH",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ramon Ramirez",
+                  "position": "DH",
+                  "ab": 1,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Vinnie Pasquantino",
+                  "position": "1B",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Brett Squires",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Salvador Perez",
+                  "position": "C",
+                  "ab": 3,
+                  "r": 2,
+                  "h": 2,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Omar Hernandez",
+                  "position": "C",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jac Caglianone",
+                  "position": "RF",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Gavin Cross",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Lane Thomas",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Drew Waters",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Michael Massey",
+                  "position": "2B",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 2,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Peyton Wilson",
+                  "position": "2B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nick Loftin",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kameron Misner",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kevin Newman",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tyler Tolbert",
+                  "position": "SS",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                }
+              ],
+              "home_batting": [
+                {
+                  "name": "Evan Carter",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Justin Foscue",
+                  "position": "2B",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Corey Seager",
+                  "position": "SS",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ezequiel Duran",
+                  "position": "SS",
+                  "ab": 0,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 2,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Joc Pederson",
+                  "position": "DH",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Cameron Cauley",
+                  "position": "DH",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jake Burger",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jonah Bride",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Josh Jung",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tyler Wade",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Josh Smith",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Willie MacIver",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kyle Higashioka",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Richie Martin",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Alejandro Osuna",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Aaron Zavala",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Michael Helman",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Andrew Velazquez",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                }
+              ],
+              "away_pitching": [
+                {
+                  "name": "Ben Sears",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 13,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Hunter Patteson",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 2,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 1,
+                  "so": 1,
+                  "np": 20,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Beck Way",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 18,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Stephen Kolek",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 3,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 1,
+                  "so": 2,
+                  "np": 36,
+                  "era": "4.50"
+                },
+                {
+                  "name": "Eric Cerantola",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 7,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Jose Cuas",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 10,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Shane Panzini",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 1,
+                  "so": 1,
+                  "np": 20,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Helcris Olivárez",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 9,
+                  "era": "0.00"
+                }
+              ],
+              "home_pitching": [
+                {
+                  "name": "Robert Garcia",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.1",
+                  "h": 2,
+                  "r": 3,
+                  "er": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 22,
+                  "era": "54.00"
+                },
+                {
+                  "name": "Aidan Anderson",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.2",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 14,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Peyton Gray",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 17,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Mason Thompson",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 2,
+                  "so": 0,
+                  "np": 13,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Gavin Collyer",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 18,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Trey Supak",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 2,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 29,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Nathan Eovaldi",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 3,
+                  "r": 3,
+                  "er": 3,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 29,
+                  "era": "13.50"
+                },
+                {
+                  "name": "Cole Winn",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 9,
+                  "era": "0.00"
+                }
+              ],
+              "game_notes": {
+                "hr": [
+                  "Salvador Perez (1)",
+                  "Michael Massey (2)"
+                ],
+                "2b": [
+                  "Josh Smith",
+                  "Lane Thomas",
+                  "Salvador Perez",
+                  "Cameron Cauley",
+                  "Brett Squires",
+                  "Justin Foscue"
+                ],
+                "3b": [
+                  "Bobby Witt Jr."
+                ],
+                "sb": [],
+                "dp": 3
+              }
+            }
+          },
+          {
+            "game_id": 832042,
+            "away_team": {
+              "abbr": "CWS",
+              "name": "Chicago White Sox",
+              "score": 8
+            },
+            "home_team": {
+              "abbr": "CHC",
+              "name": "Chicago Cubs",
+              "score": 1
+            },
+            "status": "Final",
+            "box_score": {
+              "line_score": {
+                "away": {
+                  "innings": [
+                    1,
+                    3,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "runs": 8,
+                  "hits": 12,
+                  "errors": 1
+                },
+                "home": {
+                  "innings": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "runs": 1,
+                  "hits": 7,
+                  "errors": 1
+                }
+              },
+              "away_batting": [
+                {
+                  "name": "Curtis Mead",
+                  "position": "3B",
+                  "ab": 4,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Drew Romo",
+                  "position": "C",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kyle Teel",
+                  "position": "C",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Darren Baker",
+                  "position": "2B",
+                  "ab": 0,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Austin Hays",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Braden Montgomery",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Munetaka Murakami",
+                  "position": "1B",
+                  "ab": 4,
+                  "r": 0,
+                  "h": 2,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ryan Galanie",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Derek Hill",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 2,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "William Bergolla Jr.",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 2,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Sam Antonacci",
+                  "position": "2B",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Oliver Dunn",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Korey Lee",
+                  "position": "DH",
+                  "ab": 4,
+                  "r": 1,
+                  "h": 3,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tristan Peters",
+                  "position": "RF",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jacob Burke",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tanner Murray",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Caden Connor",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                }
+              ],
+              "home_batting": [
+                {
+                  "name": "Jonathon Long",
+                  "position": "1B",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jordan Nwogu",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Alex Bregman",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jefferson Rojas",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Seiya Suzuki",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Brett Bateman",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Miguel Amaya",
+                  "position": "C",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ariel Armas",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Dylan Carlson",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "James Triantos",
+                  "position": "2B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Chas McCormick",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Owen Miller",
+                  "position": "3B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Pedro Ramirez",
+                  "position": "3B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Haydn McGeary",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "BJ Murray",
+                  "position": "DH",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Hayden Cantrelle",
+                  "position": "PH",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Scott Kingery",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Parker Chavers",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                }
+              ],
+              "away_pitching": [
+                {
+                  "name": "Tyler Schweitzer",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 2,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 2,
+                  "np": 23,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Ben Peoples",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 17,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Tyson Miller",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 11,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Jackson Kelley",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 13,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Zach Franklin",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 2,
+                  "so": 1,
+                  "np": 30,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Jonathan Cannon",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.2",
+                  "h": 2,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 1,
+                  "so": 3,
+                  "np": 41,
+                  "era": "5.40"
+                },
+                {
+                  "name": "Jairo Iriarte",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 15,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Riley Gowens",
+                  "result": "H",
+                  "record": "",
+                  "ip": "0.1",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 4,
+                  "era": "0.00"
+                }
+              ],
+              "home_pitching": [
+                {
+                  "name": "Jameson Taillon",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.2",
+                  "h": 4,
+                  "r": 4,
+                  "er": 4,
+                  "bb": 1,
+                  "so": 1,
+                  "np": 34,
+                  "era": "21.60"
+                },
+                {
+                  "name": "Gavin Hollowell",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 15,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Grant Kipp",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.2",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 16,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Zane Mills",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 2,
+                  "r": 1,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 17,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Porter Hodge",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.1",
+                  "h": 1,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 4,
+                  "so": 1,
+                  "np": 25,
+                  "era": "54.00"
+                },
+                {
+                  "name": "Connor Schultz",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.1",
+                  "h": 2,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 2,
+                  "np": 26,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Connor Noland",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 2,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 33,
+                  "era": "4.50"
+                }
+              ],
+              "game_notes": {
+                "hr": [
+                  "Austin Hays (1)",
+                  "Seiya Suzuki (1)",
+                  "Sam Antonacci (2)"
+                ],
+                "2b": [
+                  "Munetaka Murakami",
+                  "William Bergolla Jr.",
+                  "William Bergolla Jr."
+                ],
+                "3b": [
+                  "Braden Montgomery"
+                ],
+                "sb": [],
+                "dp": 3
+              }
+            }
+          },
+          {
+            "game_id": 831959,
+            "away_team": {
+              "abbr": "ARI",
+              "name": "Arizona Diamondbacks",
+              "score": 3
+            },
+            "home_team": {
+              "abbr": "COL",
+              "name": "Colorado Rockies",
+              "score": 2
+            },
+            "status": "Final",
+            "box_score": {
+              "line_score": {
+                "away": {
+                  "innings": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0
+                  ],
+                  "runs": 3,
+                  "hits": 8,
+                  "errors": 0
+                },
+                "home": {
+                  "innings": [
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "runs": 2,
+                  "hits": 3,
+                  "errors": 2
+                }
+              },
+              "away_batting": [
+                {
+                  "name": "Ketel Marte",
+                  "position": "2B",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Luken Baker",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Geraldo Perdomo",
+                  "position": "SS",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jacob Amaya",
+                  "position": "SS",
+                  "ab": 1,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Pavin Smith",
+                  "position": "DH",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "LuJames Groover",
+                  "position": "DH",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Gabriel Moreno",
+                  "position": "C",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Matt O'Neill",
+                  "position": "C",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nolan Arenado",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jose Fernandez",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Carlos Santana",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Druw Jones",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Alek Thomas",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Tommy Troy",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ryan Waldschmidt",
+                  "position": "LF",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kristian Robinson",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jorge Barrosa",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "A.J. Vukovich",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                }
+              ],
+              "home_batting": [
+                {
+                  "name": "Jake McCarthy",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Drew Avans",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Cole Carrigg",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Chad Stevens",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jordan Beck",
+                  "position": "RF",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Troy Johnston",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Edouard Julien",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ryan Ritter",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Braxton Fulford",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Brett Sullivan",
+                  "position": "C",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "GJ Hill",
+                  "position": "PR",
+                  "ab": 0,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Kyle Karros",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Vimael Machín",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "T.J. Rumfield",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Charlie Condon",
+                  "position": "1B",
+                  "ab": 0,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Zac Veen",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Sterlin Thompson",
+                  "position": "LF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nicky Lopez",
+                  "position": "DH",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                }
+              ],
+              "away_pitching": [
+                {
+                  "name": "Andrew Hoffmann",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 17,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Taylor Rashi",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 8,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Jose Cabrera",
+                  "result": "S",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 2,
+                  "so": 1,
+                  "np": 25,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Bryce Jarvis",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 12,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Thomas Hatch",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 16,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Philip Abner",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 9,
+                  "era": "0.00"
+                },
+                {
+                  "name": "John Curtiss",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 15,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Isaiah Campbell",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 2,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 20,
+                  "era": "18.00"
+                }
+              ],
+              "home_pitching": [
+                {
+                  "name": "RJ Petit",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 15,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Sean Sullivan",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 22,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Juan Mejia",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 13,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Patrick Weigel",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 3,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 13,
+                  "era": "18.00"
+                },
+                {
+                  "name": "Zach Agnos",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 9,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Antonio Senzatela",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 3,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 34,
+                  "era": "4.50"
+                },
+                {
+                  "name": "Konner Eaton",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 14,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Luis Peralta",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 16,
+                  "era": "0.00"
+                }
+              ],
+              "game_notes": {
+                "hr": [
+                  "Nolan Arenado (1)"
+                ],
+                "2b": [
+                  "Alek Thomas",
+                  "Matt O'Neill",
+                  "Tommy Troy"
+                ],
+                "3b": [
+                  "Cole Carrigg"
+                ],
+                "sb": [],
+                "dp": 1
+              }
+            }
+          },
+          {
+            "game_id": 831764,
+            "away_team": {
+              "abbr": "SD",
+              "name": "San Diego Padres",
+              "score": 4
+            },
+            "home_team": {
+              "abbr": "SEA",
+              "name": "Seattle Mariners",
+              "score": 7
+            },
+            "status": "Final",
+            "box_score": {
+              "line_score": {
+                "away": {
+                  "innings": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    2,
+                    0,
+                    1
+                  ],
+                  "runs": 4,
+                  "hits": 8,
+                  "errors": 0
+                },
+                "home": {
+                  "innings": [
+                    0,
+                    2,
+                    1,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0
+                  ],
+                  "runs": 7,
+                  "hits": 13,
+                  "errors": 0
+                }
+              },
+              "away_batting": [
+                {
+                  "name": "Xander Bogaerts",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Francisco Acuna",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jackson Merrill",
+                  "position": "CF",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jase Bowen",
+                  "position": "CF",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Manny Machado",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jose Miranda",
+                  "position": "3B",
+                  "ab": 3,
+                  "r": 1,
+                  "h": 2,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Fernando Tatis Jr.",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nick Solak",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jake Cronenworth",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Clay Dungan",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nick Castellanos",
+                  "position": "1B",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Romeo Sanabria",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Luis Campusano",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Rodolfo Durán",
+                  "position": "C",
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Ty France",
+                  "position": "DH",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Pablo Reyes",
+                  "position": "DH",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Nick Schnell",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Samad Taylor",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                }
+              ],
+              "home_batting": [
+                {
+                  "name": "Luke Raley",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 2,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jonny Farmelo",
+                  "position": "CF",
+                  "ab": 2,
+                  "r": 2,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Cal Raleigh",
+                  "position": "C",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jhonny Pereda",
+                  "position": "C",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Julio Rodríguez",
+                  "position": "DH",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Lazaro Montes",
+                  "position": "DH",
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Josh Naylor",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Connor Joe",
+                  "position": "1B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Randy Arozarena",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Rhylan Thomas",
+                  "position": "LF",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "J.P. Crawford",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Leo Rivas",
+                  "position": "SS",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Dominic Canzone",
+                  "position": "RF",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Victor Labrada",
+                  "position": "RF",
+                  "ab": 1,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Michael Arroyo",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 1,
+                  "h": 2,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Miles Mastrobuoni",
+                  "position": "2B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Colt Emerson",
+                  "position": "3B",
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Will Wilson",
+                  "position": "3B",
+                  "ab": 1,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".000"
+                }
+              ],
+              "away_pitching": [
+                {
+                  "name": "Manuel Castro",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.2",
+                  "h": 2,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 20,
+                  "era": "27.00"
+                },
+                {
+                  "name": "Jagger Haynes",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 4,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 29,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Mason Miller",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 23,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Wandy Peralta",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 11,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Justin Yeager",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 2,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 21,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Jackson Wolf",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.2",
+                  "h": 3,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 1,
+                  "so": 1,
+                  "np": 37,
+                  "era": "10.80"
+                },
+                {
+                  "name": "Garrett Hawkins",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.2",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 10,
+                  "era": "0.00"
+                }
+              ],
+              "home_pitching": [
+                {
+                  "name": "Troy Taylor",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 1,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 1,
+                  "so": 0,
+                  "np": 16,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Blas Castaño",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 13,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Nick Davila",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 2,
+                  "r": 1,
+                  "er": 1,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 18,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Michael Rucker",
+                  "result": "H",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 2,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 16,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Alex Hoppe",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.2",
+                  "h": 1,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 2,
+                  "so": 0,
+                  "np": 24,
+                  "era": "27.00"
+                },
+                {
+                  "name": "Dane Dunning",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.2",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 2,
+                  "so": 1,
+                  "np": 37,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Cooper Criswell",
+                  "result": "H",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "np": 28,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Jimmy Kingsbury",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.1",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 1,
+                  "era": "0.00"
+                },
+                {
+                  "name": "Jason Ruffcorn",
+                  "result": "",
+                  "record": "",
+                  "ip": "0.1",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 2,
+                  "era": "0.00"
+                }
+              ],
+              "game_notes": {
+                "hr": [
+                  "Michael Arroyo (2)",
+                  "Romeo Sanabria (1)",
+                  "Jose Miranda (2)",
+                  "Leo Rivas (1)"
+                ],
+                "2b": [
+                  "Michael Arroyo",
+                  "Miles Mastrobuoni",
+                  "Jose Miranda"
+                ],
+                "3b": [],
+                "sb": [],
+                "dp": 1
+              }
+            }
+          }
+        ]
       },
       "standings": {
         "AL East": [
@@ -424,68 +4350,6 @@
       },
       "schedule": [
         {
-          "date": "2026-02-20",
-          "day_label": "Fri",
-          "games": [
-            {
-              "time": "2026-02-20T18:05:00Z",
-              "time_label": "01:05 PM ET",
-              "away": "NYY",
-              "away_name": "New York Yankees",
-              "home": "BAL",
-              "home_name": "Baltimore Orioles"
-            },
-            {
-              "time": "2026-02-20T18:05:00Z",
-              "time_label": "01:05 PM ET",
-              "away": "NOR",
-              "away_name": "Northeastern Huskies",
-              "home": "BOS",
-              "home_name": "Boston Red Sox"
-            },
-            {
-              "time": "2026-02-20T20:05:00Z",
-              "time_label": "03:05 PM ET",
-              "away": "KC",
-              "away_name": "Kansas City Royals",
-              "home": "TEX",
-              "home_name": "Texas Rangers"
-            },
-            {
-              "time": "2026-02-20T20:05:00Z",
-              "time_label": "03:05 PM ET",
-              "away": "CWS",
-              "away_name": "Chicago White Sox",
-              "home": "CHC",
-              "home_name": "Chicago Cubs"
-            },
-            {
-              "time": "2026-02-20T20:10:00Z",
-              "time_label": "03:10 PM ET",
-              "away": "ARI",
-              "away_name": "Arizona Diamondbacks",
-              "home": "COL",
-              "home_name": "Colorado Rockies"
-            },
-            {
-              "time": "2026-02-20T20:10:00Z",
-              "time_label": "03:10 PM ET",
-              "away": "SD",
-              "away_name": "San Diego Padres",
-              "home": "SEA",
-              "home_name": "Seattle Mariners"
-            },
-            {
-              "time": "2026-02-20T23:05:00Z",
-              "time_label": "06:05 PM ET",
-              "away": "MIN",
-              "away_name": "Minnesota Golden Gophers",
-              "home": "MIN",
-              "home_name": "Minnesota Twins"
-            }
-          ]
-        },
-        {
           "date": "2026-02-21",
           "day_label": "Sat",
           "games": [
@@ -752,13 +4616,330 @@
               "home_name": "Milwaukee Brewers"
             }
           ]
+        },
+        {
+          "date": "2026-02-23",
+          "day_label": "Mon",
+          "games": [
+            {
+              "time": "2026-02-23T18:05:00Z",
+              "time_label": "01:05 PM ET",
+              "away": "BOS",
+              "away_name": "Boston Red Sox",
+              "home": "TB",
+              "home_name": "Tampa Bay Rays"
+            },
+            {
+              "time": "2026-02-23T18:05:00Z",
+              "time_label": "01:05 PM ET",
+              "away": "MIN",
+              "away_name": "Minnesota Twins",
+              "home": "DET",
+              "home_name": "Detroit Tigers"
+            },
+            {
+              "time": "2026-02-23T18:05:00Z",
+              "time_label": "01:05 PM ET",
+              "away": "ATL",
+              "away_name": "Atlanta Braves",
+              "home": "BAL",
+              "home_name": "Baltimore Orioles"
+            },
+            {
+              "time": "2026-02-23T18:05:00Z",
+              "time_label": "01:05 PM ET",
+              "away": "MIA",
+              "away_name": "Miami Marlins",
+              "home": "STL",
+              "home_name": "St. Louis Cardinals"
+            },
+            {
+              "time": "2026-02-23T18:05:00Z",
+              "time_label": "01:05 PM ET",
+              "away": "NYY",
+              "away_name": "New York Yankees",
+              "home": "PIT",
+              "home_name": "Pittsburgh Pirates"
+            },
+            {
+              "time": "2026-02-23T18:07:00Z",
+              "time_label": "01:07 PM ET",
+              "away": "NYM",
+              "away_name": "New York Mets",
+              "home": "TOR",
+              "home_name": "Toronto Blue Jays"
+            },
+            {
+              "time": "2026-02-23T20:05:00Z",
+              "time_label": "03:05 PM ET",
+              "away": "ARI",
+              "away_name": "Arizona Diamondbacks",
+              "home": "CLE",
+              "home_name": "Cleveland Guardians"
+            },
+            {
+              "time": "2026-02-23T20:05:00Z",
+              "time_label": "03:05 PM ET",
+              "away": "CHC",
+              "away_name": "Chicago Cubs",
+              "home": "KC",
+              "home_name": "Kansas City Royals"
+            },
+            {
+              "time": "2026-02-23T20:05:00Z",
+              "time_label": "03:05 PM ET",
+              "away": "SEA",
+              "away_name": "Seattle Mariners",
+              "home": "LAD",
+              "home_name": "Los Angeles Dodgers"
+            },
+            {
+              "time": "2026-02-23T20:05:00Z",
+              "time_label": "03:05 PM ET",
+              "away": "OAK",
+              "away_name": "Athletics",
+              "home": "SF",
+              "home_name": "San Francisco Giants"
+            },
+            {
+              "time": "2026-02-23T20:10:00Z",
+              "time_label": "03:10 PM ET",
+              "away": "TEX",
+              "away_name": "Texas Rangers",
+              "home": "LAA",
+              "home_name": "Los Angeles Angels"
+            },
+            {
+              "time": "2026-02-23T20:10:00Z",
+              "time_label": "03:10 PM ET",
+              "away": "CWS",
+              "away_name": "Chicago White Sox",
+              "home": "COL",
+              "home_name": "Colorado Rockies"
+            },
+            {
+              "time": "2026-02-23T20:10:00Z",
+              "time_label": "03:10 PM ET",
+              "away": "MIL",
+              "away_name": "Milwaukee Brewers",
+              "home": "SD",
+              "home_name": "San Diego Padres"
+            },
+            {
+              "time": "2026-02-23T23:05:00Z",
+              "time_label": "06:05 PM ET",
+              "away": "PHI",
+              "away_name": "Philadelphia Phillies",
+              "home": "WSH",
+              "home_name": "Washington Nationals"
+            }
+          ]
         }
       ]
     },
     "nhl": {
       "yesterday": {
-        "date": "2026-02-19",
-        "games": []
+        "date": "2026-02-20",
+        "games": [
+          {
+            "game_id": "2025090027",
+            "away_team": {
+              "abbr": "FIN",
+              "name": "Finland",
+              "score": 2
+            },
+            "home_team": {
+              "abbr": "CAN",
+              "name": "Canada",
+              "score": 3
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 17,
+                "home": 39
+              },
+              "goalies": [
+                {
+                  "team": "FIN",
+                  "name": "J. Korpisalo",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "FIN",
+                  "name": "J. Saros",
+                  "saves": 36,
+                  "shots": 39,
+                  "save_pct": 0.923
+                },
+                {
+                  "team": "CAN",
+                  "name": "L. Thompson",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "CAN",
+                  "name": "J. Binnington",
+                  "saves": 15,
+                  "shots": 17,
+                  "save_pct": 0.882
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "CAN",
+                  "name": "C. McDavid",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "FIN",
+                  "name": "E. Haula",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "FIN",
+                  "name": "M. Rantanen",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "CAN",
+                  "name": "S. Reinhart",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "CAN",
+                  "name": "N. MacKinnon",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "CAN",
+                  "name": "S. Theodore",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2025090028",
+            "away_team": {
+              "abbr": "SVK",
+              "name": "Slovakia",
+              "score": 2
+            },
+            "home_team": {
+              "abbr": "USA",
+              "name": "USA",
+              "score": 6
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 24,
+                "home": 39
+              },
+              "goalies": [
+                {
+                  "team": "SVK",
+                  "name": "S. Hlavaj",
+                  "saves": 19,
+                  "shots": 23,
+                  "save_pct": 0.826
+                },
+                {
+                  "team": "SVK",
+                  "name": "S. Skorvanek",
+                  "saves": 15,
+                  "shots": 17,
+                  "save_pct": 0.882
+                },
+                {
+                  "team": "USA",
+                  "name": "J. Oettinger",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "USA",
+                  "name": "C. Hellebuyck",
+                  "saves": 22,
+                  "shots": 24,
+                  "save_pct": 0.917
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "USA",
+                  "name": "Z. Werenski",
+                  "goals": 0,
+                  "assists": 3,
+                  "points": 3
+                },
+                {
+                  "team": "USA",
+                  "name": "J. Hughes",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "USA",
+                  "name": "B. Tkachuk",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "USA",
+                  "name": "J. Eichel",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "USA",
+                  "name": "T. Thompson",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "SVK",
+                  "name": "M. Fehérváry",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                }
+              ]
+            }
+          }
+        ]
       },
       "standings": {
         "Central": [
@@ -1359,45 +5540,17 @@
       },
       "schedule": [
         {
-          "date": "2026-02-20",
-          "day_label": "Fri",
-          "games": [
-            {
-              "time": "10:30",
-              "time_label": "10:30 AM ET",
-              "away": "FIN",
-              "away_name": "Finland",
-              "away_record": "",
-              "home": "CAN",
-              "home_name": "Canada",
-              "home_record": "",
-              "broadcast": "Peacock"
-            },
-            {
-              "time": "15:00",
-              "time_label": "03:00 PM ET",
-              "away": "SVK",
-              "away_name": "Slovakia",
-              "away_record": "",
-              "home": "USA",
-              "home_name": "USA",
-              "home_record": "",
-              "broadcast": "Peacock"
-            }
-          ]
-        },
-        {
           "date": "2026-02-21",
           "day_label": "Sat",
           "games": [
             {
               "time": "14:30",
               "time_label": "02:30 PM ET",
-              "away": "TBD",
-              "away_name": "TBD",
+              "away": "FIN",
+              "away_name": "Finland",
               "away_record": "",
-              "home": "TBD",
-              "home_name": "TBD",
+              "home": "SVK",
+              "home_name": "Slovakia",
               "home_record": "",
               "broadcast": "Peacock"
             }
@@ -1410,13 +5563,13 @@
             {
               "time": "08:00",
               "time_label": "08:00 AM ET",
-              "away": "TBD",
-              "away_name": "TBD",
+              "away": "USA",
+              "away_name": "USA",
               "away_record": "",
-              "home": "TBD",
-              "home_name": "TBD",
+              "home": "CAN",
+              "home_name": "Canada",
               "home_record": "",
-              "broadcast": "CBC"
+              "broadcast": "Peacock"
             }
           ]
         }
@@ -1424,994 +5577,895 @@
     },
     "nba": {
       "yesterday": {
-        "date": "2026-02-19",
+        "date": "2026-02-20",
         "games": [
           {
-            "game_id": "401810647",
+            "game_id": "401810657",
             "away_team": {
-              "abbr": "HOU",
-              "name": "Houston Rockets",
-              "score": 105
+              "abbr": "CLE",
+              "name": "Cleveland Cavaliers",
+              "score": 118
             },
             "home_team": {
               "abbr": "CHA",
               "name": "Charlotte Hornets",
-              "score": 101
+              "score": 113
             },
             "status": "Final",
             "periods": 4,
             "box_score": {
               "line_score": {
                 "away": [
-                  24,
+                  30,
                   29,
-                  27,
-                  25
+                  31,
+                  28
                 ],
                 "home": [
+                  20,
                   33,
-                  19,
-                  26,
-                  23
+                  36,
+                  24
                 ]
               },
               "scorers": [
-                {
-                  "team": "HOU",
-                  "name": "Kevin Durant",
-                  "points": 35,
-                  "rebounds": 8,
-                  "assists": 4,
-                  "fgm": 14,
-                  "fga": 20,
-                  "fg3m": 2,
-                  "fg3a": 4
-                },
-                {
-                  "team": "CHA",
-                  "name": "Grant Williams",
-                  "points": 20,
-                  "rebounds": 9,
-                  "assists": 1,
-                  "fgm": 7,
-                  "fga": 10,
-                  "fg3m": 4,
-                  "fg3a": 5
-                },
-                {
-                  "team": "CHA",
-                  "name": "Brandon Miller",
-                  "points": 17,
-                  "rebounds": 4,
-                  "assists": 7,
-                  "fgm": 5,
-                  "fga": 22,
-                  "fg3m": 1,
-                  "fg3a": 12
-                },
-                {
-                  "team": "HOU",
-                  "name": "Jabari Smith Jr.",
-                  "points": 15,
-                  "rebounds": 7,
-                  "assists": 1,
-                  "fgm": 6,
-                  "fga": 8,
-                  "fg3m": 2,
-                  "fg3a": 3
-                },
                 {
                   "team": "CHA",
                   "name": "Kon Knueppel",
-                  "points": 15,
-                  "rebounds": 5,
-                  "assists": 4,
-                  "fgm": 5,
-                  "fga": 11,
-                  "fg3m": 3,
-                  "fg3a": 6
+                  "points": 33,
+                  "rebounds": 6,
+                  "assists": 2,
+                  "fgm": 11,
+                  "fga": 20,
+                  "fg3m": 7,
+                  "fg3a": 15
                 },
-                {
-                  "team": "HOU",
-                  "name": "Alperen Sengun",
-                  "points": 13,
-                  "rebounds": 2,
-                  "assists": 7,
-                  "fgm": 6,
-                  "fga": 16,
-                  "fg3m": 0,
-                  "fg3a": 3
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401810648",
-            "away_team": {
-              "abbr": "BKN",
-              "name": "Brooklyn Nets",
-              "score": 84
-            },
-            "home_team": {
-              "abbr": "CLE",
-              "name": "Cleveland Cavaliers",
-              "score": 112
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  16,
-                  32,
-                  19,
-                  17
-                ],
-                "home": [
-                  34,
-                  36,
-                  32,
-                  10
-                ]
-              },
-              "scorers": [
                 {
                   "team": "CLE",
                   "name": "Donovan Mitchell",
-                  "points": 17,
+                  "points": 32,
                   "rebounds": 3,
-                  "assists": 5,
-                  "fgm": 7,
-                  "fga": 12,
+                  "assists": 4,
+                  "fgm": 9,
+                  "fga": 22,
                   "fg3m": 2,
-                  "fg3a": 4
-                },
-                {
-                  "team": "CLE",
-                  "name": "James Harden",
-                  "points": 16,
-                  "rebounds": 5,
-                  "assists": 9,
-                  "fgm": 6,
-                  "fga": 8,
-                  "fg3m": 3,
-                  "fg3a": 5
+                  "fg3a": 7
                 },
                 {
                   "team": "CLE",
                   "name": "Jarrett Allen",
-                  "points": 15,
-                  "rebounds": 10,
-                  "assists": 1,
-                  "fgm": 5,
-                  "fga": 8,
-                  "fg3m": 0,
-                  "fg3a": 1
-                },
-                {
-                  "team": "BKN",
-                  "name": "Michael Porter Jr.",
-                  "points": 14,
-                  "rebounds": 5,
+                  "points": 26,
+                  "rebounds": 14,
                   "assists": 2,
-                  "fgm": 5,
-                  "fga": 13,
-                  "fg3m": 1,
-                  "fg3a": 6
-                },
-                {
-                  "team": "BKN",
-                  "name": "Ochai Agbaji",
-                  "points": 13,
-                  "rebounds": 3,
-                  "assists": 3,
-                  "fgm": 5,
-                  "fga": 8,
-                  "fg3m": 3,
-                  "fg3a": 6
+                  "fgm": 11,
+                  "fga": 15,
+                  "fg3m": 0,
+                  "fg3a": 0
                 },
                 {
                   "team": "CLE",
-                  "name": "Dennis Schroder",
-                  "points": 12,
-                  "rebounds": 3,
-                  "assists": 3,
+                  "name": "James Harden",
+                  "points": 18,
+                  "rebounds": 4,
+                  "assists": 8,
+                  "fgm": 6,
+                  "fga": 14,
+                  "fg3m": 2,
+                  "fg3a": 3
+                },
+                {
+                  "team": "CHA",
+                  "name": "Brandon Miller",
+                  "points": 18,
+                  "rebounds": 2,
+                  "assists": 4,
+                  "fgm": 6,
+                  "fga": 19,
+                  "fg3m": 4,
+                  "fg3a": 12
+                },
+                {
+                  "team": "CHA",
+                  "name": "LaMelo Ball",
+                  "points": 18,
+                  "rebounds": 2,
+                  "assists": 6,
                   "fgm": 4,
-                  "fga": 8,
-                  "fg3m": 1,
-                  "fg3a": 1
+                  "fga": 17,
+                  "fg3m": 2,
+                  "fg3a": 10
                 }
               ]
             }
           },
           {
-            "game_id": "401810649",
+            "game_id": "401810658",
             "away_team": {
-              "abbr": "ATL",
-              "name": "Atlanta Hawks",
-              "score": 117
+              "abbr": "IND",
+              "name": "Indiana Pacers",
+              "score": 118
             },
             "home_team": {
-              "abbr": "PHI",
-              "name": "Philadelphia 76ers",
-              "score": 107
+              "abbr": "WSH",
+              "name": "Washington Wizards",
+              "score": 131
             },
             "status": "Final",
             "periods": 4,
             "box_score": {
               "line_score": {
                 "away": [
-                  28,
-                  32,
-                  28,
-                  29
+                  27,
+                  41,
+                  24,
+                  26
                 ],
                 "home": [
-                  26,
-                  27,
-                  31,
-                  23
+                  22,
+                  35,
+                  35,
+                  39
                 ]
               },
               "scorers": [
                 {
-                  "team": "ATL",
-                  "name": "Jalen Johnson",
-                  "points": 32,
+                  "team": "WSH",
+                  "name": "Alondes Williams",
+                  "points": 25,
                   "rebounds": 10,
-                  "assists": 5,
+                  "assists": 4,
                   "fgm": 9,
-                  "fga": 22,
-                  "fg3m": 0,
-                  "fg3a": 5
+                  "fga": 11,
+                  "fg3m": 2,
+                  "fg3a": 4
                 },
                 {
-                  "team": "PHI",
-                  "name": "Tyrese Maxey",
-                  "points": 28,
-                  "rebounds": 3,
-                  "assists": 3,
-                  "fgm": 8,
-                  "fga": 23,
-                  "fg3m": 4,
-                  "fg3a": 11
-                },
-                {
-                  "team": "ATL",
-                  "name": "CJ McCollum",
-                  "points": 23,
+                  "team": "IND",
+                  "name": "Jay Huff",
+                  "points": 22,
                   "rebounds": 1,
-                  "assists": 5,
-                  "fgm": 6,
-                  "fga": 13,
-                  "fg3m": 3,
-                  "fg3a": 5
-                },
-                {
-                  "team": "PHI",
-                  "name": "VJ Edgecombe",
-                  "points": 20,
-                  "rebounds": 9,
-                  "assists": 0,
-                  "fgm": 7,
-                  "fga": 15,
-                  "fg3m": 3,
+                  "assists": 2,
+                  "fgm": 8,
+                  "fga": 11,
+                  "fg3m": 5,
                   "fg3a": 8
                 },
                 {
-                  "team": "PHI",
-                  "name": "Kelly Oubre Jr.",
-                  "points": 17,
+                  "team": "IND",
+                  "name": "Quenton Jackson",
+                  "points": 21,
                   "rebounds": 3,
                   "assists": 3,
-                  "fgm": 4,
+                  "fgm": 8,
                   "fga": 13,
+                  "fg3m": 1,
+                  "fg3a": 4
+                },
+                {
+                  "team": "IND",
+                  "name": "Micah Potter",
+                  "points": 18,
+                  "rebounds": 5,
+                  "assists": 2,
+                  "fgm": 6,
+                  "fga": 13,
+                  "fg3m": 4,
+                  "fg3a": 9
+                },
+                {
+                  "team": "WSH",
+                  "name": "Sharife Cooper",
+                  "points": 18,
+                  "rebounds": 3,
+                  "assists": 5,
+                  "fgm": 8,
+                  "fga": 11,
+                  "fg3m": 0,
+                  "fg3a": 2
+                },
+                {
+                  "team": "WSH",
+                  "name": "Tristan Vukcevic",
+                  "points": 14,
+                  "rebounds": 8,
+                  "assists": 1,
+                  "fgm": 7,
+                  "fga": 12,
+                  "fg3m": 0,
+                  "fg3a": 5
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401810659",
+            "away_team": {
+              "abbr": "UTAH",
+              "name": "Utah Jazz",
+              "score": 114
+            },
+            "home_team": {
+              "abbr": "MEM",
+              "name": "Memphis Grizzlies",
+              "score": 123
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  32,
+                  35,
+                  21,
+                  26
+                ],
+                "home": [
+                  28,
+                  27,
+                  32,
+                  36
+                ]
+              },
+              "scorers": [
+                {
+                  "team": "UTAH",
+                  "name": "Isaiah Collier",
+                  "points": 24,
+                  "rebounds": 2,
+                  "assists": 5,
+                  "fgm": 9,
+                  "fga": 16,
+                  "fg3m": 2,
+                  "fg3a": 5
+                },
+                {
+                  "team": "MEM",
+                  "name": "Olivier-Maxence Prosper",
+                  "points": 23,
+                  "rebounds": 5,
+                  "assists": 1,
+                  "fgm": 10,
+                  "fga": 16,
                   "fg3m": 0,
                   "fg3a": 3
                 },
                 {
+                  "team": "UTAH",
+                  "name": "Kyle Filipowski",
+                  "points": 20,
+                  "rebounds": 6,
+                  "assists": 4,
+                  "fgm": 9,
+                  "fga": 13,
+                  "fg3m": 1,
+                  "fg3a": 2
+                },
+                {
+                  "team": "UTAH",
+                  "name": "Ace Bailey",
+                  "points": 20,
+                  "rebounds": 6,
+                  "assists": 3,
+                  "fgm": 8,
+                  "fga": 19,
+                  "fg3m": 2,
+                  "fg3a": 9
+                },
+                {
+                  "team": "MEM",
+                  "name": "GG Jackson",
+                  "points": 20,
+                  "rebounds": 4,
+                  "assists": 3,
+                  "fgm": 7,
+                  "fga": 13,
+                  "fg3m": 2,
+                  "fg3a": 5
+                },
+                {
+                  "team": "MEM",
+                  "name": "Javon Small",
+                  "points": 16,
+                  "rebounds": 4,
+                  "assists": 5,
+                  "fgm": 5,
+                  "fga": 12,
+                  "fg3m": 2,
+                  "fg3a": 5
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401810660",
+            "away_team": {
+              "abbr": "MIA",
+              "name": "Miami Heat",
+              "score": 128
+            },
+            "home_team": {
+              "abbr": "ATL",
+              "name": "Atlanta Hawks",
+              "score": 97
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  29,
+                  28,
+                  30,
+                  41
+                ],
+                "home": [
+                  16,
+                  35,
+                  24,
+                  22
+                ]
+              },
+              "scorers": [
+                {
+                  "team": "MIA",
+                  "name": "Tyler Herro",
+                  "points": 24,
+                  "rebounds": 4,
+                  "assists": 3,
+                  "fgm": 9,
+                  "fga": 14,
+                  "fg3m": 2,
+                  "fg3a": 4
+                },
+                {
                   "team": "ATL",
-                  "name": "Dyson Daniels",
-                  "points": 15,
+                  "name": "Onyeka Okongwu",
+                  "points": 22,
+                  "rebounds": 3,
+                  "assists": 3,
+                  "fgm": 8,
+                  "fga": 12,
+                  "fg3m": 4,
+                  "fg3a": 5
+                },
+                {
+                  "team": "ATL",
+                  "name": "Nickeil Alexander-Walker",
+                  "points": 20,
+                  "rebounds": 3,
+                  "assists": 3,
+                  "fgm": 8,
+                  "fga": 17,
+                  "fg3m": 4,
+                  "fg3a": 9
+                },
+                {
+                  "team": "ATL",
+                  "name": "CJ McCollum",
+                  "points": 20,
+                  "rebounds": 2,
+                  "assists": 1,
+                  "fgm": 8,
+                  "fga": 16,
+                  "fg3m": 4,
+                  "fg3a": 8
+                },
+                {
+                  "team": "MIA",
+                  "name": "Bam Adebayo",
+                  "points": 17,
+                  "rebounds": 8,
+                  "assists": 5,
+                  "fgm": 8,
+                  "fga": 14,
+                  "fg3m": 1,
+                  "fg3a": 4
+                },
+                {
+                  "team": "ATL",
+                  "name": "Jalen Johnson",
+                  "points": 16,
+                  "rebounds": 16,
+                  "assists": 11,
+                  "fgm": 6,
+                  "fga": 22,
+                  "fg3m": 2,
+                  "fg3a": 5
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401810661",
+            "away_team": {
+              "abbr": "DAL",
+              "name": "Dallas Mavericks",
+              "score": 111
+            },
+            "home_team": {
+              "abbr": "MIN",
+              "name": "Minnesota Timberwolves",
+              "score": 122
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  25,
+                  32,
+                  31,
+                  23
+                ],
+                "home": [
+                  40,
+                  29,
+                  27,
+                  26
+                ]
+              },
+              "scorers": [
+                {
+                  "team": "MIN",
+                  "name": "Anthony Edwards",
+                  "points": 40,
+                  "rebounds": 6,
+                  "assists": 1,
+                  "fgm": 16,
+                  "fga": 30,
+                  "fg3m": 5,
+                  "fg3a": 13
+                },
+                {
+                  "team": "MIN",
+                  "name": "Rudy Gobert",
+                  "points": 22,
+                  "rebounds": 17,
+                  "assists": 1,
+                  "fgm": 9,
+                  "fga": 11,
+                  "fg3m": 0,
+                  "fg3a": 1
+                },
+                {
+                  "team": "MIN",
+                  "name": "Naz Reid",
+                  "points": 21,
+                  "rebounds": 7,
+                  "assists": 4,
+                  "fgm": 8,
+                  "fga": 14,
+                  "fg3m": 4,
+                  "fg3a": 8
+                },
+                {
+                  "team": "DAL",
+                  "name": "Khris Middleton",
+                  "points": 18,
                   "rebounds": 7,
                   "assists": 2,
-                  "fgm": 7,
-                  "fga": 12,
+                  "fgm": 6,
+                  "fga": 14,
+                  "fg3m": 1,
+                  "fg3a": 3
+                },
+                {
+                  "team": "DAL",
+                  "name": "Naji Marshall",
+                  "points": 15,
+                  "rebounds": 5,
+                  "assists": 3,
+                  "fgm": 5,
+                  "fga": 16,
                   "fg3m": 0,
+                  "fg3a": 4
+                },
+                {
+                  "team": "DAL",
+                  "name": "Marvin Bagley III",
+                  "points": 15,
+                  "rebounds": 13,
+                  "assists": 0,
+                  "fgm": 5,
+                  "fga": 9,
+                  "fg3m": 1,
                   "fg3a": 2
                 }
               ]
             }
           },
           {
-            "game_id": "401810650",
+            "game_id": "401810662",
             "away_team": {
-              "abbr": "IND",
-              "name": "Indiana Pacers",
-              "score": 105
+              "abbr": "MIL",
+              "name": "Milwaukee Bucks",
+              "score": 139
             },
             "home_team": {
-              "abbr": "WSH",
-              "name": "Washington Wizards",
-              "score": 112
+              "abbr": "NO",
+              "name": "New Orleans Pelicans",
+              "score": 118
             },
             "status": "Final",
             "periods": 4,
             "box_score": {
               "line_score": {
                 "away": [
-                  24,
-                  23,
                   33,
-                  25
-                ],
-                "home": [
-                  26,
-                  33,
-                  29,
-                  24
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "IND",
-                  "name": "Jarace Walker",
-                  "points": 19,
-                  "rebounds": 14,
-                  "assists": 7,
-                  "fgm": 5,
-                  "fga": 15,
-                  "fg3m": 1,
-                  "fg3a": 7
-                },
-                {
-                  "team": "IND",
-                  "name": "Taelon Peter",
-                  "points": 16,
-                  "rebounds": 5,
-                  "assists": 2,
-                  "fgm": 5,
-                  "fga": 12,
-                  "fg3m": 5,
-                  "fg3a": 11
-                },
-                {
-                  "team": "IND",
-                  "name": "Jay Huff",
-                  "points": 15,
-                  "rebounds": 8,
-                  "assists": 1,
-                  "fgm": 3,
-                  "fga": 8,
-                  "fg3m": 1,
-                  "fg3a": 5
-                },
-                {
-                  "team": "IND",
-                  "name": "Ben Sheppard",
-                  "points": 15,
-                  "rebounds": 3,
-                  "assists": 2,
-                  "fgm": 6,
-                  "fga": 8,
-                  "fg3m": 3,
-                  "fg3a": 4
-                },
-                {
-                  "team": "IND",
-                  "name": "Micah Potter",
-                  "points": 14,
-                  "rebounds": 6,
-                  "assists": 1,
-                  "fgm": 5,
-                  "fga": 10,
-                  "fg3m": 2,
-                  "fg3a": 4
-                },
-                {
-                  "team": "WSH",
-                  "name": "Bub Carrington",
-                  "points": 13,
-                  "rebounds": 4,
-                  "assists": 3,
-                  "fgm": 5,
-                  "fga": 14,
-                  "fg3m": 3,
-                  "fg3a": 9
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401810651",
-            "away_team": {
-              "abbr": "DET",
-              "name": "Detroit Pistons",
-              "score": 126
-            },
-            "home_team": {
-              "abbr": "NY",
-              "name": "New York Knicks",
-              "score": 111
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  28,
-                  30,
+                  38,
                   32,
                   36
                 ],
                 "home": [
-                  26,
-                  22,
-                  31,
-                  32
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "DET",
-                  "name": "Cade Cunningham",
-                  "points": 42,
-                  "rebounds": 8,
-                  "assists": 13,
-                  "fgm": 17,
-                  "fga": 34,
-                  "fg3m": 5,
-                  "fg3a": 11
-                },
-                {
-                  "team": "NY",
-                  "name": "Jalen Brunson",
-                  "points": 33,
-                  "rebounds": 6,
-                  "assists": 8,
-                  "fgm": 12,
-                  "fga": 20,
-                  "fg3m": 3,
-                  "fg3a": 7
-                },
-                {
-                  "team": "NY",
-                  "name": "Karl-Anthony Towns",
-                  "points": 21,
-                  "rebounds": 11,
-                  "assists": 4,
-                  "fgm": 7,
-                  "fga": 14,
-                  "fg3m": 1,
-                  "fg3a": 4
-                },
-                {
-                  "team": "DET",
-                  "name": "Paul Reed",
-                  "points": 18,
-                  "rebounds": 7,
-                  "assists": 2,
-                  "fgm": 7,
-                  "fga": 9,
-                  "fg3m": 0,
-                  "fg3a": 1
-                },
-                {
-                  "team": "NY",
-                  "name": "Landry Shamet",
-                  "points": 15,
-                  "rebounds": 2,
-                  "assists": 2,
-                  "fgm": 4,
-                  "fga": 10,
-                  "fg3m": 3,
-                  "fg3a": 8
-                },
-                {
-                  "team": "DET",
-                  "name": "Tobias Harris",
-                  "points": 11,
-                  "rebounds": 10,
-                  "assists": 5,
-                  "fgm": 4,
-                  "fga": 16,
-                  "fg3m": 1,
-                  "fg3a": 5
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401810652",
-            "away_team": {
-              "abbr": "TOR",
-              "name": "Toronto Raptors",
-              "score": 110
-            },
-            "home_team": {
-              "abbr": "CHI",
-              "name": "Chicago Bulls",
-              "score": 101
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  25,
-                  28,
-                  34,
-                  23
-                ],
-                "home": [
-                  23,
-                  22,
-                  33,
-                  23
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "TOR",
-                  "name": "Brandon Ingram",
-                  "points": 31,
-                  "rebounds": 8,
-                  "assists": 6,
-                  "fgm": 11,
-                  "fga": 26,
-                  "fg3m": 3,
-                  "fg3a": 5
-                },
-                {
-                  "team": "CHI",
-                  "name": "Anfernee Simons",
-                  "points": 20,
-                  "rebounds": 1,
-                  "assists": 1,
-                  "fgm": 7,
-                  "fga": 18,
-                  "fg3m": 4,
-                  "fg3a": 11
-                },
-                {
-                  "team": "CHI",
-                  "name": "Isaac Okoro",
-                  "points": 16,
-                  "rebounds": 5,
-                  "assists": 1,
-                  "fgm": 6,
-                  "fga": 12,
-                  "fg3m": 3,
-                  "fg3a": 5
-                },
-                {
-                  "team": "TOR",
-                  "name": "Scottie Barnes",
-                  "points": 14,
-                  "rebounds": 9,
-                  "assists": 5,
-                  "fgm": 5,
-                  "fga": 14,
-                  "fg3m": 0,
-                  "fg3a": 1
-                },
-                {
-                  "team": "TOR",
-                  "name": "Immanuel Quickley",
-                  "points": 14,
-                  "rebounds": 2,
-                  "assists": 3,
-                  "fgm": 5,
-                  "fga": 12,
-                  "fg3m": 0,
-                  "fg3a": 4
-                },
-                {
-                  "team": "TOR",
-                  "name": "Ja'Kobe Walter",
-                  "points": 14,
-                  "rebounds": 4,
-                  "assists": 0,
-                  "fgm": 4,
-                  "fga": 9,
-                  "fg3m": 2,
-                  "fg3a": 5
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401810653",
-            "away_team": {
-              "abbr": "PHX",
-              "name": "Phoenix Suns",
-              "score": 94
-            },
-            "home_team": {
-              "abbr": "SA",
-              "name": "San Antonio Spurs",
-              "score": 121
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  25,
-                  24,
-                  22,
-                  23
-                ],
-                "home": [
-                  30,
-                  31,
-                  37,
-                  23
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "PHX",
-                  "name": "Jalen Green",
-                  "points": 26,
-                  "rebounds": 3,
-                  "assists": 2,
-                  "fgm": 11,
-                  "fga": 23,
-                  "fg3m": 4,
-                  "fg3a": 9
-                },
-                {
-                  "team": "SA",
-                  "name": "Stephon Castle",
-                  "points": 20,
-                  "rebounds": 2,
-                  "assists": 4,
-                  "fgm": 8,
-                  "fga": 11,
-                  "fg3m": 2,
-                  "fg3a": 4
-                },
-                {
-                  "team": "SA",
-                  "name": "Victor Wembanyama",
-                  "points": 17,
-                  "rebounds": 11,
-                  "assists": 4,
-                  "fgm": 7,
-                  "fga": 15,
-                  "fg3m": 1,
-                  "fg3a": 4
-                },
-                {
-                  "team": "SA",
-                  "name": "Dylan Harper",
-                  "points": 17,
-                  "rebounds": 1,
-                  "assists": 1,
-                  "fgm": 7,
-                  "fga": 11,
-                  "fg3m": 2,
-                  "fg3a": 5
-                },
-                {
-                  "team": "SA",
-                  "name": "De'Aaron Fox",
-                  "points": 15,
-                  "rebounds": 3,
-                  "assists": 8,
-                  "fgm": 4,
-                  "fga": 9,
-                  "fg3m": 2,
-                  "fg3a": 5
-                },
-                {
-                  "team": "SA",
-                  "name": "Devin Vassell",
-                  "points": 12,
-                  "rebounds": 2,
-                  "assists": 2,
-                  "fgm": 5,
-                  "fga": 9,
-                  "fg3m": 2,
-                  "fg3a": 5
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401810654",
-            "away_team": {
-              "abbr": "BOS",
-              "name": "Boston Celtics",
-              "score": 121
-            },
-            "home_team": {
-              "abbr": "GS",
-              "name": "Golden State Warriors",
-              "score": 110
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  36,
                   38,
-                  28,
-                  19
-                ],
-                "home": [
-                  32,
-                  19,
-                  22,
-                  37
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "BOS",
-                  "name": "Payton Pritchard",
-                  "points": 26,
-                  "rebounds": 6,
-                  "assists": 7,
-                  "fgm": 10,
-                  "fga": 18,
-                  "fg3m": 6,
-                  "fg3a": 11
-                },
-                {
-                  "team": "BOS",
-                  "name": "Jaylen Brown",
-                  "points": 23,
-                  "rebounds": 15,
-                  "assists": 13,
-                  "fgm": 10,
-                  "fga": 18,
-                  "fg3m": 0,
-                  "fg3a": 3
-                },
-                {
-                  "team": "GS",
-                  "name": "De'Anthony Melton",
-                  "points": 18,
-                  "rebounds": 3,
-                  "assists": 1,
-                  "fgm": 7,
-                  "fga": 13,
-                  "fg3m": 2,
-                  "fg3a": 6
-                },
-                {
-                  "team": "GS",
-                  "name": "Gui Santos",
-                  "points": 17,
-                  "rebounds": 6,
-                  "assists": 2,
-                  "fgm": 6,
-                  "fga": 14,
-                  "fg3m": 5,
-                  "fg3a": 9
-                },
-                {
-                  "team": "GS",
-                  "name": "Will Richard",
-                  "points": 17,
-                  "rebounds": 5,
-                  "assists": 2,
-                  "fgm": 6,
-                  "fga": 11,
-                  "fg3m": 3,
-                  "fg3a": 7
-                },
-                {
-                  "team": "BOS",
-                  "name": "Sam Hauser",
-                  "points": 16,
-                  "rebounds": 3,
-                  "assists": 5,
-                  "fgm": 6,
-                  "fga": 10,
-                  "fg3m": 4,
-                  "fg3a": 5
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401810655",
-            "away_team": {
-              "abbr": "ORL",
-              "name": "Orlando Magic",
-              "score": 131
-            },
-            "home_team": {
-              "abbr": "SAC",
-              "name": "Sacramento Kings",
-              "score": 94
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  18,
-                  46,
-                  38,
-                  29
-                ],
-                "home": [
-                  28,
                   27,
-                  29,
-                  10
+                  31,
+                  22
                 ]
               },
               "scorers": [
                 {
-                  "team": "ORL",
-                  "name": "Paolo Banchero",
-                  "points": 30,
-                  "rebounds": 5,
-                  "assists": 6,
-                  "fgm": 10,
-                  "fga": 21,
-                  "fg3m": 5,
-                  "fg3a": 7
-                },
-                {
-                  "team": "ORL",
-                  "name": "Anthony Black",
-                  "points": 20,
-                  "rebounds": 3,
-                  "assists": 3,
-                  "fgm": 8,
-                  "fga": 13,
-                  "fg3m": 4,
-                  "fg3a": 6
-                },
-                {
-                  "team": "ORL",
-                  "name": "Desmond Bane",
-                  "points": 17,
-                  "rebounds": 4,
+                  "team": "NO",
+                  "name": "Zion Williamson",
+                  "points": 32,
+                  "rebounds": 2,
                   "assists": 2,
-                  "fgm": 6,
-                  "fga": 9,
-                  "fg3m": 3,
-                  "fg3a": 5
-                },
-                {
-                  "team": "SAC",
-                  "name": "Maxime Raynaud",
-                  "points": 17,
-                  "rebounds": 14,
-                  "assists": 4,
-                  "fgm": 8,
-                  "fga": 13,
+                  "fgm": 13,
+                  "fga": 17,
                   "fg3m": 0,
                   "fg3a": 0
                 },
                 {
-                  "team": "ORL",
-                  "name": "Jett Howard",
-                  "points": 16,
-                  "rebounds": 0,
-                  "assists": 0,
-                  "fgm": 6,
-                  "fga": 6,
-                  "fg3m": 4,
-                  "fg3a": 4
+                  "team": "MIL",
+                  "name": "Ryan Rollins",
+                  "points": 27,
+                  "rebounds": 2,
+                  "assists": 6,
+                  "fgm": 10,
+                  "fga": 15,
+                  "fg3m": 7,
+                  "fg3a": 10
                 },
                 {
-                  "team": "SAC",
-                  "name": "Keegan Murray",
-                  "points": 15,
-                  "rebounds": 8,
-                  "assists": 2,
-                  "fgm": 6,
-                  "fga": 13,
-                  "fg3m": 3,
+                  "team": "MIL",
+                  "name": "Cam Thomas",
+                  "points": 27,
+                  "rebounds": 3,
+                  "assists": 1,
+                  "fgm": 11,
+                  "fga": 17,
+                  "fg3m": 1,
+                  "fg3a": 6
+                },
+                {
+                  "team": "MIL",
+                  "name": "Kevin Porter Jr.",
+                  "points": 25,
+                  "rebounds": 2,
+                  "assists": 7,
+                  "fgm": 10,
+                  "fga": 15,
+                  "fg3m": 0,
+                  "fg3a": 1
+                },
+                {
+                  "team": "NO",
+                  "name": "Saddiq Bey",
+                  "points": 22,
+                  "rebounds": 6,
+                  "assists": 3,
+                  "fgm": 7,
+                  "fga": 14,
+                  "fg3m": 2,
                   "fg3a": 7
+                },
+                {
+                  "team": "NO",
+                  "name": "Derik Queen",
+                  "points": 18,
+                  "rebounds": 9,
+                  "assists": 4,
+                  "fgm": 7,
+                  "fga": 10,
+                  "fg3m": 0,
+                  "fg3a": 0
                 }
               ]
             }
           },
           {
-            "game_id": "401810656",
+            "game_id": "401810663",
             "away_team": {
-              "abbr": "DEN",
-              "name": "Denver Nuggets",
-              "score": 114
+              "abbr": "BKN",
+              "name": "Brooklyn Nets",
+              "score": 86
             },
             "home_team": {
-              "abbr": "LAC",
-              "name": "LA Clippers",
-              "score": 115
+              "abbr": "OKC",
+              "name": "Oklahoma City Thunder",
+              "score": 105
             },
             "status": "Final",
             "periods": 4,
             "box_score": {
               "line_score": {
                 "away": [
-                  24,
-                  28,
-                  25,
-                  37
+                  23,
+                  10,
+                  34,
+                  19
                 ],
                 "home": [
-                  25,
-                  20,
-                  33,
-                  37
+                  21,
+                  29,
+                  27,
+                  28
                 ]
               },
               "scorers": [
                 {
-                  "team": "LAC",
-                  "name": "Bennedict Mathurin",
-                  "points": 38,
-                  "rebounds": 5,
-                  "assists": 4,
-                  "fgm": 12,
-                  "fga": 22,
-                  "fg3m": 2,
+                  "team": "BKN",
+                  "name": "Michael Porter Jr.",
+                  "points": 22,
+                  "rebounds": 9,
+                  "assists": 5,
+                  "fgm": 6,
+                  "fga": 16,
+                  "fg3m": 1,
+                  "fg3a": 9
+                },
+                {
+                  "team": "OKC",
+                  "name": "Jared McCain",
+                  "points": 21,
+                  "rebounds": 4,
+                  "assists": 0,
+                  "fgm": 7,
+                  "fga": 12,
+                  "fg3m": 3,
                   "fg3a": 6
                 },
                 {
-                  "team": "LAC",
-                  "name": "Kawhi Leonard",
-                  "points": 23,
-                  "rebounds": 4,
+                  "team": "BKN",
+                  "name": "Nolan Traore",
+                  "points": 17,
+                  "rebounds": 1,
                   "assists": 3,
-                  "fgm": 8,
-                  "fga": 18,
+                  "fgm": 5,
+                  "fga": 11,
                   "fg3m": 1,
-                  "fg3a": 7
+                  "fg3a": 4
                 },
+                {
+                  "team": "OKC",
+                  "name": "Chet Holmgren",
+                  "points": 15,
+                  "rebounds": 7,
+                  "assists": 2,
+                  "fgm": 3,
+                  "fga": 6,
+                  "fg3m": 2,
+                  "fg3a": 2
+                },
+                {
+                  "team": "BKN",
+                  "name": "Day'Ron Sharpe",
+                  "points": 12,
+                  "rebounds": 8,
+                  "assists": 2,
+                  "fgm": 6,
+                  "fga": 8,
+                  "fg3m": 0,
+                  "fg3a": 0
+                },
+                {
+                  "team": "OKC",
+                  "name": "Isaiah Joe",
+                  "points": 11,
+                  "rebounds": 7,
+                  "assists": 1,
+                  "fgm": 3,
+                  "fga": 6,
+                  "fg3m": 2,
+                  "fg3a": 3
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401810665",
+            "away_team": {
+              "abbr": "DEN",
+              "name": "Denver Nuggets",
+              "score": 157
+            },
+            "home_team": {
+              "abbr": "POR",
+              "name": "Portland Trail Blazers",
+              "score": 103
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  41,
+                  41,
+                  43,
+                  32
+                ],
+                "home": [
+                  27,
+                  26,
+                  32,
+                  18
+                ]
+              },
+              "scorers": [
                 {
                   "team": "DEN",
                   "name": "Nikola Jokic",
-                  "points": 22,
-                  "rebounds": 17,
-                  "assists": 6,
-                  "fgm": 9,
-                  "fga": 22,
-                  "fg3m": 0,
-                  "fg3a": 6
-                },
-                {
-                  "team": "LAC",
-                  "name": "Derrick Jones Jr.",
-                  "points": 22,
-                  "rebounds": 3,
-                  "assists": 1,
-                  "fgm": 7,
+                  "points": 32,
+                  "rebounds": 9,
+                  "assists": 7,
+                  "fgm": 10,
                   "fga": 15,
-                  "fg3m": 2,
-                  "fg3a": 7
+                  "fg3m": 3,
+                  "fg3a": 4
                 },
                 {
                   "team": "DEN",
                   "name": "Jamal Murray",
-                  "points": 20,
-                  "rebounds": 8,
-                  "assists": 8,
-                  "fgm": 5,
-                  "fga": 15,
-                  "fg3m": 2,
-                  "fg3a": 5
+                  "points": 25,
+                  "rebounds": 6,
+                  "assists": 6,
+                  "fgm": 6,
+                  "fga": 12,
+                  "fg3m": 6,
+                  "fg3a": 12
                 },
                 {
                   "team": "DEN",
-                  "name": "Bruce Brown",
+                  "name": "Julian Strawther",
                   "points": 19,
-                  "rebounds": 5,
-                  "assists": 6,
+                  "rebounds": 6,
+                  "assists": 4,
+                  "fgm": 9,
+                  "fga": 16,
+                  "fg3m": 1,
+                  "fg3a": 4
+                },
+                {
+                  "team": "DEN",
+                  "name": "Tim Hardaway Jr.",
+                  "points": 19,
+                  "rebounds": 2,
+                  "assists": 3,
+                  "fgm": 7,
+                  "fga": 11,
+                  "fg3m": 4,
+                  "fg3a": 7
+                },
+                {
+                  "team": "POR",
+                  "name": "Jrue Holiday",
+                  "points": 19,
+                  "rebounds": 2,
+                  "assists": 2,
                   "fgm": 6,
-                  "fga": 9,
-                  "fg3m": 3,
+                  "fga": 10,
+                  "fg3m": 4,
+                  "fg3a": 8
+                },
+                {
+                  "team": "DEN",
+                  "name": "Cameron Johnson",
+                  "points": 15,
+                  "rebounds": 4,
+                  "assists": 4,
+                  "fgm": 3,
+                  "fga": 8,
+                  "fg3m": 2,
                   "fg3a": 5
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401810664",
+            "away_team": {
+              "abbr": "LAC",
+              "name": "LA Clippers",
+              "score": 122
+            },
+            "home_team": {
+              "abbr": "LAL",
+              "name": "Los Angeles Lakers",
+              "score": 125
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  30,
+                  35,
+                  30,
+                  27
+                ],
+                "home": [
+                  41,
+                  31,
+                  27,
+                  26
+                ]
+              },
+              "scorers": [
+                {
+                  "team": "LAL",
+                  "name": "Luka Doncic",
+                  "points": 38,
+                  "rebounds": 6,
+                  "assists": 11,
+                  "fgm": 11,
+                  "fga": 25,
+                  "fg3m": 8,
+                  "fg3a": 14
+                },
+                {
+                  "team": "LAC",
+                  "name": "Kawhi Leonard",
+                  "points": 31,
+                  "rebounds": 4,
+                  "assists": 5,
+                  "fgm": 11,
+                  "fga": 19,
+                  "fg3m": 4,
+                  "fg3a": 6
+                },
+                {
+                  "team": "LAL",
+                  "name": "Austin Reaves",
+                  "points": 29,
+                  "rebounds": 6,
+                  "assists": 2,
+                  "fgm": 9,
+                  "fga": 15,
+                  "fg3m": 4,
+                  "fg3a": 5
+                },
+                {
+                  "team": "LAC",
+                  "name": "Bennedict Mathurin",
+                  "points": 26,
+                  "rebounds": 7,
+                  "assists": 2,
+                  "fgm": 7,
+                  "fga": 16,
+                  "fg3m": 1,
+                  "fg3a": 4
+                },
+                {
+                  "team": "LAC",
+                  "name": "Brook Lopez",
+                  "points": 16,
+                  "rebounds": 10,
+                  "assists": 1,
+                  "fgm": 7,
+                  "fga": 12,
+                  "fg3m": 1,
+                  "fg3a": 3
+                },
+                {
+                  "team": "LAC",
+                  "name": "Derrick Jones Jr.",
+                  "points": 13,
+                  "rebounds": 8,
+                  "assists": 2,
+                  "fgm": 6,
+                  "fga": 10,
+                  "fg3m": 1,
+                  "fg3a": 3
                 }
               ]
             }
@@ -2442,6 +6496,16 @@
           },
           {
             "rank": 3,
+            "team_name": "Cleveland Cavaliers",
+            "team_abbr": "CLE",
+            "wins": 36,
+            "losses": 21,
+            "win_pct": 0.632,
+            "games_back": 6.5,
+            "streak": "W7"
+          },
+          {
+            "rank": 4,
             "team_name": "New York Knicks",
             "team_abbr": "NY",
             "wins": 35,
@@ -2449,16 +6513,6 @@
             "win_pct": 0.625,
             "games_back": 7.0,
             "streak": "L1"
-          },
-          {
-            "rank": 4,
-            "team_name": "Cleveland Cavaliers",
-            "team_abbr": "CLE",
-            "wins": 35,
-            "losses": 21,
-            "win_pct": 0.625,
-            "games_back": 7.0,
-            "streak": "W6"
           },
           {
             "rank": 5,
@@ -2494,41 +6548,41 @@
             "rank": 8,
             "team_name": "Miami Heat",
             "team_abbr": "MIA",
-            "wins": 29,
+            "wins": 30,
             "losses": 27,
-            "win_pct": 0.518,
-            "games_back": 13.0,
-            "streak": "W1"
+            "win_pct": 0.526,
+            "games_back": 12.5,
+            "streak": "W2"
           },
           {
             "rank": 9,
             "team_name": "Atlanta Hawks",
             "team_abbr": "ATL",
             "wins": 27,
-            "losses": 30,
-            "win_pct": 0.474,
-            "games_back": 15.5,
-            "streak": "W1"
+            "losses": 31,
+            "win_pct": 0.466,
+            "games_back": 16.0,
+            "streak": "L1"
           },
           {
             "rank": 10,
             "team_name": "Charlotte Hornets",
             "team_abbr": "CHA",
             "wins": 26,
-            "losses": 30,
-            "win_pct": 0.464,
-            "games_back": 16.0,
-            "streak": "L1"
+            "losses": 31,
+            "win_pct": 0.456,
+            "games_back": 16.5,
+            "streak": "L2"
           },
           {
             "rank": 11,
             "team_name": "Milwaukee Bucks",
             "team_abbr": "MIL",
-            "wins": 23,
+            "wins": 24,
             "losses": 30,
-            "win_pct": 0.434,
-            "games_back": 17.5,
-            "streak": "W2"
+            "win_pct": 0.444,
+            "games_back": 17.0,
+            "streak": "W3"
           },
           {
             "rank": 12,
@@ -2542,33 +6596,33 @@
           },
           {
             "rank": 13,
-            "team_name": "Brooklyn Nets",
-            "team_abbr": "BKN",
-            "wins": 15,
+            "team_name": "Washington Wizards",
+            "team_abbr": "WSH",
+            "wins": 16,
             "losses": 39,
-            "win_pct": 0.278,
-            "games_back": 26.0,
-            "streak": "L2"
+            "win_pct": 0.291,
+            "games_back": 25.5,
+            "streak": "W2"
           },
           {
             "rank": 14,
-            "team_name": "Washington Wizards",
-            "team_abbr": "WSH",
+            "team_name": "Brooklyn Nets",
+            "team_abbr": "BKN",
             "wins": 15,
-            "losses": 39,
-            "win_pct": 0.278,
-            "games_back": 26.0,
-            "streak": "W1"
+            "losses": 40,
+            "win_pct": 0.273,
+            "games_back": 26.5,
+            "streak": "L3"
           },
           {
             "rank": 15,
             "team_name": "Indiana Pacers",
             "team_abbr": "IND",
             "wins": 15,
-            "losses": 41,
-            "win_pct": 0.268,
-            "games_back": 27.0,
-            "streak": "L1"
+            "losses": 42,
+            "win_pct": 0.263,
+            "games_back": 27.5,
+            "streak": "L2"
           }
         ],
         "Western": [
@@ -2576,11 +6630,11 @@
             "rank": 1,
             "team_name": "Oklahoma City Thunder",
             "team_abbr": "OKC",
-            "wins": 42,
+            "wins": 43,
             "losses": 14,
-            "win_pct": 0.75,
+            "win_pct": 0.754,
             "games_back": "-",
-            "streak": "L1"
+            "streak": "W1"
           },
           {
             "rank": 2,
@@ -2589,48 +6643,48 @@
             "wins": 39,
             "losses": 16,
             "win_pct": 0.709,
-            "games_back": 2.5,
+            "games_back": 3.0,
             "streak": "W7"
           },
           {
             "rank": 3,
-            "team_name": "Houston Rockets",
-            "team_abbr": "HOU",
-            "wins": 34,
-            "losses": 20,
-            "win_pct": 0.63,
+            "team_name": "Denver Nuggets",
+            "team_abbr": "DEN",
+            "wins": 36,
+            "losses": 21,
+            "win_pct": 0.632,
             "games_back": 7.0,
             "streak": "W1"
           },
           {
             "rank": 4,
-            "team_name": "Denver Nuggets",
-            "team_abbr": "DEN",
-            "wins": 35,
-            "losses": 21,
-            "win_pct": 0.625,
-            "games_back": 7.0,
-            "streak": "L1"
+            "team_name": "Houston Rockets",
+            "team_abbr": "HOU",
+            "wins": 34,
+            "losses": 20,
+            "win_pct": 0.63,
+            "games_back": 7.5,
+            "streak": "W1"
           },
           {
             "rank": 5,
             "team_name": "Los Angeles Lakers",
             "team_abbr": "LAL",
-            "wins": 33,
+            "wins": 34,
             "losses": 21,
-            "win_pct": 0.611,
+            "win_pct": 0.618,
             "games_back": 8.0,
-            "streak": "W1"
+            "streak": "W2"
           },
           {
             "rank": 6,
             "team_name": "Minnesota Timberwolves",
             "team_abbr": "MIN",
-            "wins": 34,
+            "wins": 35,
             "losses": 22,
-            "win_pct": 0.607,
+            "win_pct": 0.614,
             "games_back": 8.0,
-            "streak": "W2"
+            "streak": "W3"
           },
           {
             "rank": 7,
@@ -2639,7 +6693,7 @@
             "wins": 32,
             "losses": 24,
             "win_pct": 0.571,
-            "games_back": 10.0,
+            "games_back": 10.5,
             "streak": "L2"
           },
           {
@@ -2649,7 +6703,7 @@
             "wins": 29,
             "losses": 27,
             "win_pct": 0.518,
-            "games_back": 13.0,
+            "games_back": 13.5,
             "streak": "L2"
           },
           {
@@ -2657,60 +6711,60 @@
             "team_name": "LA Clippers",
             "team_abbr": "LAC",
             "wins": 27,
-            "losses": 28,
-            "win_pct": 0.491,
-            "games_back": 14.5,
-            "streak": "W2"
+            "losses": 29,
+            "win_pct": 0.482,
+            "games_back": 15.5,
+            "streak": "L1"
           },
           {
             "rank": 10,
             "team_name": "Portland Trail Blazers",
             "team_abbr": "POR",
             "wins": 27,
-            "losses": 29,
-            "win_pct": 0.482,
-            "games_back": 15.0,
-            "streak": "W1"
+            "losses": 30,
+            "win_pct": 0.474,
+            "games_back": 16.0,
+            "streak": "L1"
           },
           {
             "rank": 11,
             "team_name": "Memphis Grizzlies",
             "team_abbr": "MEM",
-            "wins": 20,
+            "wins": 21,
             "losses": 33,
-            "win_pct": 0.377,
+            "win_pct": 0.389,
             "games_back": 20.5,
-            "streak": "L4"
+            "streak": "W1"
           },
           {
             "rank": 12,
             "team_name": "Dallas Mavericks",
             "team_abbr": "DAL",
             "wins": 19,
-            "losses": 35,
-            "win_pct": 0.352,
-            "games_back": 22.0,
-            "streak": "L9"
+            "losses": 36,
+            "win_pct": 0.345,
+            "games_back": 23.0,
+            "streak": "L10"
           },
           {
             "rank": 13,
             "team_name": "Utah Jazz",
             "team_abbr": "UTAH",
             "wins": 18,
-            "losses": 38,
-            "win_pct": 0.321,
-            "games_back": 24.0,
-            "streak": "L1"
+            "losses": 39,
+            "win_pct": 0.316,
+            "games_back": 25.0,
+            "streak": "L2"
           },
           {
             "rank": 14,
             "team_name": "New Orleans Pelicans",
             "team_abbr": "NO",
             "wins": 15,
-            "losses": 41,
-            "win_pct": 0.268,
-            "games_back": 27.0,
-            "streak": "L1"
+            "losses": 42,
+            "win_pct": 0.263,
+            "games_back": 28.0,
+            "streak": "L2"
           },
           {
             "rank": 15,
@@ -2719,7 +6773,7 @@
             "wins": 12,
             "losses": 45,
             "win_pct": 0.211,
-            "games_back": 30.5,
+            "games_back": 31.0,
             "streak": "L15"
           }
         ]
@@ -2730,7 +6784,7 @@
             "rank": 1,
             "player": "Luka Doncic",
             "team": "LAL",
-            "value": 32.8
+            "value": 33.0
           },
           {
             "rank": 2,
@@ -2742,7 +6796,7 @@
             "rank": 3,
             "player": "Anthony Edwards",
             "team": "MIN",
-            "value": 29.3
+            "value": 29.5
           },
           {
             "rank": 4,
@@ -2766,7 +6820,7 @@
             "rank": 7,
             "player": "Nikola Jokic",
             "team": "DEN",
-            "value": 28.5
+            "value": 28.6
           },
           {
             "rank": 8,
@@ -2792,7 +6846,7 @@
             "rank": 1,
             "player": "Nikola Jokic",
             "team": "DEN",
-            "value": 12.4
+            "value": 12.3
           },
           {
             "rank": 2,
@@ -2804,7 +6858,7 @@
             "rank": 3,
             "player": "Donovan Clingan",
             "team": "POR",
-            "value": 11.5
+            "value": 11.4
           },
           {
             "rank": 4,
@@ -2816,7 +6870,7 @@
             "rank": 5,
             "player": "Rudy Gobert",
             "team": "MIN",
-            "value": 11.1
+            "value": 11.3
           },
           {
             "rank": 6,
@@ -2854,7 +6908,7 @@
             "rank": 1,
             "player": "Nikola Jokic",
             "team": "DEN",
-            "value": 10.6
+            "value": 10.5
           },
           {
             "rank": 2,
@@ -2890,7 +6944,7 @@
             "rank": 7,
             "player": "Jalen Johnson",
             "team": "ATL",
-            "value": 8.1
+            "value": 8.2
           },
           {
             "rank": 8,
@@ -2900,97 +6954,19 @@
           },
           {
             "rank": 9,
-            "player": "Jamal Murray",
-            "team": "DEN",
+            "player": "Kevin Porter Jr.",
+            "team": "MIL",
             "value": 7.6
           },
           {
             "rank": 10,
-            "player": "Kevin Porter Jr.",
-            "team": "MIL",
+            "player": "Jamal Murray",
+            "team": "DEN",
             "value": 7.6
           }
         ]
       },
       "schedule": [
-        {
-          "date": "2026-02-20",
-          "day_label": "Fri",
-          "games": [
-            {
-              "time": "12:00 AM",
-              "time_label": "12:00 AM",
-              "away": "CLE",
-              "away_name": "Cleveland Cavaliers",
-              "home": "CHA",
-              "home_name": "Charlotte Hornets"
-            },
-            {
-              "time": "12:00 AM",
-              "time_label": "12:00 AM",
-              "away": "IND",
-              "away_name": "Indiana Pacers",
-              "home": "WSH",
-              "home_name": "Washington Wizards"
-            },
-            {
-              "time": "12:00 AM",
-              "time_label": "12:00 AM",
-              "away": "UTAH",
-              "away_name": "Utah Jazz",
-              "home": "MEM",
-              "home_name": "Memphis Grizzlies"
-            },
-            {
-              "time": "12:30 AM",
-              "time_label": "12:30 AM",
-              "away": "MIA",
-              "away_name": "Miami Heat",
-              "home": "ATL",
-              "home_name": "Atlanta Hawks"
-            },
-            {
-              "time": "12:30 AM",
-              "time_label": "12:30 AM",
-              "away": "DAL",
-              "away_name": "Dallas Mavericks",
-              "home": "MIN",
-              "home_name": "Minnesota Timberwolves"
-            },
-            {
-              "time": "01:00 AM",
-              "time_label": "01:00 AM",
-              "away": "MIL",
-              "away_name": "Milwaukee Bucks",
-              "home": "NO",
-              "home_name": "New Orleans Pelicans"
-            },
-            {
-              "time": "01:00 AM",
-              "time_label": "01:00 AM",
-              "away": "BKN",
-              "away_name": "Brooklyn Nets",
-              "home": "OKC",
-              "home_name": "Oklahoma City Thunder"
-            },
-            {
-              "time": "03:00 AM",
-              "time_label": "03:00 AM",
-              "away": "LAC",
-              "away_name": "LA Clippers",
-              "home": "LAL",
-              "home_name": "Los Angeles Lakers"
-            },
-            {
-              "time": "03:00 AM",
-              "time_label": "03:00 AM",
-              "away": "DEN",
-              "away_name": "Denver Nuggets",
-              "home": "POR",
-              "home_name": "Portland Trail Blazers"
-            }
-          ]
-        },
         {
           "date": "2026-02-21",
           "day_label": "Sat",
@@ -3136,6 +7112,36 @@
               "away_name": "Orlando Magic",
               "home": "LAC",
               "home_name": "LA Clippers"
+            }
+          ]
+        },
+        {
+          "date": "2026-02-23",
+          "day_label": "Mon",
+          "games": [
+            {
+              "time": "12:00 AM",
+              "time_label": "12:00 AM",
+              "away": "SA",
+              "away_name": "San Antonio Spurs",
+              "home": "DET",
+              "home_name": "Detroit Pistons"
+            },
+            {
+              "time": "01:00 AM",
+              "time_label": "01:00 AM",
+              "away": "SAC",
+              "away_name": "Sacramento Kings",
+              "home": "MEM",
+              "home_name": "Memphis Grizzlies"
+            },
+            {
+              "time": "02:30 AM",
+              "time_label": "02:30 AM",
+              "away": "UTAH",
+              "away_name": "Utah Jazz",
+              "home": "HOU",
+              "home_name": "Houston Rockets"
             }
           ]
         }
@@ -3602,6 +7608,19 @@
               "time_label": "03:00 PM ET",
               "home": "EVE",
               "away": "MUN",
+              "broadcast": ""
+            }
+          ]
+        },
+        {
+          "date": "2026-02-27",
+          "day_label": "Fri",
+          "games": [
+            {
+              "time": "15:00",
+              "time_label": "03:00 PM ET",
+              "home": "WOL",
+              "away": "AVL",
               "broadcast": ""
             }
           ]
