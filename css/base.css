@@ -121,6 +121,29 @@ input[type="checkbox"]:focus-visible {
     box-shadow: 0 0 0 4px rgba(196, 30, 58, 0.2);
 }
 
+/* Responsive typography and spacing */
+@media (max-width: 640px) {
+    :root {
+        --text-1: 2rem;
+        --text-2: 1.375rem;
+        --space-xl: 1.25rem;
+        --space-lg: 1rem;
+    }
+
+    body {
+        padding: var(--space-sm);
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --text-1: 1.5rem;
+        --text-2: 1.125rem;
+        --space-xl: 1rem;
+        --space-lg: 0.75rem;
+    }
+}
+
 /* Utility classes */
 .no-print {
     /* Hidden in print mode via print.css */

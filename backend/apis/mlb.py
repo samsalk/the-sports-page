@@ -48,10 +48,21 @@ def fetch_all_data(yesterday_date) -> Dict[str, Any]:
     }
 
 
+def get_game_types(date) -> str:
+    """Return the appropriate gameType param based on time of year.
+    Spring training runs mid-Feb through late March.
+    """
+    month, day = date.month, date.day
+    if (month == 2 and day >= 15) or (month == 3 and day <= 31):
+        return 'S'   # Spring training only
+    return 'R'       # Regular season
+
+
 def fetch_yesterday_scores(yesterday_date) -> Dict[str, Any]:
     """Fetch yesterday's game scores with full box score data"""
     date_str = yesterday_date.strftime('%Y-%m-%d')
-    url = f"{BASE_URL}/schedule?sportId=1&date={date_str}&hydrate=linescore"
+    game_type = get_game_types(yesterday_date)
+    url = f"{BASE_URL}/schedule?sportId=1&date={date_str}&gameType={game_type}&hydrate=linescore"
 
     try:
         response = requests.get(url, timeout=10)
@@ -453,7 +464,8 @@ def fetch_upcoming_schedule(yesterday_date) -> List[Dict]:
         date_str = target_date.strftime('%Y-%m-%d')
 
         try:
-            url = f"{BASE_URL}/schedule?sportId=1&date={date_str}"
+            game_type = get_game_types(target_date)
+            url = f"{BASE_URL}/schedule?sportId=1&date={date_str}&gameType={game_type}"
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             data = resp.json()

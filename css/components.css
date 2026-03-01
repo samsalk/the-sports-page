@@ -6,18 +6,24 @@
 }
 
 .yesterday-scores .games-container {
-    column-count: 3;
+    column-count: 4;
     column-gap: var(--space-xl);
     column-rule: 1px solid var(--border-light);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+    .yesterday-scores .games-container {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 640px) {
     .yesterday-scores .games-container {
         column-count: 2;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     .yesterday-scores .games-container {
         column-count: 1;
     }
@@ -252,6 +258,8 @@
 /* EPL full-width standings table */
 .standings-full-width {
     column-span: all;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .standings-table-wide {
@@ -281,9 +289,21 @@
     white-space: nowrap;
 }
 
-/* MLB: single-column layout when box scores are visible */
+/* MLB: 2-column newspaper flow when box scores are visible */
 .league-mlb.mlb-boxscores-on .games-container {
-    column-count: 1;
+    column-count: 2;
+}
+
+@media (max-width: 700px) {
+    .league-mlb.mlb-boxscores-on .games-container {
+        column-count: 1;
+    }
+}
+
+/* Allow MLB tables to scroll horizontally on narrow screens */
+.mlb-box-score {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* ===== MLB BOX SCORES ===== */
@@ -333,6 +353,10 @@
     margin-bottom: var(--space-xs);
     padding-bottom: var(--space-xs);
     border-bottom: 2px solid var(--border-heavy);
+}
+
+.mlb-pitching-header {
+    margin-top: var(--space-xs);
 }
 
 .mlb-batting-table,
@@ -392,6 +416,13 @@
     padding-top: var(--space-xs);
     border-top: 1px solid var(--border-light);
     line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+    .mlb-batting-table .player-col,
+    .mlb-pitching-table .player-col {
+        max-width: 72px;
+    }
 }
 
 /* ===== STATISTICAL LEADERS ===== */

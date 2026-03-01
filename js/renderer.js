@@ -774,7 +774,7 @@ function renderBaseballBoxScore(game, boxScoreData) {
 
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
-        headerRow.innerHTML = '<th class="player-col">Batter</th><th>AB</th><th>R</th><th>H</th><th>BI</th><th>BB</th><th>SO</th><th>AVG</th>';
+        headerRow.innerHTML = '<th class="player-col">Batter</th><th>AB</th><th>R</th><th>H</th><th>RBI</th><th>BB</th><th>SO</th><th>AVG</th>';
         thead.appendChild(headerRow);
         table.appendChild(thead);
 
@@ -815,6 +815,8 @@ function renderBaseballBoxScore(game, boxScoreData) {
         if (!pitchers || pitchers.length === 0) return null;
 
         const section = createElement('div', 'mlb-pitching-section');
+        const header = createElement('div', 'mlb-team-header mlb-pitching-header', `${teamAbbr} Pitching`);
+        section.appendChild(header);
 
         const table = document.createElement('table');
         table.className = 'mlb-pitching-table';
@@ -841,47 +843,42 @@ function renderBaseballBoxScore(game, boxScoreData) {
         return section;
     };
 
-    // Away team batting
+    // Both batting tables first (reference site order), then batting notes, then pitching
     const awayBatting = renderBattingTable(boxScoreData.away_batting, game.away_team.abbr);
     if (awayBatting) div.appendChild(awayBatting);
 
-    // Away team pitching
-    const awayPitching = renderPitchingTable(boxScoreData.away_pitching, game.away_team.abbr);
-    if (awayPitching) div.appendChild(awayPitching);
-
-    // Home team batting
     const homeBatting = renderBattingTable(boxScoreData.home_batting, game.home_team.abbr);
     if (homeBatting) div.appendChild(homeBatting);
 
-    // Home team pitching
+    // Batting notes (HR, 2B, 3B, SB) under batting tables
+    const notes = boxScoreData.game_notes;
+    if (notes) {
+        const battingLines = [];
+        if (notes.hr && notes.hr.length > 0) battingLines.push(`<strong>HR:</strong> ${notes.hr.join(', ')}`);
+        if (notes['2b'] && notes['2b'].length > 0) battingLines.push(`<strong>2B:</strong> ${notes['2b'].join(', ')}`);
+        if (notes['3b'] && notes['3b'].length > 0) battingLines.push(`<strong>3B:</strong> ${notes['3b'].join(', ')}`);
+        if (notes.sb && notes.sb.length > 0) battingLines.push(`<strong>SB:</strong> ${notes.sb.join(', ')}`);
+        if (battingLines.length > 0) {
+            const battingNotesDiv = createElement('div', 'mlb-game-notes');
+            battingNotesDiv.innerHTML = battingLines.join(' · ');
+            div.appendChild(battingNotesDiv);
+        }
+    }
+
+    const awayPitching = renderPitchingTable(boxScoreData.away_pitching, game.away_team.abbr);
+    if (awayPitching) div.appendChild(awayPitching);
+
     const homePitching = renderPitchingTable(boxScoreData.home_pitching, game.home_team.abbr);
     if (homePitching) div.appendChild(homePitching);
 
-    // Game notes (HRs, 2B, 3B, SB, DP)
-    const notes = boxScoreData.game_notes;
+    // Pitching notes (DP) under pitching tables
     if (notes) {
-        const notesDiv = createElement('div', 'mlb-game-notes');
-        const noteLines = [];
-
-        if (notes.hr && notes.hr.length > 0) {
-            noteLines.push(`<strong>HR:</strong> ${notes.hr.join(', ')}`);
-        }
-        if (notes['2b'] && notes['2b'].length > 0) {
-            noteLines.push(`<strong>2B:</strong> ${notes['2b'].join(', ')}`);
-        }
-        if (notes['3b'] && notes['3b'].length > 0) {
-            noteLines.push(`<strong>3B:</strong> ${notes['3b'].join(', ')}`);
-        }
-        if (notes.sb && notes.sb.length > 0) {
-            noteLines.push(`<strong>SB:</strong> ${notes.sb.join(', ')}`);
-        }
-        if (notes.dp && notes.dp > 0) {
-            noteLines.push(`<strong>DP:</strong> ${notes.dp}`);
-        }
-
-        if (noteLines.length > 0) {
-            notesDiv.innerHTML = noteLines.join(' · ');
-            div.appendChild(notesDiv);
+        const pitchingLines = [];
+        if (notes.dp && notes.dp > 0) pitchingLines.push(`<strong>DP:</strong> ${notes.dp}`);
+        if (pitchingLines.length > 0) {
+            const pitchingNotesDiv = createElement('div', 'mlb-game-notes');
+            pitchingNotesDiv.innerHTML = pitchingLines.join(' · ');
+            div.appendChild(pitchingNotesDiv);
         }
     }
 

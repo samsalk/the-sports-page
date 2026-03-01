@@ -310,6 +310,55 @@
         page-break-inside: avoid !important;
     }
 
+    /* MLB box scores - 2 columns (override the default 4-col grid) */
+    .league-mlb.mlb-boxscores-on .yesterday-scores .games-container {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* MLB table sizing */
+    .mlb-line-score {
+        font-size: var(--text-8);
+    }
+
+    .mlb-line-score th,
+    .mlb-line-score td {
+        padding: 1px var(--space-xs);
+    }
+
+    .mlb-batting-table,
+    .mlb-pitching-table {
+        font-size: var(--text-8);
+    }
+
+    .mlb-batting-table td,
+    .mlb-pitching-table td,
+    .mlb-batting-table th,
+    .mlb-pitching-table th {
+        padding: 1px var(--space-xs);
+    }
+
+    .mlb-team-header {
+        font-size: var(--text-7);
+        margin-top: var(--space-xs);
+        padding-bottom: var(--space-xs);
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+    }
+
+    .mlb-game-notes {
+        font-size: var(--text-8);
+        margin-top: var(--space-xs);
+        padding-top: var(--space-xs);
+    }
+
+    /* Keep MLB batting/pitching sections intact across pages */
+    .mlb-batting-table,
+    .mlb-pitching-table,
+    .mlb-line-score {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
     /* Ensure black text */
     * {
         color: black !important;
