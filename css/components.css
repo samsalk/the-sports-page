@@ -409,6 +409,17 @@
     border-bottom: none;
 }
 
+.mlb-batting-table .batting-sub .player-col {
+    color: var(--text-secondary);
+}
+
+.mlb-batting-table .sub-indent {
+    display: inline-block;
+    width: 1em;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
 .mlb-game-notes {
     font-family: var(--font-serif);
     font-size: var(--text-8);

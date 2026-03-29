@@ -60,9 +60,11 @@ function renderLeagueSection(leagueKey, data, prefs) {
     if (data.error) {
         const section = createElement('section', 'league-section');
         section.setAttribute('aria-labelledby', headerId);
+        const isConfigError = data.error.includes('API_KEY') || data.error.includes('environment variable');
+        const msg = isConfigError ? 'Data unavailable' : `Failed to load data: ${data.error}`;
         section.innerHTML = `
             <h2 class="section-header" id="${headerId}">${getLeagueName(leagueKey)}</h2>
-            <div class="error" role="alert">Failed to load data: ${data.error}</div>
+            <div class="error" role="alert">${msg}</div>
         `;
         return section;
     }
@@ -783,8 +785,12 @@ function renderBaseballBoxScore(game, boxScoreData) {
 
         batters.forEach(b => {
             const row = document.createElement('tr');
+            if (b.is_sub) row.classList.add('batting-sub');
+            const nameHtml = b.is_sub
+                ? `<span class="sub-indent">–</span>${b.name} <span class="pos">${b.position}</span>`
+                : `${b.name} <span class="pos">${b.position}</span>`;
             row.innerHTML = `
-                <td class="player-col">${b.name} <span class="pos">${b.position}</span></td>
+                <td class="player-col">${nameHtml}</td>
                 <td>${b.ab}</td><td>${b.r}</td><td>${b.h}</td><td>${b.rbi}</td><td>${b.bb}</td><td>${b.so}</td><td>${b.avg}</td>
             `;
             tbody.appendChild(row);

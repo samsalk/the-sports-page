@@ -22,7 +22,7 @@ TEAM_ABBR = {
     'Detroit Tigers': 'DET', 'Houston Astros': 'HOU', 'Kansas City Royals': 'KC',
     'Los Angeles Angels': 'LAA', 'Los Angeles Dodgers': 'LAD', 'Athletics': 'OAK', 'Miami Marlins': 'MIA',
     'Milwaukee Brewers': 'MIL', 'Minnesota Twins': 'MIN', 'New York Mets': 'NYM',
-    'New York Yankees': 'NYY', 'Athletics': 'OAK', 'Philadelphia Phillies': 'PHI',
+    'New York Yankees': 'NYY', 'Philadelphia Phillies': 'PHI',
     'Pittsburgh Pirates': 'PIT', 'San Diego Padres': 'SD', 'San Francisco Giants': 'SF',
     'Seattle Mariners': 'SEA', 'St. Louis Cardinals': 'STL', 'Tampa Bay Rays': 'TB',
     'Texas Rangers': 'TEX', 'Toronto Blue Jays': 'TOR', 'Washington Nationals': 'WSH'
@@ -53,7 +53,7 @@ def get_game_types(date) -> str:
     Spring training runs mid-Feb through late March.
     """
     month, day = date.month, date.day
-    if (month == 2 and day >= 15) or (month == 3 and day <= 31):
+    if (month == 2 and day >= 15) or (month == 3 and day <= 20):
         return 'S'   # Spring training only
     return 'R'       # Regular season
 
@@ -204,6 +204,7 @@ def extract_batting_stats(team_data: Dict) -> List[Dict]:
         batters.append({
             'name': player['person']['fullName'],
             'position': pos,
+            'is_sub': order % 100 != 0,
             'ab': stats.get('atBats', 0),
             'r': stats.get('runs', 0),
             'h': stats.get('hits', 0),
@@ -405,7 +406,7 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
 
     try:
         for key, cat in batting_categories.items():
-            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool=qualified"
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool=qualified&group=hitting"
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             data = resp.json()
@@ -433,7 +434,7 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
 
     try:
         for key, cat in pitching_categories.items():
-            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool=qualified"
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool=qualified&group=pitching"
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             data = resp.json()
