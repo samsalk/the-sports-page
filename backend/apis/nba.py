@@ -256,6 +256,12 @@ def fetch_standings() -> Dict[str, List[Dict]]:
         return {'Eastern': [], 'Western': []}
 
 
+def current_nba_season() -> int:
+    """NBA season year: Oct+ is next calendar year, before Oct is current year"""
+    now = datetime.now()
+    return now.year + 1 if now.month >= 10 else now.year
+
+
 def fetch_stat_leaders() -> Dict[str, List[Dict]]:
     """Fetch NBA statistical leaders using ESPN core API"""
     leaders = {
@@ -272,7 +278,7 @@ def fetch_stat_leaders() -> Dict[str, List[Dict]]:
     }
 
     try:
-        url = "https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2026/types/2/leaders"
+        url = f"https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/{current_nba_season()}/types/2/leaders"
         response = requests.get(url, timeout=15)
         response.raise_for_status()
         data = response.json()

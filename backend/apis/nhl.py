@@ -232,105 +232,57 @@ def fetch_standings() -> Dict[str, List[Dict]]:
     return standings
 
 def fetch_stat_leaders() -> Dict[str, List[Dict]]:
-    """Fetch statistical leaders using new API"""
+    """Fetch statistical leaders using NHL stats leaders API"""
+    leaders = {
+        'goals': [],
+        'assists': [],
+        'points': [],
+        'save_percentage': []
+    }
+
+    # Skater leaders
+    skater_categories = {'goals': 'goals', 'assists': 'assists', 'points': 'points'}
+    for key, cat in skater_categories.items():
+        try:
+            url = f"{BASE_URL}/skater-stats-leaders/current?categories={cat}&limit=10"
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+
+            for i, player in enumerate(data.get(cat, []), 1):
+                first = player.get('firstName', {}).get('default', '')
+                last = player.get('lastName', {}).get('default', '')
+                leaders[key].append({
+                    'rank': i,
+                    'player': f"{first} {last}".strip(),
+                    'team': player.get('teamAbbrevAlt', player.get('teamAbbrev', {}).get('default', 'UNK')),
+                    'value': player.get('value', 0)
+                })
+        except Exception as e:
+            logger.error(f"Failed to fetch NHL {key} leaders: {e}")
+
+    # Goalie save percentage leaders
     try:
-        # Get player spotlight (featured players)
-        url = f"{BASE_URL}/player-spotlight"
+        url = f"{BASE_URL}/goalie-stats-leaders/current?categories=savePctg&limit=10"
         response = requests.get(url, timeout=10)
         response.raise_for_status()
-        spotlight_data = response.json()
+        data = response.json()
 
-        # Fetch detailed stats for top players
-        leaders = {
-            'goals': [],
-            'assists': [],
-            'points': [],
-            'save_percentage': []
-        }
-
-        # Get top skaters from spotlight (filter out goalies)
-        skater_count = 0
-        for player in spotlight_data:
-            # Skip goalies
-            position = player.get('position', '')
-            if position == 'G':
-                continue
-
-            player_id = player.get('playerId')
-            if not player_id:
-                continue
-
-            # Fetch player details
-            try:
-                player_url = f"{BASE_URL}/player/{player_id}/landing"
-                player_response = requests.get(player_url, timeout=5)
-                player_response.raise_for_status()
-                player_data = player_response.json()
-
-                # Extract current season stats
-                featured_stats = player_data.get('featuredStats', {})
-                regular_season = featured_stats.get('regularSeason', {})
-                sub_season = regular_season.get('subSeason', {})
-
-                if sub_season:
-                    skater_count += 1
-                    player_name = f"{player_data.get('firstName', {}).get('default', '')} {player_data.get('lastName', {}).get('default', '')}"
-                    team_abbr = player.get('teamTriCode', 'UNK')
-
-                    # Add to leaders lists
-                    goals = sub_season.get('goals', 0)
-                    assists = sub_season.get('assists', 0)
-                    points = sub_season.get('points', 0)
-
-                    leaders['goals'].append({
-                        'rank': skater_count,
-                        'player': player_name,
-                        'team': team_abbr,
-                        'value': goals
-                    })
-
-                    leaders['assists'].append({
-                        'rank': skater_count,
-                        'player': player_name,
-                        'team': team_abbr,
-                        'value': assists
-                    })
-
-                    leaders['points'].append({
-                        'rank': skater_count,
-                        'player': player_name,
-                        'team': team_abbr,
-                        'value': points
-                    })
-
-                    # Stop after 10 skaters
-                    if skater_count >= 10:
-                        break
-
-            except Exception as e:
-                logger.warning(f"Failed to fetch player {player_id} details: {e}")
-                continue
-
-        # Sort each category
-        leaders['goals'].sort(key=lambda x: x['value'], reverse=True)
-        leaders['assists'].sort(key=lambda x: x['value'], reverse=True)
-        leaders['points'].sort(key=lambda x: x['value'], reverse=True)
-
-        # Re-rank after sorting
-        for category in ['goals', 'assists', 'points']:
-            for i, player in enumerate(leaders[category], 1):
-                player['rank'] = i
-
-        return leaders
-
+        for i, player in enumerate(data.get('savePctg', []), 1):
+            first = player.get('firstName', {}).get('default', '')
+            last = player.get('lastName', {}).get('default', '')
+            leaders['save_percentage'].append({
+                'rank': i,
+                'player': f"{first} {last}".strip(),
+                'team': player.get('teamAbbrevAlt', player.get('teamAbbrev', {}).get('default', 'UNK')),
+                'value': round(player.get('value', 0), 3)
+            })
     except Exception as e:
-        logger.error(f"Failed to fetch stat leaders: {e}")
-        return {
-            'goals': [],
-            'assists': [],
-            'points': [],
-            'save_percentage': []
-        }
+        logger.error(f"Failed to fetch NHL save percentage leaders: {e}")
+
+    return leaders
+
+
 
 def fetch_week_schedule(yesterday_date) -> List[Dict]:
     """Fetch 3-day schedule using new API - today, tomorrow, day after"""
