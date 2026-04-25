@@ -398,18 +398,18 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
         'saves': []
     }
 
-    # Batting leaders
+    # Batting leaders — rate stats use qualified pool, counting stats use All
     batting_categories = {
-        'batting_avg': 'battingAverage',
-        'home_runs': 'homeRuns',
-        'rbi': 'runsBattedIn',
-        'hits': 'hits',
-        'stolen_bases': 'stolenBases'
+        'batting_avg': ('battingAverage', 'qualified'),
+        'home_runs': ('homeRuns', 'All'),
+        'rbi': ('runsBattedIn', 'All'),
+        'hits': ('hits', 'All'),
+        'stolen_bases': ('stolenBases', 'All'),
     }
 
     try:
-        for key, cat in batting_categories.items():
-            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool=qualified&group=hitting"
+        for key, (cat, pool) in batting_categories.items():
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool={pool}&group=hitting"
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             data = resp.json()
@@ -427,17 +427,17 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
     except Exception as e:
         logger.error(f"Failed to fetch batting leaders: {e}")
 
-    # Pitching leaders
+    # Pitching leaders — ERA uses qualified pool, counting stats use All
     pitching_categories = {
-        'wins': 'wins',
-        'era': 'earnedRunAverage',
-        'strikeouts': 'strikeouts',
-        'saves': 'saves'
+        'wins': ('wins', 'All'),
+        'era': ('earnedRunAverage', 'qualified'),
+        'strikeouts': ('strikeouts', 'All'),
+        'saves': ('saves', 'All'),
     }
 
     try:
-        for key, cat in pitching_categories.items():
-            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool=qualified&group=pitching"
+        for key, (cat, pool) in pitching_categories.items():
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool={pool}&group=pitching"
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             data = resp.json()
