@@ -201,6 +201,9 @@ def extract_batting_stats(team_data: Dict) -> List[Dict]:
         # Position - handle substitutes
         pos = player.get('position', {}).get('abbreviation', '')
 
+        # Use season batting average from seasonStats (game-level avg is not populated by the API)
+        season_avg = player.get('seasonStats', {}).get('batting', {}).get('avg', '.000')
+
         batters.append({
             'name': player['person']['fullName'],
             'position': pos,
@@ -211,7 +214,7 @@ def extract_batting_stats(team_data: Dict) -> List[Dict]:
             'rbi': stats.get('rbi', 0),
             'bb': stats.get('baseOnBalls', 0),
             'so': stats.get('strikeOuts', 0),
-            'avg': stats.get('avg', '.000')
+            'avg': season_avg
         })
 
     return batters
