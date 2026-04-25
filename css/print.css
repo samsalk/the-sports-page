@@ -310,9 +310,19 @@
         page-break-inside: avoid !important;
     }
 
-    /* MLB box scores - 2 columns (override the default 4-col grid) */
+    /* MLB box scores - use CSS columns instead of grid so content flows
+       naturally without fixed row heights causing blank gaps */
     .league-mlb.mlb-boxscores-on .yesterday-scores .games-container {
-        grid-template-columns: 1fr 1fr !important;
+        display: block !important;
+        columns: 2 !important;
+        column-gap: var(--space-lg) !important;
+    }
+
+    .league-mlb.mlb-boxscores-on .yesterday-scores .game {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        width: 100% !important;
+        margin-bottom: var(--space-sm) !important;
     }
 
     /* MLB table sizing */
