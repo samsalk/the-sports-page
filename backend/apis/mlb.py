@@ -43,7 +43,7 @@ def fetch_all_data(yesterday_date) -> Dict[str, Any]:
     return {
         'yesterday': fetch_yesterday_scores(yesterday_date),
         'standings': fetch_standings(season),
-        'leaders': fetch_stat_leaders(season),
+        'leaders': fetch_stat_leaders(season, yesterday_date),
         'schedule': fetch_upcoming_schedule(yesterday_date)
     }
 
@@ -384,7 +384,7 @@ def fetch_standings(season: int) -> Dict[str, List[Dict]]:
     return standings
 
 
-def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
+def fetch_stat_leaders(season: int, end_date=None) -> Dict[str, List[Dict]]:
     """Fetch MLB statistical leaders"""
     leaders = {
         'batting_avg': [],
@@ -398,24 +398,30 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
         'saves': []
     }
 
-    # Batting leaders — rate stats use qualified pool, counting stats use All
-    batting_categories = {
-        'batting_avg': ('battingAverage', 'qualified'),
-        'home_runs': ('homeRuns', 'All'),
-        'rbi': ('runsBattedIn', 'All'),
-        'hits': ('hits', 'All'),
-        'stolen_bases': ('stolenBases', 'All'),
+    if end_date is None:
+        end_date = datetime.now(ET_TZ).date()
+    # Opening Day is always after March 20; spring training ends before then
+    season_start = f"{season}-03-21"
+    season_end = end_date.strftime('%Y-%m-%d')
+
+    # Rate stats use season+qualified (API handles prorated minimums correctly)
+    # Counting stats use explicit date range — season= alone returns prior full-season totals
+    batting_rate = {'batting_avg': ('battingAverage', 'qualified')}
+    batting_counting = {
+        'home_runs': 'homeRuns',
+        'rbi': 'runsBattedIn',
+        'hits': 'hits',
+        'stolen_bases': 'stolenBases',
     }
 
     try:
-        for key, (cat, pool) in batting_categories.items():
-            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool={pool}&group=hitting"
+        for key, (cat, pool) in batting_rate.items():
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool={pool}"
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             data = resp.json()
-
             for category in data.get('leagueLeaders', []):
-                if category.get('leaderCategory') == cat:
+                if category.get('leaderCategory') == cat and category.get('statGroup') == 'hitting':
                     for leader in category.get('leaders', [])[:10]:
                         leaders[key].append({
                             'rank': leader.get('rank', 0),
@@ -425,25 +431,16 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
                         })
                     break
     except Exception as e:
-        logger.error(f"Failed to fetch batting leaders: {e}")
-
-    # Pitching leaders — ERA uses qualified pool, counting stats use All
-    pitching_categories = {
-        'wins': ('wins', 'All'),
-        'era': ('earnedRunAverage', 'qualified'),
-        'strikeouts': ('strikeouts', 'All'),
-        'saves': ('saves', 'All'),
-    }
+        logger.error(f"Failed to fetch batting rate leaders: {e}")
 
     try:
-        for key, (cat, pool) in pitching_categories.items():
-            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool={pool}&group=pitching"
+        for key, cat in batting_counting.items():
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&startDate={season_start}&endDate={season_end}&limit=10&playerPool=All"
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             data = resp.json()
-
             for category in data.get('leagueLeaders', []):
-                if category.get('leaderCategory') == cat:
+                if category.get('leaderCategory') == cat and category.get('statGroup') == 'hitting':
                     for leader in category.get('leaders', [])[:10]:
                         leaders[key].append({
                             'rank': leader.get('rank', 0),
@@ -453,7 +450,53 @@ def fetch_stat_leaders(season: int) -> Dict[str, List[Dict]]:
                         })
                     break
     except Exception as e:
-        logger.error(f"Failed to fetch pitching leaders: {e}")
+        logger.error(f"Failed to fetch batting counting leaders: {e}")
+
+    # Pitching rate stats use season+qualified; counting stats use date range
+    pitching_rate = {'era': ('earnedRunAverage', 'qualified')}
+    pitching_counting = {
+        'wins': 'wins',
+        'strikeouts': 'strikeouts',
+        'saves': 'saves',
+    }
+
+    try:
+        for key, (cat, pool) in pitching_rate.items():
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&season={season}&limit=10&playerPool={pool}"
+            resp = requests.get(url, timeout=10)
+            resp.raise_for_status()
+            data = resp.json()
+            for category in data.get('leagueLeaders', []):
+                if category.get('leaderCategory') == cat and category.get('statGroup') == 'pitching':
+                    for leader in category.get('leaders', [])[:10]:
+                        leaders[key].append({
+                            'rank': leader.get('rank', 0),
+                            'player': leader.get('person', {}).get('fullName', ''),
+                            'team': get_team_abbr(leader.get('team', {}).get('name', '')),
+                            'value': leader.get('value', '')
+                        })
+                    break
+    except Exception as e:
+        logger.error(f"Failed to fetch pitching rate leaders: {e}")
+
+    try:
+        for key, cat in pitching_counting.items():
+            url = f"{BASE_URL}/stats/leaders?leaderCategories={cat}&startDate={season_start}&endDate={season_end}&limit=10&playerPool=All"
+            resp = requests.get(url, timeout=10)
+            resp.raise_for_status()
+            data = resp.json()
+            for category in data.get('leagueLeaders', []):
+                if category.get('leaderCategory') == cat and category.get('statGroup') == 'pitching':
+                    for leader in category.get('leaders', [])[:10]:
+                        leaders[key].append({
+                            'rank': leader.get('rank', 0),
+                            'player': leader.get('person', {}).get('fullName', ''),
+                            'team': get_team_abbr(leader.get('team', {}).get('name', '')),
+                            'value': leader.get('value', '')
+                        })
+                    break
+    except Exception as e:
+        logger.error(f"Failed to fetch pitching counting leaders: {e}")
 
     return leaders
 
