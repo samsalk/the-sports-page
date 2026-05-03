@@ -2,6 +2,18 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Purpose
+
+This project exists so a kid can learn to read sports scores instead of asking Alexa. That origin shapes every product decision:
+
+- **The newspaper format is intentional and pedagogical** — it teaches sports vocabulary (standings columns, box score rows, stat categories) through a familiar, structured layout, not through an app UI
+- **Daily refresh at 6 AM is a feature, not a limitation** — this is a morning read; playoff series and final scores are always complete by then
+- **Legibility over density** — when adding UI, label things clearly; a child learning to follow sports needs context, not just abbreviations
+- **The playoff bracket is high-value** — brackets are intuitive for kids and communicate playoff stakes better than standings do
+- **Print-first is real** — the page is actually printed; `print.css` is not an afterthought
+
+When making design or feature decisions, ask whether the change helps someone learn to follow sports over coffee, not whether it's technically interesting.
+
 ## Commands
 
 ```bash
