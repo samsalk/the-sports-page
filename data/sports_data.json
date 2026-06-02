@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T09:55:48.278474-04:00",
+  "generated_at": "2026-06-02T10:53:07.504949-04:00",
   "date_label": "Tuesday, June 02, 2026",
   "leagues": {
     "mlb": {
@@ -1809,14 +1809,472 @@
             "status": "Final",
             "box_score": {
               "line_score": {
-                "away": {},
-                "home": {}
+                "away": {
+                  "innings": [
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "runs": 2,
+                  "hits": 5,
+                  "errors": 1
+                },
+                "home": {
+                  "innings": [
+                    0,
+                    7,
+                    0,
+                    1,
+                    0,
+                    2,
+                    2,
+                    4,
+                    0
+                  ],
+                  "runs": 16,
+                  "hits": 18,
+                  "errors": 0
+                }
               },
-              "away_batting": [],
-              "home_batting": [],
-              "away_pitching": [],
-              "home_pitching": [],
-              "game_notes": {}
+              "away_batting": [
+                {
+                  "name": "Casey Schmitt",
+                  "position": "SS",
+                  "is_sub": false,
+                  "ab": 4,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".289"
+                },
+                {
+                  "name": "Rafael Devers",
+                  "position": "DH",
+                  "is_sub": false,
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 2,
+                  "so": 2,
+                  "avg": ".251"
+                },
+                {
+                  "name": "Daniel Susac",
+                  "position": "3B",
+                  "is_sub": true,
+                  "ab": 0,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".293"
+                },
+                {
+                  "name": "Luis Arraez",
+                  "position": "2B",
+                  "is_sub": false,
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".321"
+                },
+                {
+                  "name": "Willy Adames",
+                  "position": "SS",
+                  "is_sub": false,
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".239"
+                },
+                {
+                  "name": "Buddy Kennedy",
+                  "position": "P",
+                  "is_sub": true,
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".000"
+                },
+                {
+                  "name": "Jung Hoo Lee",
+                  "position": "CF",
+                  "is_sub": false,
+                  "ab": 4,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".303"
+                },
+                {
+                  "name": "Matt Chapman",
+                  "position": "3B",
+                  "is_sub": false,
+                  "ab": 2,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 1,
+                  "so": 0,
+                  "avg": ".234"
+                },
+                {
+                  "name": "Victor Bericoto",
+                  "position": "RF",
+                  "is_sub": true,
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".167"
+                },
+                {
+                  "name": "Bryce Eldridge",
+                  "position": "1B",
+                  "is_sub": false,
+                  "ab": 4,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 3,
+                  "avg": ".242"
+                },
+                {
+                  "name": "Eric Haase",
+                  "position": "C",
+                  "is_sub": false,
+                  "ab": 3,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 0,
+                  "bb": 1,
+                  "so": 2,
+                  "avg": ".286"
+                },
+                {
+                  "name": "Jonah Cox",
+                  "position": "CF",
+                  "is_sub": false,
+                  "ab": 1,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".500"
+                },
+                {
+                  "name": "Drew Gilbert",
+                  "position": "LF",
+                  "is_sub": true,
+                  "ab": 3,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".231"
+                }
+              ],
+              "home_batting": [
+                {
+                  "name": "Christian Yelich",
+                  "position": "DH",
+                  "is_sub": false,
+                  "ab": 5,
+                  "r": 3,
+                  "h": 3,
+                  "rbi": 2,
+                  "bb": 1,
+                  "so": 2,
+                  "avg": ".275"
+                },
+                {
+                  "name": "Jackson Chourio",
+                  "position": "LF",
+                  "is_sub": false,
+                  "ab": 4,
+                  "r": 2,
+                  "h": 2,
+                  "rbi": 3,
+                  "bb": 2,
+                  "so": 1,
+                  "avg": ".276"
+                },
+                {
+                  "name": "Brice Turang",
+                  "position": "2B",
+                  "is_sub": false,
+                  "ab": 2,
+                  "r": 2,
+                  "h": 2,
+                  "rbi": 2,
+                  "bb": 2,
+                  "so": 0,
+                  "avg": ".270"
+                },
+                {
+                  "name": "Joey Ortiz",
+                  "position": "SS",
+                  "is_sub": true,
+                  "ab": 2,
+                  "r": 0,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 1,
+                  "avg": ".193"
+                },
+                {
+                  "name": "William Contreras",
+                  "position": "C",
+                  "is_sub": false,
+                  "ab": 4,
+                  "r": 1,
+                  "h": 1,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".294"
+                },
+                {
+                  "name": "Jake Bauers",
+                  "position": "1B",
+                  "is_sub": false,
+                  "ab": 2,
+                  "r": 1,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 4,
+                  "so": 2,
+                  "avg": ".277"
+                },
+                {
+                  "name": "Andrew Vaughn",
+                  "position": "1B",
+                  "is_sub": false,
+                  "ab": 4,
+                  "r": 0,
+                  "h": 2,
+                  "rbi": 2,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".354"
+                },
+                {
+                  "name": "Blake Perkins",
+                  "position": "CF",
+                  "is_sub": true,
+                  "ab": 2,
+                  "r": 0,
+                  "h": 0,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".092"
+                },
+                {
+                  "name": "Sal Frelick",
+                  "position": "RF",
+                  "is_sub": false,
+                  "ab": 5,
+                  "r": 1,
+                  "h": 2,
+                  "rbi": 1,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".219"
+                },
+                {
+                  "name": "Luis Rengifo",
+                  "position": "3B",
+                  "is_sub": false,
+                  "ab": 3,
+                  "r": 3,
+                  "h": 2,
+                  "rbi": 1,
+                  "bb": 2,
+                  "so": 0,
+                  "avg": ".210"
+                },
+                {
+                  "name": "David Hamilton",
+                  "position": "2B",
+                  "is_sub": false,
+                  "ab": 5,
+                  "r": 3,
+                  "h": 3,
+                  "rbi": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "avg": ".239"
+                }
+              ],
+              "away_pitching": [
+                {
+                  "name": "Buddy Kennedy",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 4,
+                  "r": 4,
+                  "er": 4,
+                  "bb": 2,
+                  "so": 0,
+                  "np": 39,
+                  "era": "36.00"
+                },
+                {
+                  "name": "Wilkin Ramos",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 3,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 2,
+                  "so": 1,
+                  "np": 40,
+                  "era": "9.00"
+                },
+                {
+                  "name": "Landen Roupp",
+                  "result": "",
+                  "record": "",
+                  "ip": "4.0",
+                  "h": 8,
+                  "r": 8,
+                  "er": 8,
+                  "bb": 5,
+                  "so": 4,
+                  "np": 96,
+                  "era": "4.22"
+                },
+                {
+                  "name": "Matt Gage",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 3,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 2,
+                  "so": 1,
+                  "np": 27,
+                  "era": "2.63"
+                }
+              ],
+              "home_pitching": [
+                {
+                  "name": "Chad Patrick",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 1,
+                  "np": 15,
+                  "era": "2.54"
+                },
+                {
+                  "name": "Grant Anderson",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 0,
+                  "np": 8,
+                  "era": "2.59"
+                },
+                {
+                  "name": "Shane Drohan",
+                  "result": "",
+                  "record": "",
+                  "ip": "4.0",
+                  "h": 4,
+                  "r": 2,
+                  "er": 2,
+                  "bb": 2,
+                  "so": 5,
+                  "np": 68,
+                  "era": "2.87"
+                },
+                {
+                  "name": "Jake Woodford",
+                  "result": "",
+                  "record": "",
+                  "ip": "1.0",
+                  "h": 0,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 0,
+                  "so": 2,
+                  "np": 12,
+                  "era": "6.20"
+                },
+                {
+                  "name": "DL Hall",
+                  "result": "",
+                  "record": "",
+                  "ip": "2.0",
+                  "h": 1,
+                  "r": 0,
+                  "er": 0,
+                  "bb": 3,
+                  "so": 2,
+                  "np": 40,
+                  "era": "2.20"
+                }
+              ],
+              "game_notes": {
+                "hr": [
+                  "Matt Chapman (2)"
+                ],
+                "2b": [
+                  "Brice Turang",
+                  "Eric Haase",
+                  "Sal Frelick",
+                  "Jackson Chourio",
+                  "Bryce Eldridge",
+                  "Sal Frelick",
+                  "David Hamilton",
+                  "Joey Ortiz"
+                ],
+                "3b": [
+                  "Brice Turang"
+                ],
+                "sb": [],
+                "dp": 3
+              }
             }
           },
           {
@@ -4266,7 +4724,68 @@
             "value": "65"
           }
         ],
-        "stolen_bases": [],
+        "stolen_bases": [
+          {
+            "rank": 1,
+            "player": "Nasim Nuñez",
+            "team": "WSH",
+            "value": "22"
+          },
+          {
+            "rank": 2,
+            "player": "José Ramírez",
+            "team": "CLE",
+            "value": "20"
+          },
+          {
+            "rank": 3,
+            "player": "Oneil Cruz",
+            "team": "PIT",
+            "value": "19"
+          },
+          {
+            "rank": 4,
+            "player": "Randy Arozarena",
+            "team": "SEA",
+            "value": "17"
+          },
+          {
+            "rank": 4,
+            "player": "Bobby Witt Jr.",
+            "team": "KC",
+            "value": "17"
+          },
+          {
+            "rank": 6,
+            "player": "José Caballero",
+            "team": "NYY",
+            "value": "14"
+          },
+          {
+            "rank": 6,
+            "player": "Jazz Chisholm Jr.",
+            "team": "NYY",
+            "value": "14"
+          },
+          {
+            "rank": 6,
+            "player": "Konnor Griffin",
+            "team": "PIT",
+            "value": "14"
+          },
+          {
+            "rank": 6,
+            "player": "Jakob Marsee",
+            "team": "MIA",
+            "value": "14"
+          },
+          {
+            "rank": 6,
+            "player": "Chandler Simpson",
+            "team": "TB",
+            "value": "14"
+          }
+        ],
         "wins": [
           {
             "rank": 1,
