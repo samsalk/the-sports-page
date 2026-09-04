@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T09:55:02.966268-04:00",
+  "generated_at": "2026-09-04T10:50:14.178450-04:00",
   "date_label": "Friday, September 04, 2026",
   "leagues": {
     "mlb": {
@@ -6289,90 +6289,27 @@
     },
     "epl": {
       "yesterday": {
-        "date": "2026-08-30",
+        "date": "2026-08-31",
         "games": [
           {
-            "match_id": 560554,
+            "match_id": 560557,
             "home_team": {
-              "abbr": "SUN",
-              "name": "Sunderland AFC",
-              "score": 1
+              "abbr": "AVL",
+              "name": "Aston Villa FC",
+              "score": 0
             },
             "away_team": {
-              "abbr": "FUL",
-              "name": "Fulham FC",
-              "score": 0
+              "abbr": "ARS",
+              "name": "Arsenal FC",
+              "score": 1
             },
             "status": "FINISHED",
             "half_time_score": "0-0",
             "box_score": {
               "home_goals": [],
               "away_goals": [],
-              "home_abbr": "SUN",
-              "away_abbr": "FUL"
-            }
-          },
-          {
-            "match_id": 560556,
-            "home_team": {
-              "abbr": "CHE",
-              "name": "Chelsea FC",
-              "score": 4
-            },
-            "away_team": {
-              "abbr": "BHA",
-              "name": "Brighton & Hove Albion FC",
-              "score": 3
-            },
-            "status": "FINISHED",
-            "half_time_score": "3-1",
-            "box_score": {
-              "home_goals": [],
-              "away_goals": [],
-              "home_abbr": "CHE",
-              "away_abbr": "BHA"
-            }
-          },
-          {
-            "match_id": 560559,
-            "home_team": {
-              "abbr": "LEE",
-              "name": "Leeds United FC",
-              "score": 1
-            },
-            "away_team": {
-              "abbr": "BRE",
-              "name": "Brentford FC",
-              "score": 1
-            },
-            "status": "FINISHED",
-            "half_time_score": "0-1",
-            "box_score": {
-              "home_goals": [],
-              "away_goals": [],
-              "home_abbr": "LEE",
-              "away_abbr": "BRE"
-            }
-          },
-          {
-            "match_id": 560553,
-            "home_team": {
-              "abbr": "MUN",
-              "name": "Manchester United FC",
-              "score": 5
-            },
-            "away_team": {
-              "abbr": "IPS",
-              "name": "Ipswich Town FC",
-              "score": 2
-            },
-            "status": "FINISHED",
-            "half_time_score": "1-1",
-            "box_score": {
-              "home_goals": [],
-              "away_goals": [],
-              "home_abbr": "MUN",
-              "away_abbr": "IPS"
+              "home_abbr": "AVL",
+              "away_abbr": "ARS"
             }
           }
         ]
@@ -6662,10 +6599,160 @@
         ]
       },
       "leaders": {
-        "goals": [],
+        "goals": [
+          {
+            "rank": 1,
+            "player": "Bruno Fernandes",
+            "team": "MUN",
+            "value": 3
+          },
+          {
+            "rank": 2,
+            "player": "Bukayo Saka",
+            "team": "ARS",
+            "value": 2
+          },
+          {
+            "rank": 3,
+            "player": "Jack Hinshelwood",
+            "team": "BHA",
+            "value": 2
+          },
+          {
+            "rank": 4,
+            "player": "Anthony Elanga",
+            "team": "NEW",
+            "value": 2
+          },
+          {
+            "rank": 5,
+            "player": "João Pedro",
+            "team": "CHE",
+            "value": 2
+          },
+          {
+            "rank": 6,
+            "player": "Cole Palmer",
+            "team": "CHE",
+            "value": 2
+          },
+          {
+            "rank": 7,
+            "player": "Erling Haaland",
+            "team": "MCI",
+            "value": 2
+          },
+          {
+            "rank": 8,
+            "player": "Rayan Cherki",
+            "team": "MCI",
+            "value": 2
+          },
+          {
+            "rank": 9,
+            "player": "Kai Havertz",
+            "team": "ARS",
+            "value": 1
+          },
+          {
+            "rank": 10,
+            "player": "Martin Ødegaard",
+            "team": "ARS",
+            "value": 1
+          }
+        ],
         "assists": []
       },
-      "schedule": []
+      "schedule": [
+        {
+          "date": "2026-09-04",
+          "day_label": "Fri",
+          "games": [
+            {
+              "time": "15:00",
+              "time_label": "03:00 PM ET",
+              "home": "IPS",
+              "away": "LIV",
+              "broadcast": ""
+            }
+          ]
+        },
+        {
+          "date": "2026-09-05",
+          "day_label": "Sat",
+          "games": [
+            {
+              "time": "07:30",
+              "time_label": "07:30 AM ET",
+              "home": "NEW",
+              "away": "BOU",
+              "broadcast": ""
+            },
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "NFO",
+              "away": "TOT",
+              "broadcast": ""
+            },
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "MCI",
+              "away": "UNK",
+              "broadcast": ""
+            },
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "BHA",
+              "away": "LEE",
+              "broadcast": ""
+            },
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "BRE",
+              "away": "SUN",
+              "broadcast": ""
+            },
+            {
+              "time": "10:00",
+              "time_label": "10:00 AM ET",
+              "home": "FUL",
+              "away": "CRY",
+              "broadcast": ""
+            },
+            {
+              "time": "12:30",
+              "time_label": "12:30 PM ET",
+              "home": "UNK",
+              "away": "AVL",
+              "broadcast": ""
+            }
+          ]
+        },
+        {
+          "date": "2026-09-06",
+          "day_label": "Sun",
+          "games": [
+            {
+              "time": "09:00",
+              "time_label": "09:00 AM ET",
+              "home": "EVE",
+              "away": "MUN",
+              "broadcast": ""
+            },
+            {
+              "time": "11:30",
+              "time_label": "11:30 AM ET",
+              "home": "ARS",
+              "away": "CHE",
+              "broadcast": ""
+            }
+          ]
+        }
+      ]
     },
     "nfl": {
       "yesterday": {
