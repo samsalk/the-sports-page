@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-02T12:31:04.191959-04:00",
-  "date_label": "Friday, October 02, 2026",
+  "generated_at": "2026-10-03T10:29:22.519827-04:00",
+  "date_label": "Saturday, October 03, 2026",
   "leagues": {
     "mlb": {
       "yesterday": {
-        "date": "2026-10-01",
+        "date": "2026-10-02",
         "games": []
       },
       "standings": {
@@ -985,7 +985,7 @@
     },
     "nba": {
       "yesterday": {
-        "date": "2026-10-01",
+        "date": "2026-10-02",
         "games": []
       },
       "standings": {
@@ -1335,12 +1335,58 @@
               "home_name": "LA Clippers"
             }
           ]
+        },
+        {
+          "date": "2026-10-05",
+          "day_label": "Mon",
+          "games": [
+            {
+              "time": "11:00 PM",
+              "time_label": "11:00 PM",
+              "away": "MEM",
+              "away_name": "Memphis Grizzlies",
+              "home": "ATL",
+              "home_name": "Atlanta Hawks"
+            },
+            {
+              "time": "11:00 PM",
+              "time_label": "11:00 PM",
+              "away": "PHX",
+              "away_name": "Phoenix Suns",
+              "home": "DET",
+              "home_name": "Detroit Pistons"
+            },
+            {
+              "time": "11:00 PM",
+              "time_label": "11:00 PM",
+              "away": "NY",
+              "away_name": "New York Knicks",
+              "home": "PHI",
+              "home_name": "Philadelphia 76ers"
+            },
+            {
+              "time": "12:00 AM",
+              "time_label": "12:00 AM",
+              "away": "MIN",
+              "away_name": "Minnesota Timberwolves",
+              "home": "MIL",
+              "home_name": "Milwaukee Bucks"
+            },
+            {
+              "time": "02:00 AM",
+              "time_label": "02:00 AM",
+              "away": "LAL",
+              "away_name": "Los Angeles Lakers",
+              "home": "SAC",
+              "home_name": "Sacramento Kings"
+            }
+          ]
         }
       ]
     },
     "epl": {
       "yesterday": {
-        "date": "2026-10-01",
+        "date": "2026-10-02",
         "games": [],
         "matchday_label": "No recent games"
       },
@@ -1353,83 +1399,8 @@
     },
     "nfl": {
       "yesterday": {
-        "date": "2026-10-01",
-        "games": [
-          {
-            "game_id": "401872964",
-            "away_team": {
-              "abbr": "PIT",
-              "name": "Pittsburgh Steelers",
-              "score": 24
-            },
-            "home_team": {
-              "abbr": "CLE",
-              "name": "Cleveland Browns",
-              "score": 27
-            },
-            "status": "Final",
-            "box_score": {
-              "line_score": {
-                "away": [
-                  7,
-                  3,
-                  0,
-                  14
-                ],
-                "home": [
-                  0,
-                  21,
-                  0,
-                  6
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "PIT",
-                  "name": "Aaron Rodgers",
-                  "points": 299,
-                  "stat_line": "299 yds, 3 TD, 2 INT",
-                  "stat_type": "passing"
-                },
-                {
-                  "team": "PIT",
-                  "name": "Jaylen Warren",
-                  "points": 93,
-                  "stat_line": "17 car, 93 yds, 0 TD",
-                  "stat_type": "rushing"
-                },
-                {
-                  "team": "PIT",
-                  "name": "DK Metcalf",
-                  "points": 115,
-                  "stat_line": "5 rec, 115 yds, 0 TD",
-                  "stat_type": "receiving"
-                },
-                {
-                  "team": "CLE",
-                  "name": "Deshaun Watson",
-                  "points": 268,
-                  "stat_line": "268 yds, 1 TD, 1 INT",
-                  "stat_type": "passing"
-                },
-                {
-                  "team": "CLE",
-                  "name": "Quinshon Judkins",
-                  "points": 53,
-                  "stat_line": "17 car, 53 yds, 1 TD",
-                  "stat_type": "rushing"
-                },
-                {
-                  "team": "CLE",
-                  "name": "Denzel Boston",
-                  "points": 89,
-                  "stat_line": "4 rec, 89 yds, 0 TD",
-                  "stat_type": "receiving"
-                }
-              ]
-            }
-          }
-        ]
+        "date": "2026-10-02",
+        "games": []
       },
       "standings": {},
       "leaders": {
