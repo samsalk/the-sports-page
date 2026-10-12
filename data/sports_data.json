@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T15:33:08.500343-04:00",
+  "generated_at": "2026-10-12T16:08:33.494302-04:00",
   "date_label": "Monday, October 12, 2026",
   "leagues": {
     "mlb": {
@@ -1544,19 +1544,32 @@
           },
           {
             "rank": 5,
-            "team": "FLA",
-            "team_name": "Florida Panthers",
-            "wins": 2,
-            "losses": 1,
-            "ot_losses": 2,
+            "team": "BUF",
+            "team_name": "Buffalo Sabres",
+            "wins": 3,
+            "losses": 3,
+            "ot_losses": 0,
             "points": 6,
-            "games_played": 5,
-            "win_pct": 0.6,
+            "games_played": 6,
+            "win_pct": 0.5,
             "games_behind": 1.0,
-            "streak": "L1"
+            "streak": "W1"
           },
           {
             "rank": 6,
+            "team": "FLA",
+            "team_name": "Florida Panthers",
+            "wins": 2,
+            "losses": 2,
+            "ot_losses": 2,
+            "points": 6,
+            "games_played": 6,
+            "win_pct": 0.5,
+            "games_behind": 1.0,
+            "streak": "L2"
+          },
+          {
+            "rank": 7,
             "team": "MTL",
             "team_name": "Montréal Canadiens",
             "wins": 2,
@@ -1567,19 +1580,6 @@
             "win_pct": 0.5,
             "games_behind": 1.5,
             "streak": "W1"
-          },
-          {
-            "rank": 7,
-            "team": "BUF",
-            "team_name": "Buffalo Sabres",
-            "wins": 2,
-            "losses": 3,
-            "ot_losses": 0,
-            "points": 4,
-            "games_played": 5,
-            "win_pct": 0.4,
-            "games_behind": 2.0,
-            "streak": "L2"
           },
           {
             "rank": 8,
@@ -1713,17 +1713,6 @@
           "date": "2026-10-12",
           "day_label": "Mon",
           "games": [
-            {
-              "time": "13:00",
-              "time_label": "01:00 PM ET",
-              "away": "FLA",
-              "away_name": "Florida Panthers",
-              "away_record": "",
-              "home": "BUF",
-              "home_name": "Buffalo Sabres",
-              "home_record": "",
-              "broadcast": "SN"
-            },
             {
               "time": "19:00",
               "time_label": "07:00 PM ET",
@@ -2832,132 +2821,69 @@
     },
     "epl": {
       "yesterday": {
-        "date": "2026-10-10",
+        "date": "2026-10-11",
         "games": [
           {
-            "match_id": 560593,
+            "match_id": 560594,
             "home_team": {
-              "abbr": "ARS",
-              "name": "Arsenal FC",
+              "abbr": "UNK",
+              "name": "Hull City AFC",
               "score": 2
             },
             "away_team": {
-              "abbr": "LEE",
-              "name": "Leeds United FC",
-              "score": 1
+              "abbr": "EVE",
+              "name": "Everton FC",
+              "score": 2
             },
             "status": "FINISHED",
             "half_time_score": "0-0",
             "box_score": {
               "home_goals": [],
               "away_goals": [],
-              "home_abbr": "ARS",
-              "away_abbr": "LEE"
+              "home_abbr": "UNK",
+              "away_abbr": "EVE"
             }
           },
           {
-            "match_id": 560592,
+            "match_id": 560596,
             "home_team": {
-              "abbr": "SUN",
-              "name": "Sunderland AFC",
+              "abbr": "CRY",
+              "name": "Crystal Palace FC",
+              "score": 3
+            },
+            "away_team": {
+              "abbr": "NFO",
+              "name": "Nottingham Forest FC",
+              "score": 1
+            },
+            "status": "FINISHED",
+            "half_time_score": "2-1",
+            "box_score": {
+              "home_goals": [],
+              "away_goals": [],
+              "home_abbr": "CRY",
+              "away_abbr": "NFO"
+            }
+          },
+          {
+            "match_id": 560598,
+            "home_team": {
+              "abbr": "LIV",
+              "name": "Liverpool FC",
               "score": 0
             },
             "away_team": {
-              "abbr": "BHA",
-              "name": "Brighton & Hove Albion FC",
-              "score": 2
+              "abbr": "MCI",
+              "name": "Manchester City FC",
+              "score": 3
             },
             "status": "FINISHED",
             "half_time_score": "0-0",
             "box_score": {
               "home_goals": [],
               "away_goals": [],
-              "home_abbr": "SUN",
-              "away_abbr": "BHA"
-            }
-          },
-          {
-            "match_id": 560595,
-            "home_team": {
-              "abbr": "CHE",
-              "name": "Chelsea FC",
-              "score": 5
-            },
-            "away_team": {
-              "abbr": "BOU",
-              "name": "AFC Bournemouth",
-              "score": 1
-            },
-            "status": "FINISHED",
-            "half_time_score": "2-0",
-            "box_score": {
-              "home_goals": [],
-              "away_goals": [],
-              "home_abbr": "CHE",
-              "away_abbr": "BOU"
-            }
-          },
-          {
-            "match_id": 560599,
-            "home_team": {
-              "abbr": "IPS",
-              "name": "Ipswich Town FC",
-              "score": 2
-            },
-            "away_team": {
-              "abbr": "FUL",
-              "name": "Fulham FC",
-              "score": 1
-            },
-            "status": "FINISHED",
-            "half_time_score": "0-0",
-            "box_score": {
-              "home_goals": [],
-              "away_goals": [],
-              "home_abbr": "IPS",
-              "away_abbr": "FUL"
-            }
-          },
-          {
-            "match_id": 560601,
-            "home_team": {
-              "abbr": "AVL",
-              "name": "Aston Villa FC",
-              "score": 2
-            },
-            "away_team": {
-              "abbr": "BRE",
-              "name": "Brentford FC",
-              "score": 2
-            },
-            "status": "FINISHED",
-            "half_time_score": "1-1",
-            "box_score": {
-              "home_goals": [],
-              "away_goals": [],
-              "home_abbr": "AVL",
-              "away_abbr": "BRE"
-            }
-          },
-          {
-            "match_id": 560600,
-            "home_team": {
-              "abbr": "MUN",
-              "name": "Manchester United FC",
-              "score": 1
-            },
-            "away_team": {
-              "abbr": "TOT",
-              "name": "Tottenham Hotspur FC",
-              "score": 1
-            },
-            "status": "FINISHED",
-            "half_time_score": "0-0",
-            "box_score": {
-              "home_goals": [],
-              "away_goals": [],
-              "home_abbr": "MUN",
-              "away_abbr": "TOT"
+              "home_abbr": "LIV",
+              "away_abbr": "MCI"
             }
           }
         ]
