@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-13T13:58:31.786061-04:00",
-  "date_label": "Tuesday, October 13, 2026",
+  "generated_at": "2026-10-14T10:48:46.509825-04:00",
+  "date_label": "Wednesday, October 14, 2026",
   "leagues": {
     "mlb": {
       "yesterday": {
-        "date": "2026-10-12",
+        "date": "2026-10-13",
         "games": []
       },
       "standings": {
@@ -975,18 +975,810 @@
     },
     "nhl": {
       "yesterday": {
-        "date": "2026-10-12",
+        "date": "2026-10-13",
         "games": [
           {
-            "game_id": "2026020087",
+            "game_id": "2026020090",
+            "away_team": {
+              "abbr": "NJD",
+              "name": "New Jersey Devils",
+              "score": 5
+            },
+            "home_team": {
+              "abbr": "DET",
+              "name": "Detroit Red Wings",
+              "score": 4
+            },
+            "status": "Final/OT",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 37,
+                "home": 27
+              },
+              "goalies": [
+                {
+                  "team": "NJD",
+                  "name": "J. Allen",
+                  "saves": 23,
+                  "shots": 27,
+                  "save_pct": 0.852
+                },
+                {
+                  "team": "NJD",
+                  "name": "N. Daws",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "DET",
+                  "name": "J. Gibson",
+                  "saves": 32,
+                  "shots": 37,
+                  "save_pct": 0.865
+                },
+                {
+                  "team": "DET",
+                  "name": "D. Tarasov",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "DET",
+                  "name": "A. DeBrincat",
+                  "goals": 2,
+                  "assists": 1,
+                  "points": 3
+                },
+                {
+                  "team": "NJD",
+                  "name": "J. Bratt",
+                  "goals": 1,
+                  "assists": 2,
+                  "points": 3
+                },
+                {
+                  "team": "NJD",
+                  "name": "J. Hughes",
+                  "goals": 1,
+                  "assists": 2,
+                  "points": 3
+                },
+                {
+                  "team": "NJD",
+                  "name": "E. Rodrigues",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "NJD",
+                  "name": "A. Mantha",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "DET",
+                  "name": "M. Brandsegg-Nygård",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020091",
             "away_team": {
               "abbr": "FLA",
               "name": "Florida Panthers",
+              "score": 7
+            },
+            "home_team": {
+              "abbr": "CBJ",
+              "name": "Columbus Blue Jackets",
+              "score": 3
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 28,
+                "home": 27
+              },
+              "goalies": [
+                {
+                  "team": "FLA",
+                  "name": "C. Black",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "FLA",
+                  "name": "A. Schmid",
+                  "saves": 24,
+                  "shots": 27,
+                  "save_pct": 0.889
+                },
+                {
+                  "team": "CBJ",
+                  "name": "C. Talbot",
+                  "saves": 17,
+                  "shots": 23,
+                  "save_pct": 0.739
+                },
+                {
+                  "team": "CBJ",
+                  "name": "J. Greaves",
+                  "saves": 4,
+                  "shots": 4,
+                  "save_pct": 1.0
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "FLA",
+                  "name": "M. Tkachuk",
+                  "goals": 0,
+                  "assists": 5,
+                  "points": 5
+                },
+                {
+                  "team": "FLA",
+                  "name": "B. Tkachuk",
+                  "goals": 3,
+                  "assists": 1,
+                  "points": 4
+                },
+                {
+                  "team": "FLA",
+                  "name": "S. Jones",
+                  "goals": 0,
+                  "assists": 4,
+                  "points": 4
+                },
+                {
+                  "team": "FLA",
+                  "name": "S. Reinhart",
+                  "goals": 2,
+                  "assists": 1,
+                  "points": 3
+                },
+                {
+                  "team": "FLA",
+                  "name": "C. Verhaeghe",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "CBJ",
+                  "name": "D. Severson",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020092",
+            "away_team": {
+              "abbr": "BUF",
+              "name": "Buffalo Sabres",
               "score": 3
             },
             "home_team": {
-              "abbr": "BUF",
-              "name": "Buffalo Sabres",
+              "abbr": "MTL",
+              "name": "Montréal Canadiens",
+              "score": 4
+            },
+            "status": "Final/SO",
+            "periods": 5,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 17,
+                "home": 38
+              },
+              "goalies": [
+                {
+                  "team": "BUF",
+                  "name": "U. Luukkonen",
+                  "saves": 35,
+                  "shots": 38,
+                  "save_pct": 0.921
+                },
+                {
+                  "team": "BUF",
+                  "name": "C. Ellis",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "MTL",
+                  "name": "J. Fowler",
+                  "saves": 14,
+                  "shots": 17,
+                  "save_pct": 0.824
+                },
+                {
+                  "team": "MTL",
+                  "name": "J. Dobes",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "BUF",
+                  "name": "O. Zellweger",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "MTL",
+                  "name": "C. Caufield",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "MTL",
+                  "name": "L. Hutson",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "BUF",
+                  "name": "B. Malenstyn",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "BUF",
+                  "name": "M. Samuelsson",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "MTL",
+                  "name": "J. Slafkovský",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020093",
+            "away_team": {
+              "abbr": "WSH",
+              "name": "Washington Capitals",
+              "score": 2
+            },
+            "home_team": {
+              "abbr": "CAR",
+              "name": "Carolina Hurricanes",
+              "score": 4
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 22,
+                "home": 35
+              },
+              "goalies": [
+                {
+                  "team": "WSH",
+                  "name": "L. Thompson",
+                  "saves": 31,
+                  "shots": 34,
+                  "save_pct": 0.912
+                },
+                {
+                  "team": "WSH",
+                  "name": "C. Lindgren",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "CAR",
+                  "name": "B. Bussi",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "CAR",
+                  "name": "P. Kochetkov",
+                  "saves": 20,
+                  "shots": 22,
+                  "save_pct": 0.909
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "CAR",
+                  "name": "A. Svechnikov",
+                  "goals": 2,
+                  "assists": 1,
+                  "points": 3
+                },
+                {
+                  "team": "WSH",
+                  "name": "R. Leonard",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "CAR",
+                  "name": "S. Aho",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "WSH",
+                  "name": "B. Jenner",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "WSH",
+                  "name": "J. Holl",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "CAR",
+                  "name": "E. Robinson",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020094",
+            "away_team": {
+              "abbr": "SEA",
+              "name": "Seattle Kraken",
+              "score": 3
+            },
+            "home_team": {
+              "abbr": "PHI",
+              "name": "Philadelphia Flyers",
+              "score": 2
+            },
+            "status": "Final/SO",
+            "periods": 5,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 31,
+                "home": 26
+              },
+              "goalies": [
+                {
+                  "team": "SEA",
+                  "name": "P. Grubauer",
+                  "saves": 24,
+                  "shots": 26,
+                  "save_pct": 0.923
+                },
+                {
+                  "team": "SEA",
+                  "name": "J. Daccord",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "PHI",
+                  "name": "J. Woll",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "PHI",
+                  "name": "D. Vladar",
+                  "saves": 29,
+                  "shots": 31,
+                  "save_pct": 0.935
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "SEA",
+                  "name": "B. McMann",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "SEA",
+                  "name": "V. Ottavainen",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "PHI",
+                  "name": "C. Dvorak",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "PHI",
+                  "name": "T. Zegras",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "SEA",
+                  "name": "J. Eberle",
+                  "goals": 0,
+                  "assists": 1,
+                  "points": 1
+                },
+                {
+                  "team": "SEA",
+                  "name": "C. Stephenson",
+                  "goals": 0,
+                  "assists": 1,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020095",
+            "away_team": {
+              "abbr": "TBL",
+              "name": "Tampa Bay Lightning",
+              "score": 1
+            },
+            "home_team": {
+              "abbr": "NYR",
+              "name": "New York Rangers",
+              "score": 4
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 26,
+                "home": 23
+              },
+              "goalies": [
+                {
+                  "team": "TBL",
+                  "name": "M. Sogaard",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "TBL",
+                  "name": "A. Vasilevskiy",
+                  "saves": 19,
+                  "shots": 22,
+                  "save_pct": 0.864
+                },
+                {
+                  "team": "NYR",
+                  "name": "D. Garand",
+                  "saves": 25,
+                  "shots": 26,
+                  "save_pct": 0.962
+                },
+                {
+                  "team": "NYR",
+                  "name": "S. Martin",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "NYR",
+                  "name": "A. Lafrenière",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "NYR",
+                  "name": "T. Kartye",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "NYR",
+                  "name": "A. Fox",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "NYR",
+                  "name": "M. Pettersson",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "TBL",
+                  "name": "Z. Girgensons",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "NYR",
+                  "name": "W. Cuylle",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020096",
+            "away_team": {
+              "abbr": "STL",
+              "name": "St. Louis Blues",
+              "score": 7
+            },
+            "home_team": {
+              "abbr": "OTT",
+              "name": "Ottawa Senators",
+              "score": 2
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 26,
+                "home": 17
+              },
+              "goalies": [
+                {
+                  "team": "STL",
+                  "name": "J. Hofer",
+                  "saves": 15,
+                  "shots": 17,
+                  "save_pct": 0.882
+                },
+                {
+                  "team": "STL",
+                  "name": "J. Binnington",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "OTT",
+                  "name": "S. Ersson",
+                  "saves": 19,
+                  "shots": 26,
+                  "save_pct": 0.731
+                },
+                {
+                  "team": "OTT",
+                  "name": "L. Ullmark",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "STL",
+                  "name": "P. Suter",
+                  "goals": 2,
+                  "assists": 1,
+                  "points": 3
+                },
+                {
+                  "team": "STL",
+                  "name": "M. McTavish",
+                  "goals": 2,
+                  "assists": 1,
+                  "points": 3
+                },
+                {
+                  "team": "STL",
+                  "name": "P. Buchnevich",
+                  "goals": 0,
+                  "assists": 3,
+                  "points": 3
+                },
+                {
+                  "team": "STL",
+                  "name": "J. Neighbours",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "STL",
+                  "name": "C. McMichael",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "STL",
+                  "name": "A. Jiricek",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020097",
+            "away_team": {
+              "abbr": "VAN",
+              "name": "Vancouver Canucks",
+              "score": 2
+            },
+            "home_team": {
+              "abbr": "NYI",
+              "name": "New York Islanders",
+              "score": 3
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 26,
+                "home": 38
+              },
+              "goalies": [
+                {
+                  "team": "VAN",
+                  "name": "L. Meriläinen",
+                  "saves": 35,
+                  "shots": 38,
+                  "save_pct": 0.921
+                },
+                {
+                  "team": "VAN",
+                  "name": "K. Lankinen",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "NYI",
+                  "name": "I. Sorokin",
+                  "saves": 24,
+                  "shots": 26,
+                  "save_pct": 0.923
+                },
+                {
+                  "team": "NYI",
+                  "name": "S. Varlamov",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "NYI",
+                  "name": "K. Palmieri",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "NYI",
+                  "name": "M. Maccelli",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "NYI",
+                  "name": "M. Schaefer",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "VAN",
+                  "name": "B. Boeser",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "VAN",
+                  "name": "M. Sasson",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "VAN",
+                  "name": "A. Bains",
+                  "goals": 0,
+                  "assists": 1,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020098",
+            "away_team": {
+              "abbr": "PIT",
+              "name": "Pittsburgh Penguins",
+              "score": 3
+            },
+            "home_team": {
+              "abbr": "CHI",
+              "name": "Chicago Blackhawks",
               "score": 5
             },
             "status": "Final",
@@ -997,78 +1789,78 @@
                 "home": []
               },
               "shots": {
-                "away": 23,
-                "home": 32
+                "away": 27,
+                "home": 20
               },
               "goalies": [
                 {
-                  "team": "FLA",
-                  "name": "J. Markstrom",
-                  "saves": 9,
-                  "shots": 11,
-                  "save_pct": 0.818
+                  "team": "PIT",
+                  "name": "S. Murashov",
+                  "saves": 15,
+                  "shots": 19,
+                  "save_pct": 0.789
                 },
                 {
-                  "team": "FLA",
-                  "name": "A. Schmid",
-                  "saves": 18,
-                  "shots": 21,
-                  "save_pct": 0.857
+                  "team": "PIT",
+                  "name": "A. Silovs",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
                 },
                 {
-                  "team": "BUF",
-                  "name": "U. Luukkonen",
-                  "saves": 13,
-                  "shots": 14,
-                  "save_pct": 0.929
+                  "team": "CHI",
+                  "name": "S. Knight",
+                  "saves": 24,
+                  "shots": 27,
+                  "save_pct": 0.889
                 },
                 {
-                  "team": "BUF",
-                  "name": "C. Ellis",
-                  "saves": 7,
-                  "shots": 9,
-                  "save_pct": 0.778
+                  "team": "CHI",
+                  "name": "A. Soderblom",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
                 }
               ],
               "scorers": [
                 {
-                  "team": "FLA",
-                  "name": "S. Reinhart",
+                  "team": "CHI",
+                  "name": "T. Teravainen",
+                  "goals": 2,
+                  "assists": 1,
+                  "points": 3
+                },
+                {
+                  "team": "PIT",
+                  "name": "S. Crosby",
                   "goals": 2,
                   "assists": 0,
                   "points": 2
                 },
                 {
-                  "team": "BUF",
-                  "name": "T. Thompson",
+                  "team": "CHI",
+                  "name": "R. Kantserov",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "CHI",
+                  "name": "T. Bertuzzi",
                   "goals": 1,
                   "assists": 1,
                   "points": 2
                 },
                 {
-                  "team": "FLA",
-                  "name": "S. Jones",
+                  "team": "PIT",
+                  "name": "E. Karlsson",
                   "goals": 0,
                   "assists": 2,
                   "points": 2
                 },
                 {
-                  "team": "BUF",
-                  "name": "P. Krebs",
-                  "goals": 0,
-                  "assists": 2,
-                  "points": 2
-                },
-                {
-                  "team": "BUF",
-                  "name": "J. Quinn",
-                  "goals": 0,
-                  "assists": 2,
-                  "points": 2
-                },
-                {
-                  "team": "BUF",
-                  "name": "O. Power",
+                  "team": "CHI",
+                  "name": "A. Frondell",
                   "goals": 0,
                   "assists": 2,
                   "points": 2
@@ -1077,15 +1869,510 @@
             }
           },
           {
-            "game_id": "2026020088",
+            "game_id": "2026020099",
             "away_team": {
-              "abbr": "OTT",
-              "name": "Ottawa Senators",
+              "abbr": "MIN",
+              "name": "Minnesota Wild",
+              "score": 2
+            },
+            "home_team": {
+              "abbr": "WPG",
+              "name": "Winnipeg Jets",
+              "score": 5
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 21,
+                "home": 25
+              },
+              "goalies": [
+                {
+                  "team": "MIN",
+                  "name": "J. Wallstedt",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "MIN",
+                  "name": "C. Pickard",
+                  "saves": 20,
+                  "shots": 25,
+                  "save_pct": 0.8
+                },
+                {
+                  "team": "WPG",
+                  "name": "C. Stevenson",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "WPG",
+                  "name": "S. Skinner",
+                  "saves": 19,
+                  "shots": 21,
+                  "save_pct": 0.905
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "WPG",
+                  "name": "M. Scheifele",
+                  "goals": 1,
+                  "assists": 2,
+                  "points": 3
+                },
+                {
+                  "team": "MIN",
+                  "name": "K. Kaprizov",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "WPG",
+                  "name": "C. Perfetti",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "WPG",
+                  "name": "K. Connor",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "WPG",
+                  "name": "N. Pionk",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "WPG",
+                  "name": "C. Koepke",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020100",
+            "away_team": {
+              "abbr": "COL",
+              "name": "Colorado Avalanche",
+              "score": 3
+            },
+            "home_team": {
+              "abbr": "DAL",
+              "name": "Dallas Stars",
+              "score": 2
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 25,
+                "home": 26
+              },
+              "goalies": [
+                {
+                  "team": "COL",
+                  "name": "M. Blackwood",
+                  "saves": 24,
+                  "shots": 26,
+                  "save_pct": 0.923
+                },
+                {
+                  "team": "COL",
+                  "name": "S. Wedgewood",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "DAL",
+                  "name": "C. DeSmith",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "DAL",
+                  "name": "J. Oettinger",
+                  "saves": 22,
+                  "shots": 25,
+                  "save_pct": 0.88
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "COL",
+                  "name": "M. Necas",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "DAL",
+                  "name": "T. Seguin",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "COL",
+                  "name": "N. MacKinnon",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "DAL",
+                  "name": "M. Heiskanen",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "COL",
+                  "name": "A. Lehkonen",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "DAL",
+                  "name": "R. Hintz",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020101",
+            "away_team": {
+              "abbr": "VGK",
+              "name": "Vegas Golden Knights",
+              "score": 5
+            },
+            "home_team": {
+              "abbr": "NSH",
+              "name": "Nashville Predators",
+              "score": 2
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 25,
+                "home": 27
+              },
+              "goalies": [
+                {
+                  "team": "VGK",
+                  "name": "A. Hill",
+                  "saves": 25,
+                  "shots": 27,
+                  "save_pct": 0.926
+                },
+                {
+                  "team": "VGK",
+                  "name": "C. Hart",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "NSH",
+                  "name": "M. Murray",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "NSH",
+                  "name": "J. Saros",
+                  "saves": 20,
+                  "shots": 25,
+                  "save_pct": 0.8
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "VGK",
+                  "name": "B. Howden",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "NSH",
+                  "name": "R. O'Reilly",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "VGK",
+                  "name": "R. Andersson",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "VGK",
+                  "name": "J. Eichel",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "VGK",
+                  "name": "T. Connelly",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "VGK",
+                  "name": "T. Hertl",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020102",
+            "away_team": {
+              "abbr": "TOR",
+              "name": "Toronto Maple Leafs",
               "score": 4
             },
             "home_team": {
-              "abbr": "NJD",
-              "name": "New Jersey Devils",
+              "abbr": "UTA",
+              "name": "Utah Mammoth",
+              "score": 5
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 26,
+                "home": 28
+              },
+              "goalies": [
+                {
+                  "team": "TOR",
+                  "name": "A. Stolarz",
+                  "saves": 23,
+                  "shots": 28,
+                  "save_pct": 0.821
+                },
+                {
+                  "team": "TOR",
+                  "name": "S. Bobrovsky",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "UTA",
+                  "name": "S. Cossa",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "UTA",
+                  "name": "K. Vejmelka",
+                  "saves": 22,
+                  "shots": 26,
+                  "save_pct": 0.846
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "TOR",
+                  "name": "A. Matthews",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "TOR",
+                  "name": "J. Tavares",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "UTA",
+                  "name": "D. Guenther",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "UTA",
+                  "name": "M. Sergachev",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "TOR",
+                  "name": "G. McKenna",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "TOR",
+                  "name": "J. Roslovic",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020103",
+            "away_team": {
+              "abbr": "CGY",
+              "name": "Calgary Flames",
+              "score": 4
+            },
+            "home_team": {
+              "abbr": "ANA",
+              "name": "Anaheim Ducks",
+              "score": 2
+            },
+            "status": "Final",
+            "periods": 3,
+            "box_score": {
+              "line_score": {
+                "away": [],
+                "home": []
+              },
+              "shots": {
+                "away": 36,
+                "home": 25
+              },
+              "goalies": [
+                {
+                  "team": "CGY",
+                  "name": "D. Cooley",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                },
+                {
+                  "team": "CGY",
+                  "name": "D. Wolf",
+                  "saves": 23,
+                  "shots": 25,
+                  "save_pct": 0.92
+                },
+                {
+                  "team": "ANA",
+                  "name": "L. Dostal",
+                  "saves": 32,
+                  "shots": 35,
+                  "save_pct": 0.914
+                },
+                {
+                  "team": "ANA",
+                  "name": "V. Husso",
+                  "saves": 0,
+                  "shots": 0,
+                  "save_pct": 0.0
+                }
+              ],
+              "scorers": [
+                {
+                  "team": "CGY",
+                  "name": "A. Suniev",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "CGY",
+                  "name": "Y. Sharangovich",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "CGY",
+                  "name": "A. Klapka",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "CGY",
+                  "name": "M. Pospisil",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "ANA",
+                  "name": "B. Sennecke",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                },
+                {
+                  "team": "ANA",
+                  "name": "L. Carlsson",
+                  "goals": 1,
+                  "assists": 0,
+                  "points": 1
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "2026020104",
+            "away_team": {
+              "abbr": "EDM",
+              "name": "Edmonton Oilers",
+              "score": 4
+            },
+            "home_team": {
+              "abbr": "LAK",
+              "name": "Los Angeles Kings",
               "score": 1
             },
             "status": "Final",
@@ -1096,78 +2383,78 @@
                 "home": []
               },
               "shots": {
-                "away": 20,
-                "home": 30
+                "away": 17,
+                "home": 40
               },
               "goalies": [
                 {
-                  "team": "OTT",
-                  "name": "S. Ersson",
+                  "team": "EDM",
+                  "name": "D. Levi",
+                  "saves": 39,
+                  "shots": 40,
+                  "save_pct": 0.975
+                },
+                {
+                  "team": "EDM",
+                  "name": "T. Jarry",
                   "saves": 0,
                   "shots": 0,
                   "save_pct": 0.0
                 },
                 {
-                  "team": "OTT",
-                  "name": "L. Ullmark",
-                  "saves": 29,
-                  "shots": 30,
-                  "save_pct": 0.967
+                  "team": "LAK",
+                  "name": "A. Forsberg",
+                  "saves": 9,
+                  "shots": 9,
+                  "save_pct": 1.0
                 },
                 {
-                  "team": "NJD",
-                  "name": "J. Allen",
-                  "saves": 0,
-                  "shots": 0,
-                  "save_pct": 0.0
-                },
-                {
-                  "team": "NJD",
-                  "name": "N. Daws",
-                  "saves": 16,
-                  "shots": 19,
-                  "save_pct": 0.842
+                  "team": "LAK",
+                  "name": "D. Kuemper",
+                  "saves": 4,
+                  "shots": 7,
+                  "save_pct": 0.571
                 }
               ],
               "scorers": [
                 {
-                  "team": "OTT",
-                  "name": "T. Stützle",
+                  "team": "EDM",
+                  "name": "C. McDavid",
+                  "goals": 1,
+                  "assists": 3,
+                  "points": 4
+                },
+                {
+                  "team": "EDM",
+                  "name": "V. Podkolzin",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "EDM",
+                  "name": "L. Draisaitl",
                   "goals": 1,
                   "assists": 1,
                   "points": 2
                 },
                 {
-                  "team": "OTT",
-                  "name": "S. Pinto",
+                  "team": "EDM",
+                  "name": "E. Bouchard",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
+                },
+                {
+                  "team": "LAK",
+                  "name": "B. Clarke",
                   "goals": 1,
                   "assists": 0,
                   "points": 1
                 },
                 {
-                  "team": "OTT",
-                  "name": "S. Halliday",
-                  "goals": 1,
-                  "assists": 0,
-                  "points": 1
-                },
-                {
-                  "team": "OTT",
-                  "name": "T. Kleven",
-                  "goals": 1,
-                  "assists": 0,
-                  "points": 1
-                },
-                {
-                  "team": "NJD",
-                  "name": "A. Gritsyuk",
-                  "goals": 1,
-                  "assists": 0,
-                  "points": 1
-                },
-                {
-                  "team": "OTT",
-                  "name": "M. Amadio",
+                  "team": "EDM",
+                  "name": "J. Dickinson",
                   "goals": 0,
                   "assists": 1,
                   "points": 1
@@ -1176,16 +2463,16 @@
             }
           },
           {
-            "game_id": "2026020089",
+            "game_id": "2026020105",
             "away_team": {
-              "abbr": "VGK",
-              "name": "Vegas Golden Knights",
-              "score": 2
+              "abbr": "BOS",
+              "name": "Boston Bruins",
+              "score": 6
             },
             "home_team": {
-              "abbr": "MIN",
-              "name": "Minnesota Wild",
-              "score": 4
+              "abbr": "SJS",
+              "name": "San Jose Sharks",
+              "score": 3
             },
             "status": "Final",
             "periods": 3,
@@ -1195,34 +2482,34 @@
                 "home": []
               },
               "shots": {
-                "away": 23,
-                "home": 28
+                "away": 26,
+                "home": 38
               },
               "goalies": [
                 {
-                  "team": "VGK",
-                  "name": "A. Hill",
+                  "team": "BOS",
+                  "name": "J. Swayman",
+                  "saves": 35,
+                  "shots": 38,
+                  "save_pct": 0.921
+                },
+                {
+                  "team": "BOS",
+                  "name": "M. DiPietro",
                   "saves": 0,
                   "shots": 0,
                   "save_pct": 0.0
                 },
                 {
-                  "team": "VGK",
-                  "name": "C. Hart",
-                  "saves": 24,
-                  "shots": 27,
-                  "save_pct": 0.889
+                  "team": "SJS",
+                  "name": "Y. Askarov",
+                  "saves": 20,
+                  "shots": 25,
+                  "save_pct": 0.8
                 },
                 {
-                  "team": "MIN",
-                  "name": "J. Wallstedt",
-                  "saves": 21,
-                  "shots": 23,
-                  "save_pct": 0.913
-                },
-                {
-                  "team": "MIN",
-                  "name": "C. Pickard",
+                  "team": "SJS",
+                  "name": "A. Nedeljkovic",
                   "saves": 0,
                   "shots": 0,
                   "save_pct": 0.0
@@ -1230,43 +2517,43 @@
               ],
               "scorers": [
                 {
-                  "team": "MIN",
-                  "name": "Q. Hughes",
+                  "team": "BOS",
+                  "name": "F. Minten",
+                  "goals": 2,
+                  "assists": 0,
+                  "points": 2
+                },
+                {
+                  "team": "SJS",
+                  "name": "I. Stenberg",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "SJS",
+                  "name": "M. Celebrini",
+                  "goals": 1,
+                  "assists": 1,
+                  "points": 2
+                },
+                {
+                  "team": "BOS",
+                  "name": "M. Geekie",
                   "goals": 0,
                   "assists": 2,
                   "points": 2
                 },
                 {
-                  "team": "VGK",
-                  "name": "W. Karlsson",
-                  "goals": 1,
-                  "assists": 0,
-                  "points": 1
+                  "team": "SJS",
+                  "name": "D. Orlov",
+                  "goals": 0,
+                  "assists": 2,
+                  "points": 2
                 },
                 {
-                  "team": "VGK",
-                  "name": "R. Andersson",
-                  "goals": 1,
-                  "assists": 0,
-                  "points": 1
-                },
-                {
-                  "team": "MIN",
-                  "name": "M. Boldy",
-                  "goals": 1,
-                  "assists": 0,
-                  "points": 1
-                },
-                {
-                  "team": "MIN",
-                  "name": "J. Eriksson Ek",
-                  "goals": 1,
-                  "assists": 0,
-                  "points": 1
-                },
-                {
-                  "team": "MIN",
-                  "name": "D. Yurov",
+                  "team": "BOS",
+                  "name": "P. Zacha",
                   "goals": 1,
                   "assists": 0,
                   "points": 1
@@ -1282,92 +2569,92 @@
             "rank": 1,
             "team": "CAR",
             "team_name": "Carolina Hurricanes",
-            "wins": 5,
+            "wins": 6,
             "losses": 1,
             "ot_losses": 1,
-            "points": 11,
-            "games_played": 7,
-            "win_pct": 0.786,
+            "points": 13,
+            "games_played": 8,
+            "win_pct": 0.812,
             "games_behind": 0.0,
-            "streak": "W5"
+            "streak": "W6"
           },
           {
             "rank": 2,
             "team": "NYR",
             "team_name": "New York Rangers",
-            "wins": 5,
+            "wins": 6,
             "losses": 2,
             "ot_losses": 0,
-            "points": 10,
-            "games_played": 7,
-            "win_pct": 0.714,
+            "points": 12,
+            "games_played": 8,
+            "win_pct": 0.75,
             "games_behind": 0.5,
-            "streak": "W1"
+            "streak": "W2"
           },
           {
             "rank": 3,
             "team": "PIT",
             "team_name": "Pittsburgh Penguins",
             "wins": 3,
-            "losses": 2,
+            "losses": 3,
             "ot_losses": 1,
             "points": 7,
-            "games_played": 6,
-            "win_pct": 0.583,
-            "games_behind": 2.0,
-            "streak": "W1"
+            "games_played": 7,
+            "win_pct": 0.5,
+            "games_behind": 3.0,
+            "streak": "L1"
           },
           {
             "rank": 4,
-            "team": "WSH",
-            "team_name": "Washington Capitals",
+            "team": "NYI",
+            "team_name": "New York Islanders",
             "wins": 3,
-            "losses": 2,
+            "losses": 3,
             "ot_losses": 0,
             "points": 6,
-            "games_played": 5,
-            "win_pct": 0.6,
-            "games_behind": 2.5,
-            "streak": "L1"
+            "games_played": 6,
+            "win_pct": 0.5,
+            "games_behind": 3.5,
+            "streak": "W1"
           },
           {
             "rank": 5,
-            "team": "CBJ",
-            "team_name": "Columbus Blue Jackets",
-            "wins": 2,
-            "losses": 2,
+            "team": "WSH",
+            "team_name": "Washington Capitals",
+            "wins": 3,
+            "losses": 3,
             "ot_losses": 0,
-            "points": 4,
-            "games_played": 4,
+            "points": 6,
+            "games_played": 6,
             "win_pct": 0.5,
             "games_behind": 3.5,
-            "streak": "L1"
+            "streak": "L2"
           },
           {
             "rank": 6,
-            "team": "NYI",
-            "team_name": "New York Islanders",
-            "wins": 2,
+            "team": "NJD",
+            "team_name": "New Jersey Devils",
+            "wins": 3,
             "losses": 3,
             "ot_losses": 0,
-            "points": 4,
-            "games_played": 5,
-            "win_pct": 0.4,
+            "points": 6,
+            "games_played": 6,
+            "win_pct": 0.5,
             "games_behind": 3.5,
-            "streak": "L1"
+            "streak": "W1"
           },
           {
             "rank": 7,
-            "team": "NJD",
-            "team_name": "New Jersey Devils",
+            "team": "CBJ",
+            "team_name": "Columbus Blue Jackets",
             "wins": 2,
             "losses": 3,
             "ot_losses": 0,
             "points": 4,
             "games_played": 5,
             "win_pct": 0.4,
-            "games_behind": 3.5,
-            "streak": "L1"
+            "games_behind": 4.5,
+            "streak": "L2"
           },
           {
             "rank": 8,
@@ -1375,117 +2662,11 @@
             "team_name": "Philadelphia Flyers",
             "wins": 0,
             "losses": 5,
-            "ot_losses": 2,
-            "points": 2,
-            "games_played": 7,
-            "win_pct": 0.143,
-            "games_behind": 4.5,
-            "streak": "L4"
-          }
-        ],
-        "Atlantic": [
-          {
-            "rank": 1,
-            "team": "OTT",
-            "team_name": "Ottawa Senators",
-            "wins": 5,
-            "losses": 1,
-            "ot_losses": 0,
-            "points": 10,
-            "games_played": 6,
-            "win_pct": 0.833,
-            "games_behind": 0.0,
-            "streak": "W3"
-          },
-          {
-            "rank": 2,
-            "team": "TBL",
-            "team_name": "Tampa Bay Lightning",
-            "wins": 4,
-            "losses": 1,
-            "ot_losses": 0,
-            "points": 8,
-            "games_played": 5,
-            "win_pct": 0.8,
-            "games_behind": 1.0,
-            "streak": "W4"
-          },
-          {
-            "rank": 3,
-            "team": "BOS",
-            "team_name": "Boston Bruins",
-            "wins": 4,
-            "losses": 2,
-            "ot_losses": 0,
-            "points": 8,
-            "games_played": 6,
-            "win_pct": 0.667,
-            "games_behind": 1.0,
-            "streak": "W2"
-          },
-          {
-            "rank": 4,
-            "team": "TOR",
-            "team_name": "Toronto Maple Leafs",
-            "wins": 3,
-            "losses": 2,
-            "ot_losses": 1,
-            "points": 7,
-            "games_played": 6,
-            "win_pct": 0.583,
-            "games_behind": 1.5,
-            "streak": "W1"
-          },
-          {
-            "rank": 5,
-            "team": "BUF",
-            "team_name": "Buffalo Sabres",
-            "wins": 3,
-            "losses": 3,
-            "ot_losses": 0,
-            "points": 6,
-            "games_played": 6,
-            "win_pct": 0.5,
-            "games_behind": 2.0,
-            "streak": "W1"
-          },
-          {
-            "rank": 6,
-            "team": "FLA",
-            "team_name": "Florida Panthers",
-            "wins": 2,
-            "losses": 2,
-            "ot_losses": 2,
-            "points": 6,
-            "games_played": 6,
-            "win_pct": 0.5,
-            "games_behind": 2.0,
-            "streak": "L2"
-          },
-          {
-            "rank": 7,
-            "team": "MTL",
-            "team_name": "Montréal Canadiens",
-            "wins": 2,
-            "losses": 2,
-            "ot_losses": 1,
-            "points": 5,
-            "games_played": 5,
-            "win_pct": 0.5,
-            "games_behind": 2.5,
-            "streak": "W1"
-          },
-          {
-            "rank": 8,
-            "team": "DET",
-            "team_name": "Detroit Red Wings",
-            "wins": 1,
-            "losses": 3,
-            "ot_losses": 1,
+            "ot_losses": 3,
             "points": 3,
-            "games_played": 5,
-            "win_pct": 0.3,
-            "games_behind": 3.5,
+            "games_played": 8,
+            "win_pct": 0.188,
+            "games_behind": 5.0,
             "streak": "OT1"
           }
         ],
@@ -1494,6 +2675,231 @@
             "rank": 1,
             "team": "VGK",
             "team_name": "Vegas Golden Knights",
+            "wins": 6,
+            "losses": 2,
+            "ot_losses": 0,
+            "points": 12,
+            "games_played": 8,
+            "win_pct": 0.75,
+            "games_behind": 0.0,
+            "streak": "W1"
+          },
+          {
+            "rank": 2,
+            "team": "EDM",
+            "team_name": "Edmonton Oilers",
+            "wins": 5,
+            "losses": 0,
+            "ot_losses": 1,
+            "points": 11,
+            "games_played": 6,
+            "win_pct": 0.917,
+            "games_behind": 0.5,
+            "streak": "W5"
+          },
+          {
+            "rank": 3,
+            "team": "SEA",
+            "team_name": "Seattle Kraken",
+            "wins": 5,
+            "losses": 2,
+            "ot_losses": 0,
+            "points": 10,
+            "games_played": 7,
+            "win_pct": 0.714,
+            "games_behind": 1.0,
+            "streak": "W3"
+          },
+          {
+            "rank": 4,
+            "team": "ANA",
+            "team_name": "Anaheim Ducks",
+            "wins": 4,
+            "losses": 2,
+            "ot_losses": 0,
+            "points": 8,
+            "games_played": 6,
+            "win_pct": 0.667,
+            "games_behind": 2.0,
+            "streak": "L1"
+          },
+          {
+            "rank": 5,
+            "team": "SJS",
+            "team_name": "San Jose Sharks",
+            "wins": 3,
+            "losses": 3,
+            "ot_losses": 0,
+            "points": 6,
+            "games_played": 6,
+            "win_pct": 0.5,
+            "games_behind": 3.0,
+            "streak": "L2"
+          },
+          {
+            "rank": 6,
+            "team": "VAN",
+            "team_name": "Vancouver Canucks",
+            "wins": 2,
+            "losses": 6,
+            "ot_losses": 0,
+            "points": 4,
+            "games_played": 8,
+            "win_pct": 0.25,
+            "games_behind": 4.0,
+            "streak": "L5"
+          },
+          {
+            "rank": 7,
+            "team": "LAK",
+            "team_name": "Los Angeles Kings",
+            "wins": 0,
+            "losses": 3,
+            "ot_losses": 2,
+            "points": 2,
+            "games_played": 5,
+            "win_pct": 0.2,
+            "games_behind": 5.0,
+            "streak": "L1"
+          },
+          {
+            "rank": 8,
+            "team": "CGY",
+            "team_name": "Calgary Flames",
+            "wins": 1,
+            "losses": 5,
+            "ot_losses": 0,
+            "points": 2,
+            "games_played": 6,
+            "win_pct": 0.167,
+            "games_behind": 5.0,
+            "streak": "W1"
+          }
+        ],
+        "Central": [
+          {
+            "rank": 1,
+            "team": "UTA",
+            "team_name": "Utah Mammoth",
+            "wins": 5,
+            "losses": 2,
+            "ot_losses": 0,
+            "points": 10,
+            "games_played": 7,
+            "win_pct": 0.714,
+            "games_behind": 0.0,
+            "streak": "W2"
+          },
+          {
+            "rank": 2,
+            "team": "WPG",
+            "team_name": "Winnipeg Jets",
+            "wins": 4,
+            "losses": 1,
+            "ot_losses": 1,
+            "points": 9,
+            "games_played": 6,
+            "win_pct": 0.75,
+            "games_behind": 0.5,
+            "streak": "W1"
+          },
+          {
+            "rank": 3,
+            "team": "MIN",
+            "team_name": "Minnesota Wild",
+            "wins": 4,
+            "losses": 2,
+            "ot_losses": 1,
+            "points": 9,
+            "games_played": 7,
+            "win_pct": 0.643,
+            "games_behind": 0.5,
+            "streak": "L1"
+          },
+          {
+            "rank": 4,
+            "team": "COL",
+            "team_name": "Colorado Avalanche",
+            "wins": 4,
+            "losses": 2,
+            "ot_losses": 0,
+            "points": 8,
+            "games_played": 6,
+            "win_pct": 0.667,
+            "games_behind": 1.0,
+            "streak": "W1"
+          },
+          {
+            "rank": 5,
+            "team": "STL",
+            "team_name": "St. Louis Blues",
+            "wins": 3,
+            "losses": 2,
+            "ot_losses": 1,
+            "points": 7,
+            "games_played": 6,
+            "win_pct": 0.583,
+            "games_behind": 1.5,
+            "streak": "W2"
+          },
+          {
+            "rank": 6,
+            "team": "NSH",
+            "team_name": "Nashville Predators",
+            "wins": 2,
+            "losses": 2,
+            "ot_losses": 2,
+            "points": 6,
+            "games_played": 6,
+            "win_pct": 0.5,
+            "games_behind": 2.0,
+            "streak": "L1"
+          },
+          {
+            "rank": 7,
+            "team": "DAL",
+            "team_name": "Dallas Stars",
+            "wins": 2,
+            "losses": 3,
+            "ot_losses": 1,
+            "points": 5,
+            "games_played": 6,
+            "win_pct": 0.417,
+            "games_behind": 2.5,
+            "streak": "L1"
+          },
+          {
+            "rank": 8,
+            "team": "CHI",
+            "team_name": "Chicago Blackhawks",
+            "wins": 2,
+            "losses": 5,
+            "ot_losses": 0,
+            "points": 4,
+            "games_played": 7,
+            "win_pct": 0.286,
+            "games_behind": 3.0,
+            "streak": "W1"
+          }
+        ],
+        "Atlantic": [
+          {
+            "rank": 1,
+            "team": "BOS",
+            "team_name": "Boston Bruins",
+            "wins": 5,
+            "losses": 2,
+            "ot_losses": 0,
+            "points": 10,
+            "games_played": 7,
+            "win_pct": 0.714,
+            "games_behind": 0.0,
+            "streak": "W3"
+          },
+          {
+            "rank": 2,
+            "team": "OTT",
+            "team_name": "Ottawa Senators",
             "wins": 5,
             "losses": 2,
             "ot_losses": 0,
@@ -1504,35 +2910,9 @@
             "streak": "L1"
           },
           {
-            "rank": 2,
-            "team": "EDM",
-            "team_name": "Edmonton Oilers",
-            "wins": 4,
-            "losses": 0,
-            "ot_losses": 1,
-            "points": 9,
-            "games_played": 5,
-            "win_pct": 0.9,
-            "games_behind": 0.5,
-            "streak": "W4"
-          },
-          {
             "rank": 3,
-            "team": "ANA",
-            "team_name": "Anaheim Ducks",
-            "wins": 4,
-            "losses": 1,
-            "ot_losses": 0,
-            "points": 8,
-            "games_played": 5,
-            "win_pct": 0.8,
-            "games_behind": 1.0,
-            "streak": "W2"
-          },
-          {
-            "rank": 4,
-            "team": "SEA",
-            "team_name": "Seattle Kraken",
+            "team": "TBL",
+            "team_name": "Tampa Bay Lightning",
             "wins": 4,
             "losses": 2,
             "ot_losses": 0,
@@ -1540,165 +2920,72 @@
             "games_played": 6,
             "win_pct": 0.667,
             "games_behind": 1.0,
-            "streak": "W2"
-          },
-          {
-            "rank": 5,
-            "team": "SJS",
-            "team_name": "San Jose Sharks",
-            "wins": 3,
-            "losses": 2,
-            "ot_losses": 0,
-            "points": 6,
-            "games_played": 5,
-            "win_pct": 0.6,
-            "games_behind": 2.0,
             "streak": "L1"
           },
           {
-            "rank": 6,
-            "team": "VAN",
-            "team_name": "Vancouver Canucks",
-            "wins": 2,
-            "losses": 5,
-            "ot_losses": 0,
-            "points": 4,
-            "games_played": 7,
-            "win_pct": 0.286,
-            "games_behind": 3.0,
-            "streak": "L4"
-          },
-          {
-            "rank": 7,
-            "team": "LAK",
-            "team_name": "Los Angeles Kings",
-            "wins": 0,
+            "rank": 4,
+            "team": "FLA",
+            "team_name": "Florida Panthers",
+            "wins": 3,
             "losses": 2,
             "ot_losses": 2,
-            "points": 2,
-            "games_played": 4,
-            "win_pct": 0.25,
-            "games_behind": 4.0,
-            "streak": "OT1"
-          },
-          {
-            "rank": 8,
-            "team": "CGY",
-            "team_name": "Calgary Flames",
-            "wins": 0,
-            "losses": 5,
-            "ot_losses": 0,
-            "points": 0,
-            "games_played": 5,
-            "win_pct": 0.0,
-            "games_behind": 5.0,
-            "streak": "L5"
-          }
-        ],
-        "Central": [
-          {
-            "rank": 1,
-            "team": "MIN",
-            "team_name": "Minnesota Wild",
-            "wins": 4,
-            "losses": 1,
-            "ot_losses": 1,
-            "points": 9,
-            "games_played": 6,
-            "win_pct": 0.75,
-            "games_behind": 0.0,
-            "streak": "W2"
-          },
-          {
-            "rank": 2,
-            "team": "UTA",
-            "team_name": "Utah Mammoth",
-            "wins": 4,
-            "losses": 2,
-            "ot_losses": 0,
             "points": 8,
-            "games_played": 6,
-            "win_pct": 0.667,
-            "games_behind": 0.5,
+            "games_played": 7,
+            "win_pct": 0.571,
+            "games_behind": 1.0,
             "streak": "W1"
           },
           {
-            "rank": 3,
-            "team": "WPG",
-            "team_name": "Winnipeg Jets",
+            "rank": 5,
+            "team": "MTL",
+            "team_name": "Montréal Canadiens",
             "wins": 3,
-            "losses": 1,
+            "losses": 2,
             "ot_losses": 1,
             "points": 7,
-            "games_played": 5,
-            "win_pct": 0.7,
-            "games_behind": 1.0,
-            "streak": "L1"
-          },
-          {
-            "rank": 4,
-            "team": "COL",
-            "team_name": "Colorado Avalanche",
-            "wins": 3,
-            "losses": 2,
-            "ot_losses": 0,
-            "points": 6,
-            "games_played": 5,
-            "win_pct": 0.6,
+            "games_played": 6,
+            "win_pct": 0.583,
             "games_behind": 1.5,
-            "streak": "L1"
-          },
-          {
-            "rank": 5,
-            "team": "NSH",
-            "team_name": "Nashville Predators",
-            "wins": 2,
-            "losses": 1,
-            "ot_losses": 2,
-            "points": 6,
-            "games_played": 5,
-            "win_pct": 0.6,
-            "games_behind": 1.5,
-            "streak": "OT1"
+            "streak": "W2"
           },
           {
             "rank": 6,
-            "team": "DAL",
-            "team_name": "Dallas Stars",
-            "wins": 2,
-            "losses": 2,
+            "team": "TOR",
+            "team_name": "Toronto Maple Leafs",
+            "wins": 3,
+            "losses": 3,
             "ot_losses": 1,
-            "points": 5,
-            "games_played": 5,
+            "points": 7,
+            "games_played": 7,
             "win_pct": 0.5,
-            "games_behind": 2.0,
-            "streak": "OT1"
+            "games_behind": 1.5,
+            "streak": "L1"
           },
           {
             "rank": 7,
-            "team": "STL",
-            "team_name": "St. Louis Blues",
-            "wins": 2,
-            "losses": 2,
+            "team": "BUF",
+            "team_name": "Buffalo Sabres",
+            "wins": 3,
+            "losses": 3,
             "ot_losses": 1,
-            "points": 5,
-            "games_played": 5,
+            "points": 7,
+            "games_played": 7,
             "win_pct": 0.5,
-            "games_behind": 2.0,
-            "streak": "W1"
+            "games_behind": 1.5,
+            "streak": "OT1"
           },
           {
             "rank": 8,
-            "team": "CHI",
-            "team_name": "Chicago Blackhawks",
+            "team": "DET",
+            "team_name": "Detroit Red Wings",
             "wins": 1,
-            "losses": 5,
-            "ot_losses": 0,
-            "points": 2,
+            "losses": 3,
+            "ot_losses": 2,
+            "points": 4,
             "games_played": 6,
-            "win_pct": 0.167,
-            "games_behind": 3.5,
-            "streak": "L2"
+            "win_pct": 0.333,
+            "games_behind": 3.0,
+            "streak": "OT2"
           }
         ]
       },
@@ -1710,188 +2997,6 @@
       },
       "schedule": [
         {
-          "date": "2026-10-13",
-          "day_label": "Tue",
-          "games": [
-            {
-              "time": "18:00",
-              "time_label": "06:00 PM ET",
-              "away": "NJD",
-              "away_name": "New Jersey Devils",
-              "away_record": "2-3-0",
-              "home": "DET",
-              "home_name": "Detroit Red Wings",
-              "home_record": "1-3-1",
-              "broadcast": "ESPN"
-            },
-            {
-              "time": "18:15",
-              "time_label": "06:15 PM ET",
-              "away": "FLA",
-              "away_name": "Florida Panthers",
-              "away_record": "2-2-2",
-              "home": "CBJ",
-              "home_name": "Columbus Blue Jackets",
-              "home_record": "2-2-0",
-              "broadcast": "CBJNHL"
-            },
-            {
-              "time": "18:30",
-              "time_label": "06:30 PM ET",
-              "away": "BUF",
-              "away_name": "Buffalo Sabres",
-              "away_record": "3-3-0",
-              "home": "MTL",
-              "home_name": "Montréal Canadiens",
-              "home_record": "2-2-1",
-              "broadcast": "TSN2"
-            },
-            {
-              "time": "18:45",
-              "time_label": "06:45 PM ET",
-              "away": "WSH",
-              "away_name": "Washington Capitals",
-              "away_record": "3-2-0",
-              "home": "CAR",
-              "home_name": "Carolina Hurricanes",
-              "home_record": "5-1-1",
-              "broadcast": "CARNHL"
-            },
-            {
-              "time": "19:00",
-              "time_label": "07:00 PM ET",
-              "away": "SEA",
-              "away_name": "Seattle Kraken",
-              "away_record": "4-2-0",
-              "home": "PHI",
-              "home_name": "Philadelphia Flyers",
-              "home_record": "0-5-2",
-              "broadcast": "Prime Video"
-            },
-            {
-              "time": "19:15",
-              "time_label": "07:15 PM ET",
-              "away": "TBL",
-              "away_name": "Tampa Bay Lightning",
-              "away_record": "4-1-0",
-              "home": "NYR",
-              "home_name": "New York Rangers",
-              "home_record": "5-2-0",
-              "broadcast": "The Spot"
-            },
-            {
-              "time": "19:30",
-              "time_label": "07:30 PM ET",
-              "away": "STL",
-              "away_name": "St. Louis Blues",
-              "away_record": "2-2-1",
-              "home": "OTT",
-              "home_name": "Ottawa Senators",
-              "home_record": "5-1-0",
-              "broadcast": "STLNHL"
-            },
-            {
-              "time": "19:45",
-              "time_label": "07:45 PM ET",
-              "away": "VAN",
-              "away_name": "Vancouver Canucks",
-              "away_record": "2-5-0",
-              "home": "NYI",
-              "home_name": "New York Islanders",
-              "home_record": "2-3-0",
-              "broadcast": "SNP"
-            },
-            {
-              "time": "20:00",
-              "time_label": "08:00 PM ET",
-              "away": "PIT",
-              "away_name": "Pittsburgh Penguins",
-              "away_record": "3-2-1",
-              "home": "CHI",
-              "home_name": "Chicago Blackhawks",
-              "home_record": "1-5-0",
-              "broadcast": "CHSN"
-            },
-            {
-              "time": "20:15",
-              "time_label": "08:15 PM ET",
-              "away": "MIN",
-              "away_name": "Minnesota Wild",
-              "away_record": "4-1-1",
-              "home": "WPG",
-              "home_name": "Winnipeg Jets",
-              "home_record": "3-1-1",
-              "broadcast": "MINNHL"
-            },
-            {
-              "time": "20:30",
-              "time_label": "08:30 PM ET",
-              "away": "COL",
-              "away_name": "Colorado Avalanche",
-              "away_record": "3-2-0",
-              "home": "DAL",
-              "home_name": "Dallas Stars",
-              "home_record": "2-2-1",
-              "broadcast": "ESPN"
-            },
-            {
-              "time": "20:45",
-              "time_label": "08:45 PM ET",
-              "away": "VGK",
-              "away_name": "Vegas Golden Knights",
-              "away_record": "5-2-0",
-              "home": "NSH",
-              "home_name": "Nashville Predators",
-              "home_record": "2-1-2",
-              "broadcast": "SCRIPPS"
-            },
-            {
-              "time": "21:00",
-              "time_label": "09:00 PM ET",
-              "away": "TOR",
-              "away_name": "Toronto Maple Leafs",
-              "away_record": "3-2-1",
-              "home": "UTA",
-              "home_name": "Utah Mammoth",
-              "home_record": "4-2-0",
-              "broadcast": "Mammoth+"
-            },
-            {
-              "time": "21:45",
-              "time_label": "09:45 PM ET",
-              "away": "CGY",
-              "away_name": "Calgary Flames",
-              "away_record": "0-5-0",
-              "home": "ANA",
-              "home_name": "Anaheim Ducks",
-              "home_record": "4-1-0",
-              "broadcast": "SNW"
-            },
-            {
-              "time": "22:30",
-              "time_label": "10:30 PM ET",
-              "away": "EDM",
-              "away_name": "Edmonton Oilers",
-              "away_record": "4-0-1",
-              "home": "LAK",
-              "home_name": "Los Angeles Kings",
-              "home_record": "0-2-2",
-              "broadcast": "ABTV "
-            },
-            {
-              "time": "23:00",
-              "time_label": "11:00 PM ET",
-              "away": "BOS",
-              "away_name": "Boston Bruins",
-              "away_record": "4-2-0",
-              "home": "SJS",
-              "home_name": "San Jose Sharks",
-              "home_record": "3-2-0",
-              "broadcast": "ESPN"
-            }
-          ]
-        },
-        {
           "date": "2026-10-14",
           "day_label": "Wed",
           "games": [
@@ -1900,10 +3005,10 @@
               "time_label": "07:30 PM ET",
               "away": "MTL",
               "away_name": "Montréal Canadiens",
-              "away_record": "2-2-1",
+              "away_record": "3-2-1",
               "home": "WSH",
               "home_name": "Washington Capitals",
-              "home_record": "3-2-0",
+              "home_record": "3-3-0",
               "broadcast": "Prime"
             },
             {
@@ -1911,10 +3016,10 @@
               "time_label": "08:30 PM ET",
               "away": "DAL",
               "away_name": "Dallas Stars",
-              "away_record": "2-2-1",
+              "away_record": "2-3-1",
               "home": "COL",
               "home_name": "Colorado Avalanche",
-              "home_record": "3-2-0",
+              "home_record": "4-2-0",
               "broadcast": "TNT"
             }
           ]
@@ -1928,10 +3033,10 @@
               "time_label": "07:00 PM ET",
               "away": "BUF",
               "away_name": "Buffalo Sabres",
-              "away_record": "3-3-0",
+              "away_record": "3-3-1",
               "home": "TOR",
               "home_name": "Toronto Maple Leafs",
-              "home_record": "3-2-1",
+              "home_record": "3-3-1",
               "broadcast": "TSN4"
             },
             {
@@ -1939,10 +3044,10 @@
               "time_label": "07:00 PM ET",
               "away": "NYI",
               "away_name": "New York Islanders",
-              "away_record": "2-3-0",
+              "away_record": "3-3-0",
               "home": "OTT",
               "home_name": "Ottawa Senators",
-              "home_record": "5-1-0",
+              "home_record": "5-2-0",
               "broadcast": "TSN5"
             },
             {
@@ -1950,10 +3055,10 @@
               "time_label": "07:00 PM ET",
               "away": "SEA",
               "away_name": "Seattle Kraken",
-              "away_record": "4-2-0",
+              "away_record": "5-2-0",
               "home": "TBL",
               "home_name": "Tampa Bay Lightning",
-              "home_record": "4-1-0",
+              "home_record": "4-2-0",
               "broadcast": "Prime Video"
             },
             {
@@ -1961,10 +3066,10 @@
               "time_label": "07:00 PM ET",
               "away": "VAN",
               "away_name": "Vancouver Canucks",
-              "away_record": "2-5-0",
+              "away_record": "2-6-0",
               "home": "FLA",
               "home_name": "Florida Panthers",
-              "home_record": "2-2-2",
+              "home_record": "3-2-2",
               "broadcast": "SNP"
             },
             {
@@ -1972,10 +3077,10 @@
               "time_label": "07:00 PM ET",
               "away": "NYR",
               "away_name": "New York Rangers",
-              "away_record": "5-2-0",
+              "away_record": "6-2-0",
               "home": "NJD",
               "home_name": "New Jersey Devils",
-              "home_record": "2-3-0",
+              "home_record": "3-3-0",
               "broadcast": "MSGSN2"
             },
             {
@@ -1983,10 +3088,10 @@
               "time_label": "07:30 PM ET",
               "away": "PHI",
               "away_name": "Philadelphia Flyers",
-              "away_record": "0-5-2",
+              "away_record": "0-5-3",
               "home": "DET",
               "home_name": "Detroit Red Wings",
-              "home_record": "1-3-1",
+              "home_record": "1-3-2",
               "broadcast": "ESPN+"
             },
             {
@@ -1994,10 +3099,10 @@
               "time_label": "08:00 PM ET",
               "away": "WPG",
               "away_name": "Winnipeg Jets",
-              "away_record": "3-1-1",
+              "away_record": "4-1-1",
               "home": "CHI",
               "home_name": "Chicago Blackhawks",
-              "home_record": "1-5-0",
+              "home_record": "2-5-0",
               "broadcast": "TSN3"
             },
             {
@@ -2005,10 +3110,10 @@
               "time_label": "08:00 PM ET",
               "away": "SJS",
               "away_name": "San Jose Sharks",
-              "away_record": "3-2-0",
+              "away_record": "3-3-0",
               "home": "NSH",
               "home_name": "Nashville Predators",
-              "home_record": "2-1-2",
+              "home_record": "2-2-2",
               "broadcast": "NBCSCA"
             },
             {
@@ -2016,10 +3121,10 @@
               "time_label": "08:00 PM ET",
               "away": "STL",
               "away_name": "St. Louis Blues",
-              "away_record": "2-2-1",
+              "away_record": "3-2-1",
               "home": "MIN",
               "home_name": "Minnesota Wild",
-              "home_record": "4-1-1",
+              "home_record": "4-2-1",
               "broadcast": "MINNHL"
             },
             {
@@ -2027,10 +3132,10 @@
               "time_label": "09:00 PM ET",
               "away": "UTA",
               "away_name": "Utah Mammoth",
-              "away_record": "4-2-0",
+              "away_record": "5-2-0",
               "home": "EDM",
               "home_name": "Edmonton Oilers",
-              "home_record": "4-0-1",
+              "home_record": "5-0-1",
               "broadcast": "Mammoth+"
             },
             {
@@ -2038,11 +3143,39 @@
               "time_label": "10:00 PM ET",
               "away": "CGY",
               "away_name": "Calgary Flames",
-              "away_record": "0-5-0",
+              "away_record": "1-5-0",
               "home": "VGK",
               "home_name": "Vegas Golden Knights",
-              "home_record": "5-2-0",
+              "home_record": "6-2-0",
               "broadcast": "SN1"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "day_label": "Fri",
+          "games": [
+            {
+              "time": "21:00",
+              "time_label": "09:00 PM ET",
+              "away": "PIT",
+              "away_name": "Pittsburgh Penguins",
+              "away_record": "3-3-1",
+              "home": "COL",
+              "home_name": "Colorado Avalanche",
+              "home_record": "4-2-0",
+              "broadcast": "SN+"
+            },
+            {
+              "time": "22:00",
+              "time_label": "10:00 PM ET",
+              "away": "BOS",
+              "away_name": "Boston Bruins",
+              "away_record": "5-2-0",
+              "home": "ANA",
+              "home_name": "Anaheim Ducks",
+              "home_record": "4-2-0",
+              "broadcast": "Prime Video"
             }
           ]
         }
@@ -2050,118 +3183,19 @@
     },
     "nba": {
       "yesterday": {
-        "date": "2026-10-12",
+        "date": "2026-10-13",
         "games": [
           {
-            "game_id": "401914130",
+            "game_id": "401898403",
             "away_team": {
-              "abbr": "LON",
-              "name": "London Lions",
-              "score": 66
+              "abbr": "CLE",
+              "name": "Cleveland Cavaliers",
+              "score": 116
             },
             "home_team": {
-              "abbr": "POR",
-              "name": "Portland Trail Blazers",
-              "score": 119
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  21,
-                  12,
-                  16,
-                  17
-                ],
-                "home": [
-                  34,
-                  38,
-                  28,
-                  19
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "POR",
-                  "name": "Toumani Camara",
-                  "points": 14,
-                  "rebounds": 2,
-                  "assists": 3,
-                  "fgm": 4,
-                  "fga": 7,
-                  "fg3m": 2,
-                  "fg3a": 5
-                },
-                {
-                  "team": "POR",
-                  "name": "Scoot Henderson",
-                  "points": 14,
-                  "rebounds": 0,
-                  "assists": 3,
-                  "fgm": 4,
-                  "fga": 7,
-                  "fg3m": 4,
-                  "fg3a": 5
-                },
-                {
-                  "team": "LON",
-                  "name": "Maxwell Lewis",
-                  "points": 13,
-                  "rebounds": 5,
-                  "assists": 0,
-                  "fgm": 4,
-                  "fga": 8,
-                  "fg3m": 2,
-                  "fg3a": 4
-                },
-                {
-                  "team": "POR",
-                  "name": "Yang Hansen",
-                  "points": 13,
-                  "rebounds": 4,
-                  "assists": 4,
-                  "fgm": 6,
-                  "fga": 8,
-                  "fg3m": 1,
-                  "fg3a": 1
-                },
-                {
-                  "team": "POR",
-                  "name": "Sidy Cissoko",
-                  "points": 13,
-                  "rebounds": 2,
-                  "assists": 3,
-                  "fgm": 5,
-                  "fga": 5,
-                  "fg3m": 3,
-                  "fg3a": 3
-                },
-                {
-                  "team": "LON",
-                  "name": "Devante Adams",
-                  "points": 12,
-                  "rebounds": 2,
-                  "assists": 4,
-                  "fgm": 5,
-                  "fga": 12,
-                  "fg3m": 2,
-                  "fg3a": 3
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401898402",
-            "away_team": {
-              "abbr": "OKC",
-              "name": "Oklahoma City Thunder",
-              "score": 110
-            },
-            "home_team": {
-              "abbr": "ATL",
-              "name": "Atlanta Hawks",
-              "score": 113
+              "abbr": "ORL",
+              "name": "Orlando Magic",
+              "score": 132
             },
             "status": "Final",
             "periods": 4,
@@ -2169,380 +3203,481 @@
               "line_score": {
                 "away": [
                   28,
-                  21,
-                  30,
-                  31
+                  24,
+                  31,
+                  33
                 ],
                 "home": [
-                  29,
-                  27,
-                  23,
-                  34
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "OKC",
-                  "name": "Bennett Stirtz",
-                  "points": 26,
-                  "rebounds": 4,
-                  "assists": 5,
-                  "fgm": 9,
-                  "fga": 16,
-                  "fg3m": 6,
-                  "fg3a": 9
-                },
-                {
-                  "team": "OKC",
-                  "name": "Brooks Barnhizer",
-                  "points": 20,
-                  "rebounds": 8,
-                  "assists": 2,
-                  "fgm": 8,
-                  "fga": 23,
-                  "fg3m": 2,
-                  "fg3a": 6
-                },
-                {
-                  "team": "OKC",
-                  "name": "Aday Mara",
-                  "points": 17,
-                  "rebounds": 10,
-                  "assists": 6,
-                  "fgm": 4,
-                  "fga": 9,
-                  "fg3m": 0,
-                  "fg3a": 1
-                },
-                {
-                  "team": "ATL",
-                  "name": "Jock Landale",
-                  "points": 17,
-                  "rebounds": 6,
-                  "assists": 5,
-                  "fgm": 7,
-                  "fga": 11,
-                  "fg3m": 1,
-                  "fg3a": 3
-                },
-                {
-                  "team": "OKC",
-                  "name": "Josh Dix",
-                  "points": 16,
-                  "rebounds": 3,
-                  "assists": 7,
-                  "fgm": 6,
-                  "fga": 15,
-                  "fg3m": 4,
-                  "fg3a": 10
-                },
-                {
-                  "team": "ATL",
-                  "name": "Nickeil Alexander-Walker",
-                  "points": 16,
-                  "rebounds": 6,
-                  "assists": 5,
-                  "fgm": 4,
-                  "fga": 10,
-                  "fg3m": 4,
-                  "fg3a": 7
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401901824",
-            "away_team": {
-              "abbr": "BKN",
-              "name": "Brooklyn Nets",
-              "score": 131
-            },
-            "home_team": {
-              "abbr": "WSH",
-              "name": "Washington Wizards",
-              "score": 122
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  36,
+                  35,
                   37,
-                  30,
-                  28
-                ],
-                "home": [
-                  32,
-                  40,
-                  22,
-                  28
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "BKN",
-                  "name": "Michael Porter Jr.",
-                  "points": 22,
-                  "rebounds": 4,
-                  "assists": 0,
-                  "fgm": 8,
-                  "fga": 13,
-                  "fg3m": 2,
-                  "fg3a": 7
-                },
-                {
-                  "team": "WSH",
-                  "name": "Kyshawn George",
-                  "points": 21,
-                  "rebounds": 1,
-                  "assists": 4,
-                  "fgm": 6,
-                  "fga": 7,
-                  "fg3m": 3,
-                  "fg3a": 3
-                },
-                {
-                  "team": "WSH",
-                  "name": "Bilal Coulibaly",
-                  "points": 19,
-                  "rebounds": 2,
-                  "assists": 1,
-                  "fgm": 7,
-                  "fga": 11,
-                  "fg3m": 3,
-                  "fg3a": 5
-                },
-                {
-                  "team": "BKN",
-                  "name": "Nolan Traore",
-                  "points": 17,
-                  "rebounds": 1,
-                  "assists": 2,
-                  "fgm": 6,
-                  "fga": 8,
-                  "fg3m": 2,
-                  "fg3a": 4
-                },
-                {
-                  "team": "BKN",
-                  "name": "Keon Ellis",
-                  "points": 15,
-                  "rebounds": 1,
-                  "assists": 0,
-                  "fgm": 4,
-                  "fga": 7,
-                  "fg3m": 3,
-                  "fg3a": 4
-                },
-                {
-                  "team": "BKN",
-                  "name": "Noah Clowney",
-                  "points": 15,
-                  "rebounds": 3,
-                  "assists": 4,
-                  "fgm": 5,
-                  "fga": 8,
-                  "fg3m": 4,
-                  "fg3a": 6
-                }
-              ]
-            }
-          },
-          {
-            "game_id": "401914124",
-            "away_team": {
-              "abbr": "MIN",
-              "name": "Minnesota Timberwolves",
-              "score": 122
-            },
-            "home_team": {
-              "abbr": "NY",
-              "name": "New York Knicks",
-              "score": 104
-            },
-            "status": "Final",
-            "periods": 4,
-            "box_score": {
-              "line_score": {
-                "away": [
-                  30,
-                  32,
-                  28,
-                  32
-                ],
-                "home": [
-                  25,
-                  25,
-                  30,
+                  36,
                   24
                 ]
               },
               "scorers": [
                 {
-                  "team": "MIN",
-                  "name": "Anthony Edwards",
-                  "points": 26,
-                  "rebounds": 3,
+                  "team": "ORL",
+                  "name": "Paolo Banchero",
+                  "points": 24,
+                  "rebounds": 8,
                   "assists": 3,
-                  "fgm": 8,
-                  "fga": 16,
-                  "fg3m": 5,
-                  "fg3a": 8
-                },
-                {
-                  "team": "MIN",
-                  "name": "Jaden McDaniels",
-                  "points": 22,
-                  "rebounds": 5,
-                  "assists": 2,
-                  "fgm": 8,
-                  "fga": 12,
-                  "fg3m": 4,
-                  "fg3a": 5
-                },
-                {
-                  "team": "NY",
-                  "name": "Jalen Brunson",
-                  "points": 20,
-                  "rebounds": 5,
-                  "assists": 3,
-                  "fgm": 6,
+                  "fgm": 10,
                   "fga": 13,
-                  "fg3m": 1,
-                  "fg3a": 4
-                },
-                {
-                  "team": "NY",
-                  "name": "OG Anunoby",
-                  "points": 15,
-                  "rebounds": 2,
-                  "assists": 1,
-                  "fgm": 4,
-                  "fga": 8,
-                  "fg3m": 1,
+                  "fg3m": 2,
                   "fg3a": 3
                 },
                 {
-                  "team": "MIN",
-                  "name": "Ayo Dosunmu",
-                  "points": 11,
+                  "team": "ORL",
+                  "name": "Franz Wagner",
+                  "points": 20,
                   "rebounds": 4,
-                  "assists": 2,
-                  "fgm": 3,
-                  "fga": 6,
-                  "fg3m": 3,
+                  "assists": 8,
+                  "fgm": 7,
+                  "fga": 10,
+                  "fg3m": 1,
+                  "fg3a": 2
+                },
+                {
+                  "team": "ORL",
+                  "name": "Tristan da Silva",
+                  "points": 18,
+                  "rebounds": 3,
+                  "assists": 5,
+                  "fgm": 7,
+                  "fga": 14,
+                  "fg3m": 4,
+                  "fg3a": 11
+                },
+                {
+                  "team": "CLE",
+                  "name": "Meleek Thomas",
+                  "points": 16,
+                  "rebounds": 3,
+                  "assists": 0,
+                  "fgm": 6,
+                  "fga": 9,
+                  "fg3m": 2,
+                  "fg3a": 3
+                },
+                {
+                  "team": "CLE",
+                  "name": "Donovan Mitchell",
+                  "points": 15,
+                  "rebounds": 2,
+                  "assists": 8,
+                  "fgm": 7,
+                  "fga": 15,
+                  "fg3m": 1,
                   "fg3a": 5
                 },
                 {
-                  "team": "NY",
-                  "name": "Karl-Anthony Towns",
-                  "points": 11,
-                  "rebounds": 2,
-                  "assists": 4,
-                  "fgm": 3,
-                  "fga": 6,
-                  "fg3m": 1,
-                  "fg3a": 4
+                  "team": "CLE",
+                  "name": "Evan Mobley",
+                  "points": 14,
+                  "rebounds": 5,
+                  "assists": 0,
+                  "fgm": 6,
+                  "fga": 14,
+                  "fg3m": 2,
+                  "fg3a": 6
                 }
               ]
             }
           },
           {
-            "game_id": "401898721",
+            "game_id": "401908944",
             "away_team": {
-              "abbr": "SA",
-              "name": "San Antonio Spurs",
-              "score": 109
+              "abbr": "NY",
+              "name": "New York Knicks",
+              "score": 98
             },
             "home_team": {
-              "abbr": "UTAH",
-              "name": "Utah Jazz",
-              "score": 119
+              "abbr": "TOR",
+              "name": "Toronto Raptors",
+              "score": 148
             },
             "status": "Final",
             "periods": 4,
             "box_score": {
               "line_score": {
                 "away": [
-                  26,
-                  35,
-                  17,
-                  31
-                ],
-                "home": [
-                  33,
-                  35,
+                  22,
+                  25,
                   31,
                   20
+                ],
+                "home": [
+                  42,
+                  44,
+                  30,
+                  32
                 ]
               },
               "scorers": [
                 {
-                  "team": "SA",
-                  "name": "Ja'Kobi Gillespie",
-                  "points": 25,
-                  "rebounds": 1,
-                  "assists": 3,
-                  "fgm": 9,
-                  "fga": 14,
+                  "team": "TOR",
+                  "name": "Kawhi Leonard",
+                  "points": 21,
+                  "rebounds": 5,
+                  "assists": 0,
+                  "fgm": 6,
+                  "fga": 12,
                   "fg3m": 4,
                   "fg3a": 8
                 },
                 {
-                  "team": "SA",
-                  "name": "Harrison Barnes",
+                  "team": "TOR",
+                  "name": "Scottie Barnes",
                   "points": 19,
-                  "rebounds": 2,
-                  "assists": 1,
-                  "fgm": 3,
+                  "rebounds": 6,
+                  "assists": 4,
+                  "fgm": 8,
+                  "fga": 10,
+                  "fg3m": 0,
+                  "fg3a": 1
+                },
+                {
+                  "team": "TOR",
+                  "name": "Collin Murray-Boyles",
+                  "points": 19,
+                  "rebounds": 9,
+                  "assists": 2,
+                  "fgm": 7,
+                  "fga": 7,
+                  "fg3m": 2,
+                  "fg3a": 2
+                },
+                {
+                  "team": "NY",
+                  "name": "James Wiseman",
+                  "points": 18,
+                  "rebounds": 10,
+                  "assists": 0,
+                  "fgm": 7,
                   "fga": 8,
+                  "fg3m": 0,
+                  "fg3a": 0
+                },
+                {
+                  "team": "TOR",
+                  "name": "RJ Barrett",
+                  "points": 17,
+                  "rebounds": 4,
+                  "assists": 3,
+                  "fgm": 6,
+                  "fga": 12,
+                  "fg3m": 1,
+                  "fg3a": 4
+                },
+                {
+                  "team": "TOR",
+                  "name": "Ja'Kobe Walter",
+                  "points": 14,
+                  "rebounds": 1,
+                  "assists": 1,
+                  "fgm": 5,
+                  "fga": 8,
+                  "fg3m": 4,
+                  "fg3a": 6
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401908621",
+            "away_team": {
+              "abbr": "IND",
+              "name": "Indiana Pacers",
+              "score": 112
+            },
+            "home_team": {
+              "abbr": "OKC",
+              "name": "Oklahoma City Thunder",
+              "score": 114
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  33,
+                  28,
+                  23,
+                  16,
+                  12
+                ],
+                "home": [
+                  25,
+                  34,
+                  26,
+                  15,
+                  14
+                ]
+              },
+              "scorers": [
+                {
+                  "team": "IND",
+                  "name": "Tyrese Haliburton",
+                  "points": 24,
+                  "rebounds": 3,
+                  "assists": 3,
+                  "fgm": 9,
+                  "fga": 14,
+                  "fg3m": 4,
+                  "fg3a": 6
+                },
+                {
+                  "team": "OKC",
+                  "name": "Jared McCain",
+                  "points": 20,
+                  "rebounds": 2,
+                  "assists": 2,
+                  "fgm": 6,
+                  "fga": 13,
+                  "fg3m": 6,
+                  "fg3a": 12
+                },
+                {
+                  "team": "OKC",
+                  "name": "Jalen Williams",
+                  "points": 16,
+                  "rebounds": 4,
+                  "assists": 3,
+                  "fgm": 7,
+                  "fga": 14,
+                  "fg3m": 1,
+                  "fg3a": 4
+                },
+                {
+                  "team": "OKC",
+                  "name": "Shai Gilgeous-Alexander",
+                  "points": 15,
+                  "rebounds": 0,
+                  "assists": 6,
+                  "fgm": 5,
+                  "fga": 6,
+                  "fg3m": 1,
+                  "fg3a": 1
+                },
+                {
+                  "team": "IND",
+                  "name": "Ivica Zubac",
+                  "points": 13,
+                  "rebounds": 13,
+                  "assists": 5,
+                  "fgm": 6,
+                  "fga": 7,
+                  "fg3m": 0,
+                  "fg3a": 0
+                },
+                {
+                  "team": "IND",
+                  "name": "Kelly Oubre Jr.",
+                  "points": 12,
+                  "rebounds": 5,
+                  "assists": 2,
+                  "fgm": 4,
+                  "fga": 9,
+                  "fg3m": 2,
+                  "fg3a": 5
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401898718",
+            "away_team": {
+              "abbr": "GS",
+              "name": "Golden State Warriors",
+              "score": 101
+            },
+            "home_team": {
+              "abbr": "LAL",
+              "name": "Los Angeles Lakers",
+              "score": 89
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  29,
+                  21,
+                  22,
+                  29
+                ],
+                "home": [
+                  29,
+                  34,
+                  13,
+                  13
+                ]
+              },
+              "scorers": [
+                {
+                  "team": "LAL",
+                  "name": "Austin Reaves",
+                  "points": 28,
+                  "rebounds": 4,
+                  "assists": 7,
+                  "fgm": 10,
+                  "fga": 18,
+                  "fg3m": 4,
+                  "fg3a": 7
+                },
+                {
+                  "team": "GS",
+                  "name": "Yaxel Lendeborg",
+                  "points": 17,
+                  "rebounds": 5,
+                  "assists": 4,
+                  "fgm": 5,
+                  "fga": 11,
+                  "fg3m": 1,
+                  "fg3a": 4
+                },
+                {
+                  "team": "GS",
+                  "name": "Brandin Podziemski",
+                  "points": 17,
+                  "rebounds": 5,
+                  "assists": 2,
+                  "fgm": 6,
+                  "fga": 12,
                   "fg3m": 3,
                   "fg3a": 7
                 },
                 {
-                  "team": "SA",
-                  "name": "Keldon Johnson",
-                  "points": 15,
-                  "rebounds": 4,
-                  "assists": 4,
+                  "team": "GS",
+                  "name": "Stephen Curry",
+                  "points": 11,
+                  "rebounds": 2,
+                  "assists": 2,
+                  "fgm": 3,
+                  "fga": 9,
+                  "fg3m": 3,
+                  "fg3a": 7
+                },
+                {
+                  "team": "LAL",
+                  "name": "Walker Kessler",
+                  "points": 11,
+                  "rebounds": 9,
+                  "assists": 1,
                   "fgm": 4,
-                  "fga": 10,
+                  "fga": 6,
                   "fg3m": 0,
+                  "fg3a": 0
+                },
+                {
+                  "team": "GS",
+                  "name": "Gui Santos",
+                  "points": 10,
+                  "rebounds": 5,
+                  "assists": 3,
+                  "fgm": 2,
+                  "fga": 6,
+                  "fg3m": 2,
+                  "fg3a": 6
+                }
+              ]
+            }
+          },
+          {
+            "game_id": "401901826",
+            "away_team": {
+              "abbr": "POR",
+              "name": "Portland Trail Blazers",
+              "score": 110
+            },
+            "home_team": {
+              "abbr": "SAC",
+              "name": "Sacramento Kings",
+              "score": 98
+            },
+            "status": "Final",
+            "periods": 4,
+            "box_score": {
+              "line_score": {
+                "away": [
+                  33,
+                  33,
+                  27,
+                  17
+                ],
+                "home": [
+                  22,
+                  17,
+                  27,
+                  32
+                ]
+              },
+              "scorers": [
+                {
+                  "team": "POR",
+                  "name": "Deni Avdija",
+                  "points": 26,
+                  "rebounds": 9,
+                  "assists": 4,
+                  "fgm": 9,
+                  "fga": 13,
+                  "fg3m": 2,
+                  "fg3a": 6
+                },
+                {
+                  "team": "SAC",
+                  "name": "Jonathan Mogbo",
+                  "points": 15,
+                  "rebounds": 10,
+                  "assists": 4,
+                  "fgm": 5,
+                  "fga": 10,
+                  "fg3m": 1,
                   "fg3a": 2
                 },
                 {
-                  "team": "SA",
-                  "name": "Julian Champagnie",
-                  "points": 14,
-                  "rebounds": 4,
-                  "assists": 0,
-                  "fgm": 5,
-                  "fga": 13,
-                  "fg3m": 3,
-                  "fg3a": 9
-                },
-                {
-                  "team": "SA",
-                  "name": "Jordan McLaughlin",
-                  "points": 14,
-                  "rebounds": 1,
-                  "assists": 6,
-                  "fgm": 6,
-                  "fga": 10,
+                  "team": "SAC",
+                  "name": "Tristen Newton",
+                  "points": 15,
+                  "rebounds": 2,
+                  "assists": 3,
+                  "fgm": 4,
+                  "fga": 9,
                   "fg3m": 1,
                   "fg3a": 3
                 },
                 {
-                  "team": "UTAH",
-                  "name": "Darryn Peterson",
+                  "team": "POR",
+                  "name": "Damian Lillard",
+                  "points": 14,
+                  "rebounds": 3,
+                  "assists": 4,
+                  "fgm": 4,
+                  "fga": 11,
+                  "fg3m": 3,
+                  "fg3a": 8
+                },
+                {
+                  "team": "POR",
+                  "name": "Ja Morant",
                   "points": 14,
                   "rebounds": 2,
-                  "assists": 5,
+                  "assists": 6,
+                  "fgm": 4,
+                  "fga": 6,
+                  "fg3m": 0,
+                  "fg3a": 1
+                },
+                {
+                  "team": "SAC",
+                  "name": "Precious Achiuwa",
+                  "points": 12,
+                  "rebounds": 11,
+                  "assists": 4,
                   "fgm": 5,
-                  "fga": 10,
-                  "fg3m": 1,
-                  "fg3a": 2
+                  "fga": 15,
+                  "fg3m": 2,
+                  "fg3a": 6
                 }
               ]
             }
@@ -2603,36 +3738,26 @@
           },
           {
             "rank": 6,
-            "team_name": "Cleveland Cavaliers",
-            "team_abbr": "CLE",
-            "wins": 1,
+            "team_name": "Toronto Raptors",
+            "team_abbr": "TOR",
+            "wins": 2,
             "losses": 1,
-            "win_pct": 0.5,
-            "games_back": 1.5,
-            "streak": "W1"
+            "win_pct": 0.667,
+            "games_back": 1.0,
+            "streak": "W2"
           },
           {
             "rank": 7,
-            "team_name": "Charlotte Hornets",
-            "team_abbr": "CHA",
-            "wins": 1,
+            "team_name": "Orlando Magic",
+            "team_abbr": "ORL",
+            "wins": 2,
             "losses": 1,
-            "win_pct": 0.5,
-            "games_back": 1.5,
+            "win_pct": 0.667,
+            "games_back": 1.0,
             "streak": "W1"
           },
           {
             "rank": 8,
-            "team_name": "Indiana Pacers",
-            "team_abbr": "IND",
-            "wins": 1,
-            "losses": 1,
-            "win_pct": 0.5,
-            "games_back": 1.5,
-            "streak": "L1"
-          },
-          {
-            "rank": 9,
             "team_name": "Detroit Pistons",
             "team_abbr": "DET",
             "wins": 1,
@@ -2642,24 +3767,34 @@
             "streak": "L1"
           },
           {
-            "rank": 10,
-            "team_name": "Orlando Magic",
-            "team_abbr": "ORL",
-            "wins": 1,
-            "losses": 1,
-            "win_pct": 0.5,
-            "games_back": 1.5,
-            "streak": "L1"
-          },
-          {
-            "rank": 11,
-            "team_name": "Toronto Raptors",
-            "team_abbr": "TOR",
+            "rank": 9,
+            "team_name": "Charlotte Hornets",
+            "team_abbr": "CHA",
             "wins": 1,
             "losses": 1,
             "win_pct": 0.5,
             "games_back": 1.5,
             "streak": "W1"
+          },
+          {
+            "rank": 10,
+            "team_name": "Cleveland Cavaliers",
+            "team_abbr": "CLE",
+            "wins": 1,
+            "losses": 2,
+            "win_pct": 0.333,
+            "games_back": 2.0,
+            "streak": "L1"
+          },
+          {
+            "rank": 11,
+            "team_name": "Indiana Pacers",
+            "team_abbr": "IND",
+            "wins": 1,
+            "losses": 2,
+            "win_pct": 0.333,
+            "games_back": 2.0,
+            "streak": "L2"
           },
           {
             "rank": 12,
@@ -2696,10 +3831,10 @@
             "team_name": "New York Knicks",
             "team_abbr": "NY",
             "wins": 0,
-            "losses": 3,
+            "losses": 4,
             "win_pct": 0.0,
-            "games_back": 3.0,
-            "streak": "L3"
+            "games_back": 3.5,
+            "streak": "L4"
           }
         ],
         "Western": [
@@ -2707,11 +3842,11 @@
             "rank": 1,
             "team_name": "Portland Trail Blazers",
             "team_abbr": "POR",
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
             "win_pct": 1.0,
             "games_back": "-",
-            "streak": "W2"
+            "streak": "W3"
           },
           {
             "rank": 2,
@@ -2720,7 +3855,7 @@
             "wins": 3,
             "losses": 1,
             "win_pct": 0.75,
-            "games_back": "-",
+            "games_back": 0.5,
             "streak": "W2"
           },
           {
@@ -2730,48 +3865,48 @@
             "wins": 2,
             "losses": 1,
             "win_pct": 0.667,
-            "games_back": 0.5,
+            "games_back": 1.0,
             "streak": "W1"
           },
           {
             "rank": 4,
-            "team_name": "Los Angeles Lakers",
-            "team_abbr": "LAL",
-            "wins": 2,
-            "losses": 1,
-            "win_pct": 0.667,
-            "games_back": 0.5,
-            "streak": "W1"
-          },
-          {
-            "rank": 5,
             "team_name": "Utah Jazz",
             "team_abbr": "UTAH",
             "wins": 2,
             "losses": 1,
             "win_pct": 0.667,
-            "games_back": 0.5,
+            "games_back": 1.0,
             "streak": "W1"
           },
           {
-            "rank": 6,
+            "rank": 5,
             "team_name": "Denver Nuggets",
             "team_abbr": "DEN",
             "wins": 2,
             "losses": 1,
             "win_pct": 0.667,
-            "games_back": 0.5,
+            "games_back": 1.0,
+            "streak": "W2"
+          },
+          {
+            "rank": 6,
+            "team_name": "Golden State Warriors",
+            "team_abbr": "GS",
+            "wins": 3,
+            "losses": 2,
+            "win_pct": 0.6,
+            "games_back": 1.0,
             "streak": "W2"
           },
           {
             "rank": 7,
-            "team_name": "Golden State Warriors",
-            "team_abbr": "GS",
+            "team_name": "Los Angeles Lakers",
+            "team_abbr": "LAL",
             "wins": 2,
             "losses": 2,
             "win_pct": 0.5,
-            "games_back": 1.0,
-            "streak": "W1"
+            "games_back": 1.5,
+            "streak": "L1"
           },
           {
             "rank": 8,
@@ -2780,7 +3915,7 @@
             "wins": 1,
             "losses": 1,
             "win_pct": 0.5,
-            "games_back": 1.0,
+            "games_back": 1.5,
             "streak": "L1"
           },
           {
@@ -2790,7 +3925,7 @@
             "wins": 1,
             "losses": 1,
             "win_pct": 0.5,
-            "games_back": 1.0,
+            "games_back": 1.5,
             "streak": "L1"
           },
           {
@@ -2800,7 +3935,7 @@
             "wins": 1,
             "losses": 1,
             "win_pct": 0.5,
-            "games_back": 1.0,
+            "games_back": 1.5,
             "streak": "W1"
           },
           {
@@ -2810,7 +3945,7 @@
             "wins": 1,
             "losses": 1,
             "win_pct": 0.5,
-            "games_back": 1.0,
+            "games_back": 1.5,
             "streak": "L1"
           },
           {
@@ -2820,37 +3955,37 @@
             "wins": 1,
             "losses": 2,
             "win_pct": 0.333,
-            "games_back": 1.5,
+            "games_back": 2.0,
             "streak": "W1"
           },
           {
             "rank": 13,
             "team_name": "Oklahoma City Thunder",
             "team_abbr": "OKC",
-            "wins": 0,
+            "wins": 1,
             "losses": 3,
-            "win_pct": 0.0,
+            "win_pct": 0.25,
             "games_back": 2.5,
-            "streak": "L3"
+            "streak": "W1"
           },
           {
             "rank": 14,
+            "team_name": "Sacramento Kings",
+            "team_abbr": "SAC",
+            "wins": 0,
+            "losses": 4,
+            "win_pct": 0.0,
+            "games_back": 3.5,
+            "streak": "L4"
+          },
+          {
+            "rank": 15,
             "team_name": "San Antonio Spurs",
             "team_abbr": "SA",
             "wins": 0,
             "losses": 3,
             "win_pct": 0.0,
-            "games_back": 2.5,
-            "streak": "L3"
-          },
-          {
-            "rank": 15,
-            "team_name": "Sacramento Kings",
-            "team_abbr": "SAC",
-            "wins": 0,
-            "losses": 3,
-            "win_pct": 0.0,
-            "games_back": 2.5,
+            "games_back": 3.0,
             "streak": "L3"
           }
         ]
@@ -2861,52 +3996,6 @@
         "assists": []
       },
       "schedule": [
-        {
-          "date": "2026-10-13",
-          "day_label": "Tue",
-          "games": [
-            {
-              "time": "11:00 PM",
-              "time_label": "11:00 PM",
-              "away": "CLE",
-              "away_name": "Cleveland Cavaliers",
-              "home": "ORL",
-              "home_name": "Orlando Magic"
-            },
-            {
-              "time": "11:00 PM",
-              "time_label": "11:00 PM",
-              "away": "NY",
-              "away_name": "New York Knicks",
-              "home": "TOR",
-              "home_name": "Toronto Raptors"
-            },
-            {
-              "time": "12:00 AM",
-              "time_label": "12:00 AM",
-              "away": "IND",
-              "away_name": "Indiana Pacers",
-              "home": "OKC",
-              "home_name": "Oklahoma City Thunder"
-            },
-            {
-              "time": "02:00 AM",
-              "time_label": "02:00 AM",
-              "away": "GS",
-              "away_name": "Golden State Warriors",
-              "home": "LAL",
-              "home_name": "Los Angeles Lakers"
-            },
-            {
-              "time": "02:00 AM",
-              "time_label": "02:00 AM",
-              "away": "POR",
-              "away_name": "Portland Trail Blazers",
-              "home": "SAC",
-              "home_name": "Sacramento Kings"
-            }
-          ]
-        },
         {
           "date": "2026-10-14",
           "day_label": "Wed",
@@ -2988,6 +4077,108 @@
               "away_name": "Oklahoma City Thunder",
               "home": "HOU",
               "home_name": "Houston Rockets"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "day_label": "Fri",
+          "games": [
+            {
+              "time": "11:00 PM",
+              "time_label": "11:00 PM",
+              "away": "MIA",
+              "away_name": "Miami Heat",
+              "home": "ORL",
+              "home_name": "Orlando Magic"
+            },
+            {
+              "time": "11:00 PM",
+              "time_label": "11:00 PM",
+              "away": "BOS",
+              "away_name": "Boston Celtics",
+              "home": "PHI",
+              "home_name": "Philadelphia 76ers"
+            },
+            {
+              "time": "11:00 PM",
+              "time_label": "11:00 PM",
+              "away": "TOR",
+              "away_name": "Toronto Raptors",
+              "home": "DET",
+              "home_name": "Detroit Pistons"
+            },
+            {
+              "time": "11:00 PM",
+              "time_label": "11:00 PM",
+              "away": "MIL",
+              "away_name": "Milwaukee Bucks",
+              "home": "IND",
+              "home_name": "Indiana Pacers"
+            },
+            {
+              "time": "12:00 AM",
+              "time_label": "12:00 AM",
+              "away": "ATL",
+              "away_name": "Atlanta Hawks",
+              "home": "DAL",
+              "home_name": "Dallas Mavericks"
+            },
+            {
+              "time": "12:00 AM",
+              "time_label": "12:00 AM",
+              "away": "SAC",
+              "away_name": "Sacramento Kings",
+              "home": "SA",
+              "home_name": "San Antonio Spurs"
+            },
+            {
+              "time": "12:00 AM",
+              "time_label": "12:00 AM",
+              "away": "CHA",
+              "away_name": "Charlotte Hornets",
+              "home": "MEM",
+              "home_name": "Memphis Grizzlies"
+            },
+            {
+              "time": "12:00 AM",
+              "time_label": "12:00 AM",
+              "away": "WSH",
+              "away_name": "Washington Wizards",
+              "home": "NO",
+              "home_name": "New Orleans Pelicans"
+            },
+            {
+              "time": "12:00 AM",
+              "time_label": "12:00 AM",
+              "away": "MIN",
+              "away_name": "Minnesota Timberwolves",
+              "home": "CHI",
+              "home_name": "Chicago Bulls"
+            },
+            {
+              "time": "02:00 AM",
+              "time_label": "02:00 AM",
+              "away": "POR",
+              "away_name": "Portland Trail Blazers",
+              "home": "GS",
+              "home_name": "Golden State Warriors"
+            },
+            {
+              "time": "02:00 AM",
+              "time_label": "02:00 AM",
+              "away": "UTAH",
+              "away_name": "Utah Jazz",
+              "home": "PHX",
+              "home_name": "Phoenix Suns"
+            },
+            {
+              "time": "02:30 AM",
+              "time_label": "02:30 AM",
+              "away": "DEN",
+              "away_name": "Denver Nuggets",
+              "home": "LAL",
+              "home_name": "Los Angeles Lakers"
             }
           ]
         }
@@ -3462,85 +4653,8 @@
     },
     "nfl": {
       "yesterday": {
-        "date": "2026-10-12",
-        "games": [
-          {
-            "game_id": "401872994",
-            "away_team": {
-              "abbr": "BUF",
-              "name": "Buffalo Bills",
-              "score": 37
-            },
-            "home_team": {
-              "abbr": "LAR",
-              "name": "Los Angeles Rams",
-              "score": 34
-            },
-            "status": "Final/OT",
-            "box_score": {
-              "line_score": {
-                "away": [
-                  6,
-                  7,
-                  6,
-                  15,
-                  3
-                ],
-                "home": [
-                  0,
-                  7,
-                  7,
-                  20,
-                  0
-                ]
-              },
-              "scorers": [
-                {
-                  "team": "BUF",
-                  "name": "Josh Allen",
-                  "points": 210,
-                  "stat_line": "210 yds, 1 TD, 1 INT",
-                  "stat_type": "passing"
-                },
-                {
-                  "team": "BUF",
-                  "name": "Josh Allen",
-                  "points": 121,
-                  "stat_line": "10 car, 121 yds, 1 TD",
-                  "stat_type": "rushing"
-                },
-                {
-                  "team": "BUF",
-                  "name": "Khalil Shakir",
-                  "points": 80,
-                  "stat_line": "3 rec, 80 yds, 0 TD",
-                  "stat_type": "receiving"
-                },
-                {
-                  "team": "LAR",
-                  "name": "Matthew Stafford",
-                  "points": 383,
-                  "stat_line": "383 yds, 3 TD, 0 INT",
-                  "stat_type": "passing"
-                },
-                {
-                  "team": "LAR",
-                  "name": "Kyren Williams",
-                  "points": 49,
-                  "stat_line": "16 car, 49 yds, 1 TD",
-                  "stat_type": "rushing"
-                },
-                {
-                  "team": "LAR",
-                  "name": "Puka Nacua",
-                  "points": 138,
-                  "stat_line": "17 rec, 138 yds, 1 TD",
-                  "stat_type": "receiving"
-                }
-              ]
-            }
-          }
-        ]
+        "date": "2026-10-13",
+        "games": []
       },
       "standings": {},
       "leaders": {
