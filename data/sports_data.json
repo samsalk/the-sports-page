@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T10:02:36.647926-04:00",
+  "generated_at": "2026-10-25T10:52:13.401820-04:00",
   "date_label": "Sunday, October 25, 2026",
   "leagues": {
     "mlb": {
@@ -4430,16 +4430,30 @@
             "team_name": "Brighton & Hove Albion FC",
             "played": 8,
             "wins": 5,
-            "draws": 2,
-            "losses": 1,
+            "draws": 1,
+            "losses": 2,
             "goals_for": 23,
-            "goals_against": 5,
-            "goal_diff": 18,
-            "points": 17,
+            "goals_against": 7,
+            "goal_diff": 16,
+            "points": 16,
             "form": null
           },
           {
             "rank": 4,
+            "team": "LIV",
+            "team_name": "Liverpool FC",
+            "played": 8,
+            "wins": 4,
+            "draws": 3,
+            "losses": 1,
+            "goals_for": 11,
+            "goals_against": 8,
+            "goal_diff": 3,
+            "points": 15,
+            "form": null
+          },
+          {
+            "rank": 5,
             "team": "CHE",
             "team_name": "Chelsea FC",
             "played": 8,
@@ -4453,31 +4467,17 @@
             "form": null
           },
           {
-            "rank": 5,
-            "team": "LIV",
-            "team_name": "Liverpool FC",
+            "rank": 6,
+            "team": "UNK",
+            "team_name": "Hull City AFC",
             "played": 8,
             "wins": 3,
-            "draws": 4,
-            "losses": 1,
+            "draws": 3,
+            "losses": 2,
             "goals_for": 9,
-            "goals_against": 8,
-            "goal_diff": 1,
-            "points": 13,
-            "form": null
-          },
-          {
-            "rank": 6,
-            "team": "BRE",
-            "team_name": "Brentford FC",
-            "played": 8,
-            "wins": 2,
-            "draws": 5,
-            "losses": 1,
-            "goals_for": 13,
-            "goals_against": 8,
-            "goal_diff": 5,
-            "points": 11,
+            "goals_against": 7,
+            "goal_diff": 2,
+            "points": 12,
             "form": null
           },
           {
@@ -4496,6 +4496,20 @@
           },
           {
             "rank": 8,
+            "team": "BRE",
+            "team_name": "Brentford FC",
+            "played": 8,
+            "wins": 2,
+            "draws": 4,
+            "losses": 2,
+            "goals_for": 13,
+            "goals_against": 9,
+            "goal_diff": 4,
+            "points": 10,
+            "form": null
+          },
+          {
+            "rank": 9,
             "team": "LEE",
             "team_name": "Leeds United FC",
             "played": 7,
@@ -4505,20 +4519,6 @@
             "goals_for": 9,
             "goals_against": 6,
             "goal_diff": 3,
-            "points": 10,
-            "form": null
-          },
-          {
-            "rank": 9,
-            "team": "UNK",
-            "team_name": "Hull City AFC",
-            "played": 8,
-            "wins": 2,
-            "draws": 4,
-            "losses": 2,
-            "goals_for": 8,
-            "goals_against": 7,
-            "goal_diff": 1,
             "points": 10,
             "form": null
           },
@@ -4552,6 +4552,20 @@
           },
           {
             "rank": 12,
+            "team": "BOU",
+            "team_name": "AFC Bournemouth",
+            "played": 8,
+            "wins": 2,
+            "draws": 3,
+            "losses": 3,
+            "goals_for": 11,
+            "goals_against": 13,
+            "goal_diff": -2,
+            "points": 9,
+            "form": null
+          },
+          {
+            "rank": 13,
             "team": "TOT",
             "team_name": "Tottenham Hotspur FC",
             "played": 8,
@@ -4565,7 +4579,7 @@
             "form": null
           },
           {
-            "rank": 13,
+            "rank": 14,
             "team": "NEW",
             "team_name": "Newcastle United FC",
             "played": 8,
@@ -4576,20 +4590,6 @@
             "goals_against": 14,
             "goal_diff": -4,
             "points": 9,
-            "form": null
-          },
-          {
-            "rank": 14,
-            "team": "MUN",
-            "team_name": "Manchester United FC",
-            "played": 8,
-            "wins": 1,
-            "draws": 5,
-            "losses": 2,
-            "goals_for": 10,
-            "goals_against": 10,
-            "goal_diff": 0,
-            "points": 8,
             "form": null
           },
           {
@@ -4622,15 +4622,15 @@
           },
           {
             "rank": 17,
-            "team": "BOU",
-            "team_name": "AFC Bournemouth",
+            "team": "MUN",
+            "team_name": "Manchester United FC",
             "played": 8,
             "wins": 1,
             "draws": 4,
             "losses": 3,
-            "goals_for": 9,
-            "goals_against": 13,
-            "goal_diff": -4,
+            "goals_for": 10,
+            "goals_against": 12,
+            "goal_diff": -2,
             "points": 7,
             "form": null
           },
@@ -4688,21 +4688,21 @@
           },
           {
             "rank": 2,
-            "player": "João Pedro",
-            "team": "CHE",
-            "value": 5
+            "player": "Alexander Isak",
+            "team": "LIV",
+            "value": 6
           },
           {
             "rank": 3,
-            "player": "Alexander Isak",
-            "team": "LIV",
+            "player": "Marcus Tavernier",
+            "team": "BOU",
             "value": 5
           },
           {
             "rank": 4,
-            "player": "Marcus Tavernier",
-            "team": "BOU",
-            "value": 4
+            "player": "João Pedro",
+            "team": "CHE",
+            "value": 5
           },
           {
             "rank": 5,
